@@ -1,0 +1,12 @@
+{
+  "vimMode": false,
+  "showLineNumber": true,
+  "showFrontmatter": true,
+  "defaultViewMode": "source",
+  "alwaysUpdateLinks": true,
+  "newLinkFormat": "shortest",
+  "useMarkdownLinks": true,
+  "attachmentFolderPath": "content/attachments",
+  "newFileLocation": "folder",
+  "newFileFolderPath": "content"
+}
