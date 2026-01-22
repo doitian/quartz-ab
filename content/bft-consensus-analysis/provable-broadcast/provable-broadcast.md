@@ -9,26 +9,26 @@ difficulty: advanced
 fault_model: byzantine
 fault_tolerance: "f < n/3"
 related:
-  - "[[byzantine-reliable-broadcast]]"
-  - "[[overview]]"
-  - "[[properties]]"
-  - "[[vs-reliable-broadcast]]"
-  - "[[hotstuff]]"
-  - "[[honeybadger-bft]]"
+  - "[[bft-consensus-analysis/provable-broadcast/byzantine-reliable-broadcast|Byzantine Reliable Broadcast]]"
+  - "[[overview|overview]]"
+  - "[[bft-consensus-analysis/provable-broadcast/properties|Provable Broadcast Properties]]"
+  - "[[bft-consensus-analysis/provable-broadcast/vs-reliable-broadcast|Provable Broadcast vs Reliable Broadcast]]"
+  - "[[bft-consensus-analysis/bft-consensus/protocols/hotstuff|HotStuff: Linear-Complexity BFT Consensus]]"
+  - "[[bft-consensus-analysis/bft-consensus/protocols/honeybadger-bft|HoneyBadgerBFT: Asynchronous Byzantine Consensus]]"
 references:
   - decentralized-thoughts-2022-provable-broadcast
   - cachin-guerraoui-rodrigues-2011-reliable-broadcast
   - yin-2019-hotstuff
   - miller-2016-honeybadger
 prerequisites:
-  - "[[byzantine-reliable-broadcast]]"
-  - "[[properties]]"
-  - "[[fault-tolerance-threshold]]"
+  - "[[bft-consensus-analysis/provable-broadcast/byzantine-reliable-broadcast|Byzantine Reliable Broadcast]]"
+  - "[[bft-consensus-analysis/provable-broadcast/properties|Provable Broadcast Properties]]"
+  - "[[bft-consensus-analysis/bft-consensus/properties/fault-tolerance-threshold|Fault Tolerance Threshold: Why f < n/3 for Byzantine Failures]]"
 ---
 
 # Provable Broadcast Protocol
 
-**Provable broadcast** is a Byzantine fault-tolerant communication primitive that extends **[[byzantine-reliable-broadcast|Byzantine Reliable Broadcast]]** with **delivery certificates** — cryptographic or quorum-based proofs that a message was delivered by a supermajority of nodes. This note provides the detailed protocol specification and implementation approaches.
+**Provable broadcast** is a Byzantine fault-tolerant communication primitive that extends **[[bft-consensus-analysis/provable-broadcast/byzantine-reliable-broadcast|Byzantine Reliable Broadcast]]** with **delivery certificates** — cryptographic or quorum-based proofs that a message was delivered by a supermajority of nodes. This note provides the detailed protocol specification and implementation approaches.
 
 ## Key Innovation
 
@@ -84,7 +84,7 @@ There are two main approaches to implementing provable broadcast: **signature-ba
 
 ### Variant 1: Signature-Based Provable Broadcast
 
-Used in protocols like **[[hotstuff|HotStuff]]**.
+Used in protocols like **[[bft-consensus-analysis/bft-consensus/protocols/hotstuff|HotStuff: Linear-Complexity BFT Consensus]]**.
 
 #### Protocol Steps
 
@@ -177,7 +177,7 @@ sequenceDiagram
 
 ### Variant 2: Threshold Signature Provable Broadcast
 
-Used in protocols like **[[honeybadger-bft|HoneyBadgerBFT]]**.
+Used in protocols like **[[bft-consensus-analysis/bft-consensus/protocols/honeybadger-bft|HoneyBadgerBFT: Asynchronous Byzantine Consensus]]**.
 
 #### Setup Phase (One-time)
 
@@ -426,7 +426,7 @@ Round i+1: Include cert_i as proof of previous round
 # Amortizes cost: 2 rounds become 1 amortized
 ```
 
-Used in: **[[hotstuff|HotStuff]]** (pipelined BFT)
+Used in: **[[bft-consensus-analysis/bft-consensus/protocols/hotstuff|HotStuff: Linear-Complexity BFT Consensus]]** (pipelined BFT)
 
 ### 3. Aggregated Signatures (BLS)
 
@@ -584,16 +584,16 @@ provable_broadcast(vertex)
 
 ## Related Concepts
 
-- **[[byzantine-reliable-broadcast]]**: Foundation without certificates
-- **[[properties]]**: Formal property specifications
-- **[[vs-reliable-broadcast]]**: Detailed comparison
-- **[[hotstuff]]**: Quorum certificate usage
-- **[[honeybadger-bft]]**: Threshold signature usage
-- **[[applications]]**: Use cases in blockchain and distributed systems
+- **[[bft-consensus-analysis/provable-broadcast/byzantine-reliable-broadcast|Byzantine Reliable Broadcast]]**: Foundation without certificates
+- **[[bft-consensus-analysis/provable-broadcast/properties|Provable Broadcast Properties]]**: Formal property specifications
+- **[[bft-consensus-analysis/provable-broadcast/vs-reliable-broadcast|Provable Broadcast vs Reliable Broadcast]]**: Detailed comparison
+- **[[bft-consensus-analysis/bft-consensus/protocols/hotstuff|HotStuff: Linear-Complexity BFT Consensus]]**: Quorum certificate usage
+- **[[bft-consensus-analysis/bft-consensus/protocols/honeybadger-bft|HoneyBadgerBFT: Asynchronous Byzantine Consensus]]**: Threshold signature usage
+- **[[bft-consensus-analysis/provable-broadcast/applications|Provable Broadcast Applications]]**: Use cases in blockchain and distributed systems
 
 ## References
 
 - Decentralized Thoughts (2022). "What is Provable Broadcast?"
 - Yin et al. (2019). "HotStuff: BFT Consensus with Linearity and Responsiveness"
 - Miller et al. (2016). "The Honey Badger of BFT Protocols"
-- See **[[references]]** for complete bibliography
+- See **[[bft-consensus-analysis/references|References: Bibliography and External Sources]]** for complete bibliography

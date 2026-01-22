@@ -7,12 +7,12 @@ updated: 2026-01-22
 status: complete
 difficulty: intermediate
 related:
-  - [[overview]]
-  - [[temporal-logic]]
-  - [[formal-verification]]
-  - [[../bft-consensus/fundamentals]]
+  - [[overview|overview]]
+  - [[bft-consensus-analysis/logic-models/temporal-logic|Temporal Logic for Distributed Systems]]
+  - [[bft-consensus-analysis/logic-models/formal-verification|Formal Verification of Consensus Protocols]]
+  - [[bft-consensus-analysis/bft-consensus/fundamentals|BFT Consensus Fundamentals]]
 prerequisites:
-  - [[overview]]
+  - [[overview|overview]]
 references:
   - halpern-moses-1990-knowledge
   - fagin-halpern-moses-vardi-1995-reasoning
@@ -363,7 +363,7 @@ $$
 $$
 "Eventually all correct nodes know they have decided."
 
-→ See [[temporal-logic]] for temporal operators
+→ See [[bft-consensus-analysis/logic-models/temporal-logic|Temporal Logic for Distributed Systems]] for temporal operators
 
 ## Self-Assessment Questions
 
@@ -385,16 +385,16 @@ $$
 ## See Also
 
 **Within Logic Models**:
-- [[overview]] — Introduction to logic models
-- [[temporal-logic]] — Combining knowledge with time
-- [[formal-verification]] — Using knowledge in proofs
-- [[proof-techniques]] — Proof strategies using knowledge
+- [[overview|overview]] — Introduction to logic models
+- [[bft-consensus-analysis/logic-models/temporal-logic|Temporal Logic for Distributed Systems]] — Combining knowledge with time
+- [[bft-consensus-analysis/logic-models/formal-verification|Formal Verification of Consensus Protocols]] — Using knowledge in proofs
+- [[bft-consensus-analysis/logic-models/proof-techniques|Proof Techniques for Consensus Protocols]] — Proof strategies using knowledge
 
 **Related Concepts**:
-- [[../bft-consensus/fundamentals]] — BFT consensus basics
-- [[../bft-consensus/properties/fault-tolerance-threshold]] — Why f < n/3
-- [[../provable-broadcast/provable-broadcast]] — Delivery certificates
-- [[../bft-consensus/protocols/pbft]] — Knowledge in PBFT
+- [[bft-consensus-analysis/bft-consensus/fundamentals|BFT Consensus Fundamentals]] — BFT consensus basics
+- [[bft-consensus-analysis/bft-consensus/properties/fault-tolerance-threshold|Fault Tolerance Threshold: Why f < n/3 for Byzantine Failures]] — Why f < n/3
+- [[bft-consensus-analysis/provable-broadcast/provable-broadcast|Provable Broadcast Protocol]] — Delivery certificates
+- [[bft-consensus-analysis/bft-consensus/protocols/pbft|PBFT: Practical Byzantine Fault Tolerance]] — Knowledge in PBFT
 
 **External Resources**:
 - Halpern & Moses: "Knowledge and Common Knowledge in a Distributed Environment" (1990)
@@ -403,4 +403,4 @@ $$
 
 ---
 
-**Next**: Learn about [[temporal-logic]] to express how knowledge evolves over time.
+**Next**: Learn about [[bft-consensus-analysis/logic-models/temporal-logic|Temporal Logic for Distributed Systems]] to express how knowledge evolves over time.

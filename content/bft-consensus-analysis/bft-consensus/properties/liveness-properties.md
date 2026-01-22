@@ -7,10 +7,10 @@ updated: 2026-01-21
 status: complete
 difficulty: intermediate
 related:
-  - "[[safety-properties]]"
-  - "[[fundamentals]]"
-  - "[[byzantine-failures]]"
-  - "[[fault-tolerance-threshold]]"
+  - "[[bft-consensus-analysis/bft-consensus/properties/safety-properties|Safety Properties in BFT Consensus]]"
+  - "[[bft-consensus-analysis/bft-consensus/fundamentals|BFT Consensus Fundamentals]]"
+  - "[[bft-consensus-analysis/bft-consensus/byzantine-failures|Byzantine Failures]]"
+  - "[[bft-consensus-analysis/bft-consensus/properties/fault-tolerance-threshold|Fault Tolerance Threshold: Why f < n/3 for Byzantine Failures]]"
 references:
   - fischer-lynch-paterson-1985-flp
   - castro-liskov-1999-pbft
@@ -31,7 +31,7 @@ Liveness properties specify that "something good eventually happens" - the syste
 
 Unlike safety violations (which are permanent), liveness violations can be temporary. A protocol may stall for a period but later resume progress.
 
-**Fundamental Challenge**: The FLP Impossibility Theorem proves that **deterministic consensus is impossible** in asynchronous systems with even one crash failure [[fischer-lynch-paterson-1985-flp]]. BFT consensus faces even stronger liveness challenges.
+**Fundamental Challenge**: The FLP Impossibility Theorem proves that **deterministic consensus is impossible** in asynchronous systems with even one crash failure [[fischer-lynch-paterson-1985-flp|fischer-lynch-paterson-1985-flp]]. BFT consensus faces even stronger liveness challenges.
 
 ## Core Liveness Properties
 
@@ -425,7 +425,7 @@ HoneyBadgerBFT: ~variable TPS (depends on network conditions)
 
 **Guarantee**: Termination after GST and after $O(f)$ view changes (expected).
 
-**See [[pbft]] for details.**
+**See [[bft-consensus-analysis/bft-consensus/protocols/pbft|PBFT: Practical Byzantine Fault Tolerance]] for details.**
 
 ### HoneyBadgerBFT Liveness
 
@@ -438,7 +438,7 @@ HoneyBadgerBFT: ~variable TPS (depends on network conditions)
 
 **Guarantee**: Probabilistic termination with high probability in expected constant rounds.
 
-**See [[honeybadger-bft]] for details.**
+**See [[bft-consensus-analysis/bft-consensus/protocols/honeybadger-bft|HoneyBadgerBFT: Asynchronous Byzantine Consensus]] for details.**
 
 ### HotStuff Liveness
 
@@ -452,7 +452,7 @@ HoneyBadgerBFT: ~variable TPS (depends on network conditions)
 
 **Guarantee**: Termination after GST with responsive (actual network delay) latency.
 
-**See [[hotstuff]] for details.**
+**See [[bft-consensus-analysis/bft-consensus/protocols/hotstuff|HotStuff: Linear-Complexity BFT Consensus]] for details.**
 
 ## Temporal Logic Specification
 
@@ -476,25 +476,25 @@ $$
 
 This prevents perpetual stalling.
 
-**See [[temporal-logic]] for detailed formal specifications.**
+**See [[bft-consensus-analysis/logic-models/temporal-logic|Temporal Logic for Distributed Systems]] for detailed formal specifications.**
 
 ## See Also
 
-- [[safety-properties]] - Complementary correctness guarantees
-- [[fundamentals]] - Core BFT consensus concepts
-- [[byzantine-failures]] - Fault model affecting liveness
-- [[fault-tolerance-threshold]] - Limits of fault tolerance
-- [[pbft]] - Partially synchronous liveness
-- [[honeybadger-bft]] - Asynchronous liveness via randomization
-- [[hotstuff]] - Linear-complexity liveness
-- [[temporal-logic]] - Formal specification of liveness properties
+- [[bft-consensus-analysis/bft-consensus/properties/safety-properties|Safety Properties in BFT Consensus]] - Complementary correctness guarantees
+- [[bft-consensus-analysis/bft-consensus/fundamentals|BFT Consensus Fundamentals]] - Core BFT consensus concepts
+- [[bft-consensus-analysis/bft-consensus/byzantine-failures|Byzantine Failures]] - Fault model affecting liveness
+- [[bft-consensus-analysis/bft-consensus/properties/fault-tolerance-threshold|Fault Tolerance Threshold: Why f < n/3 for Byzantine Failures]] - Limits of fault tolerance
+- [[bft-consensus-analysis/bft-consensus/protocols/pbft|PBFT: Practical Byzantine Fault Tolerance]] - Partially synchronous liveness
+- [[bft-consensus-analysis/bft-consensus/protocols/honeybadger-bft|HoneyBadgerBFT: Asynchronous Byzantine Consensus]] - Asynchronous liveness via randomization
+- [[bft-consensus-analysis/bft-consensus/protocols/hotstuff|HotStuff: Linear-Complexity BFT Consensus]] - Linear-complexity liveness
+- [[bft-consensus-analysis/logic-models/temporal-logic|Temporal Logic for Distributed Systems]] - Formal specification of liveness properties
 
 ## Further Reading
 
-- **FLP Impossibility**: [[fischer-lynch-paterson-1985-flp]]
-- **PBFT Liveness**: [[castro-liskov-1999-pbft]]
-- **Asynchronous Liveness**: [[miller-2016-honeybadger]]
-- **Modern Optimizations**: [[yin-2019-hotstuff]]
+- **FLP Impossibility**: [[fischer-lynch-paterson-1985-flp|fischer-lynch-paterson-1985-flp]]
+- **PBFT Liveness**: [[castro-liskov-1999-pbft|castro-liskov-1999-pbft]]
+- **Asynchronous Liveness**: [[miller-2016-honeybadger|miller-2016-honeybadger]]
+- **Modern Optimizations**: [[yin-2019-hotstuff|yin-2019-hotstuff]]
 
 ---
 

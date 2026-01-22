@@ -11,12 +11,12 @@ synchrony_model: fully-asynchronous
 fault_tolerance: "f < n/3"
 year_introduced: 2016
 related:
-  - "[[../relationships]]"
-  - "[[../design-framework]]"
-  - "[[../../bft-consensus/protocols/honeybadger-bft]]"
-  - "[[../../provable-broadcast/reliable-broadcast]]"
-  - "[[../../logic-models/temporal-logic]]"
-  - "[[dag-rider-analysis]]"
+  - "[[bft-consensus-analysis/integration/relationships|Relationships Between BFT, Broadcast, and Logic Models]]"
+  - "[[bft-consensus-analysis/integration/design-framework|Unified Design Framework for BFT Systems]]"
+  - "[[bft-consensus-analysis/bft-consensus/protocols/honeybadger-bft|HoneyBadgerBFT: Asynchronous Byzantine Consensus]]"
+  - "[[bft-consensus-analysis/provable-broadcast/reliable-broadcast|Reliable Broadcast]]"
+  - "[[bft-consensus-analysis/logic-models/temporal-logic|Temporal Logic for Distributed Systems]]"
+  - "[[bft-consensus-analysis/integration/case-studies/dag-rider-analysis|DAG-Rider: Asynchronous DAG-Based BFT Analysis]]"
 references:
   - miller-2016-honeybadger
   - cachin-2001-random-oracles-async
@@ -327,7 +327,7 @@ HoneyBadger BFT relies on two broadcast primitives:
 
 ### 2.2 Reliable Broadcast (RBC) Analysis
 
-**See [[../../provable-broadcast/reliable-broadcast]] for foundational details.**
+**See [[bft-consensus-analysis/provable-broadcast/reliable-broadcast|Reliable Broadcast]] for foundational details.**
 
 #### Properties
 
@@ -477,7 +477,7 @@ graph TD
 
 ### 3.1 Formalizing HoneyBadger Properties
 
-Use [[../../logic-models/temporal-logic|temporal logic]] to specify HoneyBadger's safety and liveness.
+Use [[bft-consensus-analysis/logic-models/temporal-logic|Temporal Logic for Distributed Systems]] to specify HoneyBadger's safety and liveness.
 
 #### Safety (Agreement)
 
@@ -555,7 +555,7 @@ $$
 
 ### 3.3 Safety Proof via Quorum Intersection
 
-**See [[../../logic-models/proof-techniques]] for proof strategies.**
+**See [[bft-consensus-analysis/logic-models/proof-techniques|Proof Techniques for Consensus Protocols]] for proof strategies.**
 
 **Theorem (Safety)**: If honest node $i$ outputs $B$ and honest node $j$ outputs $B'$, then $B = B'$.
 
@@ -653,7 +653,7 @@ Once ACS terminates, consensus outputs.
 
 ### 3.5 Knowledge-Based Analysis
 
-**See [[../../logic-models/knowledge-framework]] for epistemic logic foundations.**
+**See [[bft-consensus-analysis/logic-models/knowledge-framework|Knowledge Framework for Distributed Systems]] for epistemic logic foundations.**
 
 **Question**: Why can't asynchronous consensus rely on knowledge of message delivery?
 
@@ -857,7 +857,7 @@ graph LR
 ---
 
 **See Also**:
-- [[dag-rider-analysis]] - Another asynchronous BFT protocol using DAG structure
-- [[../design-framework]] - Apply this integrated methodology to design your own protocols
-- [[../../bft-consensus/protocols/protocol-comparison]] - Compare HoneyBadger to PBFT and HotStuff
-- [[../../provable-broadcast/applications]] - Other applications of provable broadcast
+- [[bft-consensus-analysis/integration/case-studies/dag-rider-analysis|DAG-Rider: Asynchronous DAG-Based BFT Analysis]] - Another asynchronous BFT protocol using DAG structure
+- [[bft-consensus-analysis/integration/design-framework|Unified Design Framework for BFT Systems]] - Apply this integrated methodology to design your own protocols
+- [[bft-consensus-analysis/bft-consensus/protocols/protocol-comparison|BFT Protocol Comparison: PBFT, HoneyBadgerBFT, and HotStuff]] - Compare HoneyBadger to PBFT and HotStuff
+- [[bft-consensus-analysis/provable-broadcast/applications|Provable Broadcast Applications]] - Other applications of provable broadcast

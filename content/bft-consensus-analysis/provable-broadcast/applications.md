@@ -7,19 +7,19 @@ updated: 2026-01-22
 status: complete
 difficulty: intermediate
 related:
-  - "[[provable-broadcast]]"
-  - "[[overview]]"
-  - "[[hotstuff]]"
-  - "[[honeybadger-bft]]"
-  - "[[protocol-comparison]]"
+  - "[[bft-consensus-analysis/provable-broadcast/provable-broadcast|Provable Broadcast Protocol]]"
+  - "[[overview|overview]]"
+  - "[[bft-consensus-analysis/bft-consensus/protocols/hotstuff|HotStuff: Linear-Complexity BFT Consensus]]"
+  - "[[bft-consensus-analysis/bft-consensus/protocols/honeybadger-bft|HoneyBadgerBFT: Asynchronous Byzantine Consensus]]"
+  - "[[bft-consensus-analysis/bft-consensus/protocols/protocol-comparison|BFT Protocol Comparison: PBFT, HoneyBadgerBFT, and HotStuff]]"
 references:
   - decentralized-thoughts-2022-provable-broadcast
   - yin-2019-hotstuff
   - miller-2016-honeybadger
   - danezis-2022-narwhal
 prerequisites:
-  - "[[provable-broadcast]]"
-  - "[[fundamentals]]"
+  - "[[bft-consensus-analysis/provable-broadcast/provable-broadcast|Provable Broadcast Protocol]]"
+  - "[[bft-consensus-analysis/bft-consensus/fundamentals|BFT Consensus Fundamentals]]"
 ---
 
 # Provable Broadcast Applications
@@ -60,7 +60,7 @@ graph TD
 
 ### HotStuff (Quorum Certificates)
 
-**[[hotstuff|HotStuff]]** uses provable broadcast to achieve **linear communication complexity** (O(n) instead of O(n²)) and **responsive liveness** (progress at network speed).
+**[[bft-consensus-analysis/bft-consensus/protocols/hotstuff|HotStuff: Linear-Complexity BFT Consensus]]** uses provable broadcast to achieve **linear communication complexity** (O(n) instead of O(n²)) and **responsive liveness** (progress at network speed).
 
 #### How It Works
 
@@ -124,7 +124,7 @@ class HotStuffReplica:
 
 ### HoneyBadger BFT (Threshold Signatures)
 
-**[[honeybadger-bft|HoneyBadgerBFT]]** uses threshold cryptography for **asynchronous BFT** with guaranteed liveness even under network attacks.
+**[[bft-consensus-analysis/bft-consensus/protocols/honeybadger-bft|HoneyBadgerBFT: Asynchronous Byzantine Consensus]]** uses threshold cryptography for **asynchronous BFT** with guaranteed liveness even under network attacks.
 
 #### How It Works
 
@@ -609,11 +609,11 @@ nodes → level_1_aggregators → level_2_aggregators → root
 
 ## Related Concepts
 
-- **[[provable-broadcast]]**: Protocol specifications
-- **[[hotstuff]]**: Linear BFT using QCs
-- **[[honeybadger-bft]]**: Asynchronous BFT with threshold signatures
-- **[[protocol-comparison]]**: Comparing BFT protocols
-- **[[overview]]**: Introduction to provable broadcast
+- **[[bft-consensus-analysis/provable-broadcast/provable-broadcast|Provable Broadcast Protocol]]**: Protocol specifications
+- **[[bft-consensus-analysis/bft-consensus/protocols/hotstuff|HotStuff: Linear-Complexity BFT Consensus]]**: Linear BFT using QCs
+- **[[bft-consensus-analysis/bft-consensus/protocols/honeybadger-bft|HoneyBadgerBFT: Asynchronous Byzantine Consensus]]**: Asynchronous BFT with threshold signatures
+- **[[bft-consensus-analysis/bft-consensus/protocols/protocol-comparison|BFT Protocol Comparison: PBFT, HoneyBadgerBFT, and HotStuff]]**: Comparing BFT protocols
+- **[[overview|overview]]**: Introduction to provable broadcast
 
 ## References
 
@@ -621,4 +621,4 @@ nodes → level_1_aggregators → level_2_aggregators → root
 - Miller, A., et al. (2016). "The Honey Badger of BFT Protocols"
 - Danezis, G., et al. (2022). "Narwhal and Tusk: A DAG-based Mempool and Efficient BFT Consensus"
 - Decentralized Thoughts (2022). "What is Provable Broadcast?"
-- See **[[references]]** for complete bibliography
+- See **[[bft-consensus-analysis/references|References: Bibliography and External Sources]]** for complete bibliography

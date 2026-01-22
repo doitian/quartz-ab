@@ -7,16 +7,16 @@ updated: 2026-01-22
 status: complete
 difficulty: advanced
 related:
-  - [[overview]]
-  - [[formal-verification]]
-  - [[temporal-logic]]
-  - [[knowledge-framework]]
-  - [[../bft-consensus/properties/safety-properties]]
-  - [[../bft-consensus/properties/liveness-properties]]
+  - [[overview|overview]]
+  - [[bft-consensus-analysis/logic-models/formal-verification|Formal Verification of Consensus Protocols]]
+  - [[bft-consensus-analysis/logic-models/temporal-logic|Temporal Logic for Distributed Systems]]
+  - [[bft-consensus-analysis/logic-models/knowledge-framework|Knowledge Framework for Distributed Systems]]
+  - [[bft-consensus-analysis/bft-consensus/properties/safety-properties|Safety Properties in BFT Consensus]]
+  - [[bft-consensus-analysis/bft-consensus/properties/liveness-properties|Liveness Properties in BFT Consensus]]
 prerequisites:
-  - [[overview]]
-  - [[temporal-logic]]
-  - [[formal-verification]]
+  - [[overview|overview]]
+  - [[bft-consensus-analysis/logic-models/temporal-logic|Temporal Logic for Distributed Systems]]
+  - [[bft-consensus-analysis/logic-models/formal-verification|Formal Verification of Consensus Protocols]]
 references:
   - lamport-2002-tla
   - lynch-1996-distributed-algorithms
@@ -211,7 +211,7 @@ $$
 
 **Therefore**: $f < n/3$ is the **tight bound** for Byzantine consensus.
 
-→ See [[../bft-consensus/properties/fault-tolerance-threshold]] for detailed analysis
+→ See [[bft-consensus-analysis/bft-consensus/properties/fault-tolerance-threshold|Fault Tolerance Threshold: Why f < n/3 for Byzantine Failures]] for detailed analysis
 
 ## Technique 3: Temporal Induction
 
@@ -267,7 +267,7 @@ $$
 
 **Note**: Requires **fairness assumption** (messages eventually delivered).
 
-→ See [[temporal-logic]] for temporal operators
+→ See [[bft-consensus-analysis/logic-models/temporal-logic|Temporal Logic for Distributed Systems]] for temporal operators
 
 ## Technique 4: Simulation Arguments
 
@@ -299,7 +299,7 @@ Prove protocol $P_1$ satisfies property $\phi$ by showing:
 
 **Proof**: Show $R$ is a simulation relation → PBFT refines Byzantine Agreement.
 
-→ See [[formal-verification]] for refinement verification
+→ See [[bft-consensus-analysis/logic-models/formal-verification|Formal Verification of Consensus Protocols]] for refinement verification
 
 ## Technique 5: Contradiction and Adversary Arguments
 
@@ -337,7 +337,7 @@ Prove protocol $P_1$ satisfies property $\phi$ by showing:
 - **Argument**: Even with delays, once network becomes synchronous, progress is made
 - **Conclusion**: Liveness holds under **eventual synchrony**
 
-→ See [[../bft-consensus/fundamentals#synchrony-models]] for synchrony assumptions
+→ See [[bft-consensus-analysis/bft-consensus/fundamentals|BFT Consensus Fundamentals#synchrony-models]] for synchrony assumptions
 
 ## Technique 6: Knowledge-Based Proofs
 
@@ -360,7 +360,7 @@ Prove protocol $P_1$ satisfies property $\phi$ by showing:
 
 **Insight**: Protocols progressively increase knowledge until decision is safe.
 
-→ See [[knowledge-framework]] for epistemic logic
+→ See [[bft-consensus-analysis/logic-models/knowledge-framework|Knowledge Framework for Distributed Systems]] for epistemic logic
 
 ## Technique 7: Case Analysis
 
@@ -469,21 +469,21 @@ Study published proofs (PBFT paper, HotStuff paper) for proof patterns.
 ## See Also
 
 **Within Logic Models**:
-- [[overview]] — Introduction to logic models
-- [[temporal-logic]] — Temporal logic operators
-- [[knowledge-framework]] — Epistemic logic for knowledge proofs
-- [[formal-verification]] — Automated verification techniques
+- [[overview|overview]] — Introduction to logic models
+- [[bft-consensus-analysis/logic-models/temporal-logic|Temporal Logic for Distributed Systems]] — Temporal logic operators
+- [[bft-consensus-analysis/logic-models/knowledge-framework|Knowledge Framework for Distributed Systems]] — Epistemic logic for knowledge proofs
+- [[bft-consensus-analysis/logic-models/formal-verification|Formal Verification of Consensus Protocols]] — Automated verification techniques
 
 **Related Concepts**:
-- [[../bft-consensus/fundamentals]] — BFT consensus properties
-- [[../bft-consensus/properties/safety-properties]] — Safety properties to prove
-- [[../bft-consensus/properties/liveness-properties]] — Liveness properties to prove
-- [[../bft-consensus/properties/fault-tolerance-threshold]] — Why f < n/3
+- [[bft-consensus-analysis/bft-consensus/fundamentals|BFT Consensus Fundamentals]] — BFT consensus properties
+- [[bft-consensus-analysis/bft-consensus/properties/safety-properties|Safety Properties in BFT Consensus]] — Safety properties to prove
+- [[bft-consensus-analysis/bft-consensus/properties/liveness-properties|Liveness Properties in BFT Consensus]] — Liveness properties to prove
+- [[bft-consensus-analysis/bft-consensus/properties/fault-tolerance-threshold|Fault Tolerance Threshold: Why f < n/3 for Byzantine Failures]] — Why f < n/3
 
 **Protocols**:
-- [[../bft-consensus/protocols/pbft]] — PBFT proof example
-- [[../bft-consensus/protocols/hotstuff]] — HotStuff simplified proofs
-- [[../provable-broadcast/provable-broadcast]] — Broadcast correctness proofs
+- [[bft-consensus-analysis/bft-consensus/protocols/pbft|PBFT: Practical Byzantine Fault Tolerance]] — PBFT proof example
+- [[bft-consensus-analysis/bft-consensus/protocols/hotstuff|HotStuff: Linear-Complexity BFT Consensus]] — HotStuff simplified proofs
+- [[bft-consensus-analysis/provable-broadcast/provable-broadcast|Provable Broadcast Protocol]] — Broadcast correctness proofs
 
 **External Resources**:
 - Lamport: "Specifying Systems" (2002) — TLA+ proofs
@@ -493,4 +493,4 @@ Study published proofs (PBFT paper, HotStuff paper) for proof patterns.
 
 ---
 
-**Congratulations!** You've completed the Logic Models domain. You now have the tools to formally specify, verify, and prove correctness of Byzantine consensus protocols. Consider applying these techniques to analyze protocols in the [[../integration/relationships|integration]] section.
+**Congratulations!** You've completed the Logic Models domain. You now have the tools to formally specify, verify, and prove correctness of Byzantine consensus protocols. Consider applying these techniques to analyze protocols in the [[bft-consensus-analysis/integration/relationships|Relationships Between BFT, Broadcast, and Logic Models]] section.

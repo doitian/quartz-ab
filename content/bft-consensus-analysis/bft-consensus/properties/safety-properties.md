@@ -7,10 +7,10 @@ updated: 2026-01-21
 status: complete
 difficulty: intermediate
 related:
-  - "[[liveness-properties]]"
-  - "[[fundamentals]]"
-  - "[[byzantine-failures]]"
-  - "[[fault-tolerance-threshold]]"
+  - "[[bft-consensus-analysis/bft-consensus/properties/liveness-properties|Liveness Properties in BFT Consensus]]"
+  - "[[bft-consensus-analysis/bft-consensus/fundamentals|BFT Consensus Fundamentals]]"
+  - "[[bft-consensus-analysis/bft-consensus/byzantine-failures|Byzantine Failures]]"
+  - "[[bft-consensus-analysis/bft-consensus/properties/fault-tolerance-threshold|Fault Tolerance Threshold: Why f < n/3 for Byzantine Failures]]"
 references:
   - lamport-shostak-pease-1982-byzantine
   - castro-liskov-1999-pbft
@@ -192,7 +192,7 @@ For Byzantine quorums of size $Q \geq n - f$ where $f < \frac{n}{3}$:
 
 ### Common Knowledge and Safety
 
-From Halpern-Moses knowledge framework [[halpern-moses-1990-knowledge]]:
+From Halpern-Moses knowledge framework [[halpern-moses-1990-knowledge|halpern-moses-1990-knowledge]]:
 
 **Common Knowledge Requirement**: Agreement requires that all correct nodes achieve (approximate) common knowledge of the decided value.
 
@@ -308,7 +308,7 @@ if node is locked on value v at round r:
 6. Contradiction: honest node cannot have sent COMMIT for both $v$ and $w$
 7. Therefore $v = w$
 
-**See [[pbft]] for full protocol details.**
+**See [[bft-consensus-analysis/bft-consensus/protocols/pbft|PBFT: Practical Byzantine Fault Tolerance]] for full protocol details.**
 
 ## Temporal Logic Specification
 
@@ -330,7 +330,7 @@ $$
 
 This states: "Always, if a node decides $v$, then some node must have proposed $v$."
 
-**See [[temporal-logic]] for detailed treatment of formal specifications.**
+**See [[bft-consensus-analysis/logic-models/temporal-logic|Temporal Logic for Distributed Systems]] for detailed treatment of formal specifications.**
 
 ## Safety vs. Liveness Trade-offs
 
@@ -385,24 +385,24 @@ def monitor_safety(node1_chain, node2_chain):
 - **Model Checkers**: TLA+, Spin can verify safety on execution traces
 - **Formal Verification**: Coq, Isabelle/HOL can prove safety mechanically
 
-**See [[formal-verification]] for verification techniques.**
+**See [[bft-consensus-analysis/logic-models/formal-verification|Formal Verification of Consensus Protocols]] for verification techniques.**
 
 ## See Also
 
-- [[liveness-properties]] - Complementary progress guarantees
-- [[fundamentals]] - Core BFT concepts
-- [[byzantine-failures]] - Fault model that safety must tolerate
-- [[fault-tolerance-threshold]] - Why $f < n/3$ is necessary
-- [[pbft]] - Safety mechanisms in PBFT
-- [[hotstuff]] - Modern safety-preserving optimizations
-- [[temporal-logic]] - Formal specification of safety properties
+- [[bft-consensus-analysis/bft-consensus/properties/liveness-properties|Liveness Properties in BFT Consensus]] - Complementary progress guarantees
+- [[bft-consensus-analysis/bft-consensus/fundamentals|BFT Consensus Fundamentals]] - Core BFT concepts
+- [[bft-consensus-analysis/bft-consensus/byzantine-failures|Byzantine Failures]] - Fault model that safety must tolerate
+- [[bft-consensus-analysis/bft-consensus/properties/fault-tolerance-threshold|Fault Tolerance Threshold: Why f < n/3 for Byzantine Failures]] - Why $f < n/3$ is necessary
+- [[bft-consensus-analysis/bft-consensus/protocols/pbft|PBFT: Practical Byzantine Fault Tolerance]] - Safety mechanisms in PBFT
+- [[bft-consensus-analysis/bft-consensus/protocols/hotstuff|HotStuff: Linear-Complexity BFT Consensus]] - Modern safety-preserving optimizations
+- [[bft-consensus-analysis/logic-models/temporal-logic|Temporal Logic for Distributed Systems]] - Formal specification of safety properties
 
 ## Further Reading
 
-- **Byzantine Generals**: [[lamport-shostak-pease-1982-byzantine]]
-- **PBFT Safety**: [[castro-liskov-1999-pbft]]
-- **Textbook Treatment**: [[cachin-guerraoui-rodrigues-2011-textbook]]
-- **Knowledge Foundations**: [[halpern-moses-1990-knowledge]]
+- **Byzantine Generals**: [[lamport-shostak-pease-1982-byzantine|lamport-shostak-pease-1982-byzantine]]
+- **PBFT Safety**: [[castro-liskov-1999-pbft|castro-liskov-1999-pbft]]
+- **Textbook Treatment**: [[cachin-guerraoui-rodrigues-2011-textbook|cachin-guerraoui-rodrigues-2011-textbook]]
+- **Knowledge Foundations**: [[halpern-moses-1990-knowledge|halpern-moses-1990-knowledge]]
 
 ---
 

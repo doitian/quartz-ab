@@ -7,12 +7,12 @@ updated: 2026-01-22
 status: complete
 difficulty: advanced
 related:
-  - "[[relationships]]"
-  - "[[../bft-consensus/fundamentals]]"
-  - "[[bft-consensus-analysis/provable-broadcast/overview]]"
-  - "[[bft-consensus-analysis/logic-models/overview]]"
-  - "[[case-studies/honeybadger-complete]]"
-  - "[[case-studies/dag-rider-analysis]]"
+  - "[[bft-consensus-analysis/integration/relationships|Relationships Between BFT, Broadcast, and Logic Models]]"
+  - "[[bft-consensus-analysis/bft-consensus/fundamentals|BFT Consensus Fundamentals]]"
+  - "[[bft-consensus-analysis/provable-broadcast/overview|Provable Broadcast: Overview]]"
+  - "[[bft-consensus-analysis/logic-models/overview|Logic Models for Distributed Systems]]"
+  - "[[case-studies/honeybadger-complete|case-studies/honeybadger-complete]]"
+  - "[[case-studies/dag-rider-analysis|case-studies/dag-rider-analysis]]"
 references:
   - comprehensive-bft-survey-2022
   - cachin-2011-introduction-reliable-broadcast
@@ -87,7 +87,7 @@ Environment: Wide-area network (WAN), high latency variance
 
 ### Step 1.2: Formalize Safety and Liveness
 
-Use [[../logic-models/temporal-logic|temporal logic]] to specify properties precisely.
+Use [[bft-consensus-analysis/logic-models/temporal-logic|Temporal Logic for Distributed Systems]] to specify properties precisely.
 
 **Safety Properties** (something bad never happens):
 
@@ -130,7 +130,7 @@ $$
 
 ### Step 2.1: Understand Impossibility Results
 
-Use [[bft-consensus-analysis/logic-models/overview|logic models]] to understand fundamental limits:
+Use [[bft-consensus-analysis/logic-models/overview|Logic Models for Distributed Systems]] to understand fundamental limits:
 
 | Impossibility Result | System Model | Implication |
 |---------------------|--------------|-------------|
@@ -170,12 +170,12 @@ graph TD
 
 2. **Partially Synchronous** ⭐ *Most Common*:
    - **Assumption**: Unknown $\Delta$ exists, or network is synchronous after unknown time GST
-   - **BFT Protocols**: [[../bft-consensus/protocols/pbft|PBFT]], [[../bft-consensus/protocols/hotstuff|HotStuff]], Tendermint
+   - **BFT Protocols**: [[bft-consensus-analysis/bft-consensus/protocols/pbft|PBFT: Practical Byzantine Fault Tolerance]], [[bft-consensus-analysis/bft-consensus/protocols/hotstuff|HotStuff: Linear-Complexity BFT Consensus]], Tendermint
    - **Trade-off**: Safety always holds; liveness guaranteed after synchrony period
 
 3. **Asynchronous**:
    - **Assumption**: No timing assumptions; messages can be arbitrarily delayed
-   - **BFT Protocols**: [[../bft-consensus/protocols/honeybadger-bft|HoneyBadger BFT]], BEAT, Dumbo
+   - **BFT Protocols**: [[bft-consensus-analysis/bft-consensus/protocols/honeybadger-bft|HoneyBadgerBFT: Asynchronous Byzantine Consensus]], BEAT, Dumbo
    - **Trade-off**: Liveness always holds (probabilistic); requires randomization
 
 **Selection Guidance**:
@@ -223,13 +223,13 @@ graph TD
 
 ### Step 3.1: Map Consensus Properties to Broadcast Properties
 
-Use [[relationships|the relationships]] between BFT consensus and provable broadcast:
+Use [[bft-consensus-analysis/integration/relationships|Relationships Between BFT, Broadcast, and Logic Models]] between BFT consensus and provable broadcast:
 
 | Consensus Requirement | Broadcast Property | Primitive |
 |-----------------------|-------------------|-----------|
 | Safety (no disagreement) | **Agreement**: All honest nodes deliver same message | Any reliable broadcast |
 | Validity (correct proposal accepted) | **Validity**: Honest sender's message delivered correctly | Reliable broadcast |
-| Non-repudiation (prove delivery) | **Provability**: Cryptographic proof of delivery | [[../provable-broadcast/provable-broadcast|Provable broadcast]] |
+| Non-repudiation (prove delivery) | **Provability**: Cryptographic proof of delivery | [[bft-consensus-analysis/provable-broadcast/provable-broadcast|Provable Broadcast Protocol]] |
 | Censorship resistance | **Guaranteed delivery**: Byzantine nodes can't block messages | Byzantine reliable broadcast |
 | Efficiency (low overhead) | **Compact proofs**: $O(1)$ or $O(\log n)$ certificate size | Threshold signatures |
 
@@ -273,7 +273,7 @@ graph TD
 - Large message payloads (erasure coding reduces bandwidth)
 - Don't need compact delivery proofs
 
-**See [[../provable-broadcast/reliable-broadcast]] for details.**
+**See [[bft-consensus-analysis/provable-broadcast/reliable-broadcast|Reliable Broadcast]] for details.**
 
 #### Option 2: Provable Broadcast
 
@@ -287,7 +287,7 @@ graph TD
 - Nodes must prove they delivered messages to external observers
 - Blockchain state machine replication
 
-**See [[../provable-broadcast/provable-broadcast]] for details.**
+**See [[bft-consensus-analysis/provable-broadcast/provable-broadcast|Provable Broadcast Protocol]] for details.**
 
 #### Option 3: Threshold Signature Broadcast
 
@@ -494,11 +494,11 @@ graph TD
 **Approach**: Encode protocol in formal language.
 
 **Options**:
-1. **Temporal Logic Specification** ([[../logic-models/temporal-logic]]):
+1. **Temporal Logic Specification** ([[bft-consensus-analysis/logic-models/temporal-logic|Temporal Logic for Distributed Systems]]):
    - Specify properties in LTL or CTL
    - Verify using model checker (e.g., TLA+, SPIN)
 
-2. **Threshold Automata** ([[../logic-models/threshold-automata]]):
+2. **Threshold Automata** ([[bft-consensus-analysis/logic-models/threshold-automata|Threshold Automata for Parameterized Verification]]):
    - Model protocol as state machine with threshold guards
    - Verify using ByMC or Ivy
 
@@ -557,7 +557,7 @@ Liveness ==
 4. **Theorem (Safety)**: If node $A$ decides $v$ and node $B$ decides $w$, then $v = w$
    - **Proof**: Both decisions require quorums. By Lemmas 1-2, quorums share honest node. Honest node votes consistently, so $v = w$.
 
-**See [[../logic-models/proof-techniques]] for detailed proof methods.**
+**See [[bft-consensus-analysis/logic-models/proof-techniques|Proof Techniques for Consensus Protocols]] for detailed proof methods.**
 
 ### Step 5.3: Prove Liveness Property
 
@@ -799,7 +799,7 @@ Let's apply this framework to design a BFT consensus protocol for a permissioned
 **Advantages**: High throughput, asynchronous  
 **Disadvantages**: Complex ordering logic, eventual finality
 
-**See [[case-studies/dag-rider-analysis]] for details.**
+**See [[case-studies/dag-rider-analysis|case-studies/dag-rider-analysis]] for details.**
 
 ---
 
@@ -945,12 +945,12 @@ Use this checklist when designing a new BFT protocol:
 ## Next Steps
 
 - **Case Studies**: See how this framework was applied to real protocols:
-  - [[case-studies/honeybadger-complete]] - HoneyBadger BFT integrated analysis
-  - [[case-studies/dag-rider-analysis]] - DAG-Rider protocol analysis
+  - [[case-studies/honeybadger-complete|case-studies/honeybadger-complete]] - HoneyBadger BFT integrated analysis
+  - [[case-studies/dag-rider-analysis|case-studies/dag-rider-analysis]] - DAG-Rider protocol analysis
 - **Deepen Understanding**:
-  - [[relationships]] - How BFT, broadcast, and logic models interconnect
-  - [[../bft-consensus/protocols/protocol-comparison]] - Compare existing protocols
-  - [[../logic-models/formal-verification]] - Learn verification techniques
+  - [[bft-consensus-analysis/integration/relationships|Relationships Between BFT, Broadcast, and Logic Models]] - How BFT, broadcast, and logic models interconnect
+  - [[bft-consensus-analysis/bft-consensus/protocols/protocol-comparison|BFT Protocol Comparison: PBFT, HoneyBadgerBFT, and HotStuff]] - Compare existing protocols
+  - [[bft-consensus-analysis/logic-models/formal-verification|Formal Verification of Consensus Protocols]] - Learn verification techniques
 - **Apply the Framework**: Design your own BFT protocol using this systematic methodology
 
 ---

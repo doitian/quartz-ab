@@ -9,24 +9,24 @@ difficulty: advanced
 fault_model: byzantine
 fault_tolerance: "f < n/3"
 related:
-  - "[[reliable-broadcast]]"
-  - "[[provable-broadcast]]"
-  - "[[overview]]"
-  - "[[properties]]"
-  - "[[byzantine-failures]]"
+  - "[[bft-consensus-analysis/provable-broadcast/reliable-broadcast|Reliable Broadcast]]"
+  - "[[bft-consensus-analysis/provable-broadcast/provable-broadcast|Provable Broadcast Protocol]]"
+  - "[[overview|overview]]"
+  - "[[bft-consensus-analysis/provable-broadcast/properties|Provable Broadcast Properties]]"
+  - "[[bft-consensus-analysis/bft-consensus/byzantine-failures|Byzantine Failures]]"
 references:
   - bracha-asynchronous-consensus-1987
   - cachin-guerraoui-rodrigues-2011-reliable-broadcast
   - decentralized-thoughts-2022-provable-broadcast
 prerequisites:
-  - "[[reliable-broadcast]]"
-  - "[[byzantine-failures]]"
-  - "[[fault-tolerance-threshold]]"
+  - "[[bft-consensus-analysis/provable-broadcast/reliable-broadcast|Reliable Broadcast]]"
+  - "[[bft-consensus-analysis/bft-consensus/byzantine-failures|Byzantine Failures]]"
+  - "[[bft-consensus-analysis/bft-consensus/properties/fault-tolerance-threshold|Fault Tolerance Threshold: Why f < n/3 for Byzantine Failures]]"
 ---
 
 # Byzantine Reliable Broadcast
 
-**Byzantine Reliable Broadcast** extends **[[reliable-broadcast|Reliable Broadcast]]** to handle **Byzantine (malicious) failures**, where faulty nodes can exhibit arbitrary behavior including lying, equivocation, and collusion. This is a critical building block for Byzantine Fault Tolerant consensus protocols.
+**Byzantine Reliable Broadcast** extends **[[bft-consensus-analysis/provable-broadcast/reliable-broadcast|Reliable Broadcast]]** to handle **Byzantine (malicious) failures**, where faulty nodes can exhibit arbitrary behavior including lying, equivocation, and collusion. This is a critical building block for Byzantine Fault Tolerant consensus protocols.
 
 ## Problem Statement
 
@@ -84,7 +84,7 @@ graph TD
 
 ## Properties
 
-Byzantine Reliable Broadcast satisfies the same properties as **[[reliable-broadcast|Reliable Broadcast]]**, but strengthened to resist Byzantine attacks:
+Byzantine Reliable Broadcast satisfies the same properties as **[[bft-consensus-analysis/provable-broadcast/reliable-broadcast|Reliable Broadcast]]**, but strengthened to resist Byzantine attacks:
 
 ### 1. Validity
 
@@ -351,7 +351,7 @@ Broadcast Merkle root, let nodes request missing leaves:
 
 ### 1. Byzantine Consensus Building Block
 
-**[[pbft|PBFT]]**, **[[honeybadger-bft|HoneyBadgerBFT]]**, and other protocols use Byzantine reliable broadcast to:
+**[[bft-consensus-analysis/bft-consensus/protocols/pbft|PBFT: Practical Byzantine Fault Tolerance]]**, **[[bft-consensus-analysis/bft-consensus/protocols/honeybadger-bft|HoneyBadgerBFT: Asynchronous Byzantine Consensus]]**, and other protocols use Byzantine reliable broadcast to:
 - Disseminate proposals
 - Ensure all replicas see the same requests
 - Build higher-level agreement
@@ -374,14 +374,14 @@ Replicate ledger updates across nodes:
 ### Does NOT Provide
 
 ❌ **Ordering**: Byzantine reliable broadcast doesn't specify message delivery order
-❌ **Provability**: No certificates proving delivery to others (see **[[provable-broadcast]]**)
+❌ **Provability**: No certificates proving delivery to others (see **[[bft-consensus-analysis/provable-broadcast/provable-broadcast|Provable Broadcast Protocol]]**)
 ❌ **Sender Accountability**: Can't prove sender equivocated (all nodes just reject)
 ❌ **Efficiency**: O(n²) message complexity is high for large networks
 
 ### Extensions
 
 - **Total Order Broadcast**: Add ordering guarantees (atomic broadcast)
-- **[[provable-broadcast|Provable Broadcast]]**: Add delivery certificates
+- **[[bft-consensus-analysis/provable-broadcast/provable-broadcast|Provable Broadcast Protocol]]**: Add delivery certificates
 - **Threshold Cryptography**: Reduce message sizes with aggregated signatures
 
 ## Self-Assessment Questions
@@ -403,13 +403,13 @@ Replicate ledger updates across nodes:
 
 ## Next Steps
 
-- **[[provable-broadcast]]**: Add delivery certificates for accountability
-- **[[properties]]**: Formal property definitions
-- **[[overview]]**: Compare broadcast primitives
-- **[[honeybadger-bft]]**: See Byzantine broadcast in action
+- **[[bft-consensus-analysis/provable-broadcast/provable-broadcast|Provable Broadcast Protocol]]**: Add delivery certificates for accountability
+- **[[bft-consensus-analysis/provable-broadcast/properties|Provable Broadcast Properties]]**: Formal property definitions
+- **[[overview|overview]]**: Compare broadcast primitives
+- **[[bft-consensus-analysis/bft-consensus/protocols/honeybadger-bft|HoneyBadgerBFT: Asynchronous Byzantine Consensus]]**: See Byzantine broadcast in action
 
 ## References
 
 - Bracha, G. (1987). "Asynchronous Byzantine Agreement Protocols"
 - Cachin, C., Guerraoui, R., & Rodrigues, L. (2011). "Introduction to Reliable and Secure Distributed Programming"
-- See **[[references]]** for complete bibliography
+- See **[[bft-consensus-analysis/references|References: Bibliography and External Sources]]** for complete bibliography

@@ -7,14 +7,14 @@ updated: 2026-01-22
 status: complete
 difficulty: advanced
 related:
-  - [[overview]]
-  - [[formal-verification]]
-  - [[proof-techniques]]
-  - [[../bft-consensus/protocols/pbft]]
-  - [[../bft-consensus/properties/fault-tolerance-threshold]]
+  - [[overview|overview]]
+  - [[bft-consensus-analysis/logic-models/formal-verification|Formal Verification of Consensus Protocols]]
+  - [[bft-consensus-analysis/logic-models/proof-techniques|Proof Techniques for Consensus Protocols]]
+  - [[bft-consensus-analysis/bft-consensus/protocols/pbft|PBFT: Practical Byzantine Fault Tolerance]]
+  - [[bft-consensus-analysis/bft-consensus/properties/fault-tolerance-threshold|Fault Tolerance Threshold: Why f < n/3 for Byzantine Failures]]
 prerequisites:
-  - [[overview]]
-  - [[temporal-logic]]
+  - [[overview|overview]]
+  - [[bft-consensus-analysis/logic-models/temporal-logic|Temporal Logic for Distributed Systems]]
 references:
   - konnov-veith-widder-2017-threshold
   - john-konnov-schmid-veith-widder-2013-parameterized
@@ -410,7 +410,7 @@ Effect: Decide on value
 - Check agreement property: $\Box (\text{DECIDE}(v) \land \text{DECIDE}(v') \to v = v')$
 - Result: ✓ Verified for all $n \geq 7$
 
-→ See [[../bft-consensus/protocols/hotstuff]] for protocol details
+→ See [[bft-consensus-analysis/bft-consensus/protocols/hotstuff|HotStuff: Linear-Complexity BFT Consensus]] for protocol details
 
 ## Self-Assessment Questions
 
@@ -437,16 +437,16 @@ Effect: Decide on value
 ## See Also
 
 **Within Logic Models**:
-- [[overview]] — Introduction to logic models
-- [[formal-verification]] — Verification techniques overview
-- [[proof-techniques]] — Manual proof strategies
-- [[temporal-logic]] — Temporal logic for specifications
+- [[overview|overview]] — Introduction to logic models
+- [[bft-consensus-analysis/logic-models/formal-verification|Formal Verification of Consensus Protocols]] — Verification techniques overview
+- [[bft-consensus-analysis/logic-models/proof-techniques|Proof Techniques for Consensus Protocols]] — Manual proof strategies
+- [[bft-consensus-analysis/logic-models/temporal-logic|Temporal Logic for Distributed Systems]] — Temporal logic for specifications
 
 **Related Concepts**:
-- [[../bft-consensus/protocols/pbft]] — PBFT protocol (threshold automaton example)
-- [[../bft-consensus/protocols/hotstuff]] — HotStuff (simplified threshold structure)
-- [[../bft-consensus/properties/fault-tolerance-threshold]] — Why 2f+1 quorums
-- [[../provable-broadcast/provable-broadcast]] — Quorum certificates
+- [[bft-consensus-analysis/bft-consensus/protocols/pbft|PBFT: Practical Byzantine Fault Tolerance]] — PBFT protocol (threshold automaton example)
+- [[bft-consensus-analysis/bft-consensus/protocols/hotstuff|HotStuff: Linear-Complexity BFT Consensus]] — HotStuff (simplified threshold structure)
+- [[bft-consensus-analysis/bft-consensus/properties/fault-tolerance-threshold|Fault Tolerance Threshold: Why f < n/3 for Byzantine Failures]] — Why 2f+1 quorums
+- [[bft-consensus-analysis/provable-broadcast/provable-broadcast|Provable Broadcast Protocol]] — Quorum certificates
 
 **Tools**:
 - [ByMC (Byzantine Model Checker)](https://github.com/konnov/bymc)
@@ -460,4 +460,4 @@ Effect: Decide on value
 
 ---
 
-**Next**: Learn [[formal-verification]] techniques to apply these models in practice.
+**Next**: Learn [[bft-consensus-analysis/logic-models/formal-verification|Formal Verification of Consensus Protocols]] techniques to apply these models in practice.

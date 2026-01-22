@@ -7,9 +7,9 @@ updated: 2026-01-21
 status: complete
 difficulty: introductory
 related:
-  - "[[fundamentals]]"
-  - "[[fault-tolerance-threshold]]"
-  - "[[safety-properties]]"
+  - "[[bft-consensus-analysis/bft-consensus/fundamentals|BFT Consensus Fundamentals]]"
+  - "[[bft-consensus-analysis/bft-consensus/properties/fault-tolerance-threshold|Fault Tolerance Threshold: Why f < n/3 for Byzantine Failures]]"
+  - "[[bft-consensus-analysis/bft-consensus/properties/safety-properties|Safety Properties in BFT Consensus]]"
 references:
   - lamport-shostak-pease-1982-byzantine
   - fischer-lynch-paterson-1985-flp
@@ -22,7 +22,7 @@ Byzantine failures represent the most challenging class of faults in distributed
 
 ## Overview
 
-The term "Byzantine" comes from the **Byzantine Generals Problem**, formulated by Lamport, Shostak, and Pease in 1982 [[lamport-shostak-pease-1982-byzantine]]. The problem illustrates the challenge of achieving consensus when some participants may be malicious and actively try to prevent agreement.
+The term "Byzantine" comes from the **Byzantine Generals Problem**, formulated by Lamport, Shostak, and Pease in 1982 [[lamport-shostak-pease-1982-byzantine|lamport-shostak-pease-1982-byzantine]]. The problem illustrates the challenge of achieving consensus when some participants may be malicious and actively try to prevent agreement.
 
 **Byzantine failure** refers to a fault that presents different symptoms to different observers, making it difficult or impossible for other nodes in the system to determine whether the faulty node is actually faulty or simply slow.
 
@@ -209,7 +209,7 @@ Where:
 - Need to distinguish honest majority from Byzantine nodes + silent honest nodes
 - Requires $n - f > 2f$, which gives $n > 3f$
 
-For detailed explanation, see [[fault-tolerance-threshold]].
+For detailed explanation, see [[bft-consensus-analysis/bft-consensus/properties/fault-tolerance-threshold|Fault Tolerance Threshold: Why f < n/3 for Byzantine Failures]].
 
 **Practical Implications:**
 - **4 nodes**: Can tolerate 1 Byzantine failure (4 > 3×1)
@@ -257,7 +257,7 @@ This ensures that conflicting decisions cannot both gather quorums.
 
 - **Model Checking**: Exhaustively test all possible Byzantine behaviors in small models
 - **Theorem Proving**: Mechanically verify that protocol maintains safety/liveness despite f Byzantine nodes
-- See [[formal-verification]] for techniques
+- See [[bft-consensus-analysis/logic-models/formal-verification|Formal Verification of Consensus Protocols]] for techniques
 
 ## Historical Context
 
@@ -275,7 +275,7 @@ This ensures that conflicting decisions cannot both gather quorums.
 
 ### FLP Impossibility (1985)
 
-Fischer, Lynch, and Paterson proved that **deterministic consensus is impossible** in asynchronous systems with even a single crash failure [[fischer-lynch-paterson-1985-flp]].
+Fischer, Lynch, and Paterson proved that **deterministic consensus is impossible** in asynchronous systems with even a single crash failure [[fischer-lynch-paterson-1985-flp|fischer-lynch-paterson-1985-flp]].
 
 **Implications for Byzantine Tolerance:**
 - Asynchronous Byzantine consensus is even harder
@@ -283,19 +283,19 @@ Fischer, Lynch, and Paterson proved that **deterministic consensus is impossible
 
 ## See Also
 
-- [[fundamentals]] - Core BFT consensus concepts
-- [[safety-properties]] - What Byzantine nodes cannot violate
-- [[liveness-properties]] - Progress guarantees despite Byzantine nodes
-- [[fault-tolerance-threshold]] - Mathematical foundation for f < n/3
-- [[pbft]] - First practical Byzantine fault tolerant protocol
-- [[honeybadger-bft]] - Asynchronous BFT protocol
-- [[hotstuff]] - Modern linear-complexity BFT protocol
+- [[bft-consensus-analysis/bft-consensus/fundamentals|BFT Consensus Fundamentals]] - Core BFT consensus concepts
+- [[bft-consensus-analysis/bft-consensus/properties/safety-properties|Safety Properties in BFT Consensus]] - What Byzantine nodes cannot violate
+- [[bft-consensus-analysis/bft-consensus/properties/liveness-properties|Liveness Properties in BFT Consensus]] - Progress guarantees despite Byzantine nodes
+- [[bft-consensus-analysis/bft-consensus/properties/fault-tolerance-threshold|Fault Tolerance Threshold: Why f < n/3 for Byzantine Failures]] - Mathematical foundation for f < n/3
+- [[bft-consensus-analysis/bft-consensus/protocols/pbft|PBFT: Practical Byzantine Fault Tolerance]] - First practical Byzantine fault tolerant protocol
+- [[bft-consensus-analysis/bft-consensus/protocols/honeybadger-bft|HoneyBadgerBFT: Asynchronous Byzantine Consensus]] - Asynchronous BFT protocol
+- [[bft-consensus-analysis/bft-consensus/protocols/hotstuff|HotStuff: Linear-Complexity BFT Consensus]] - Modern linear-complexity BFT protocol
 
 ## Further Reading
 
-- **Byzantine Generals Problem**: [[lamport-shostak-pease-1982-byzantine]]
-- **FLP Impossibility**: [[fischer-lynch-paterson-1985-flp]]
-- **Textbook Treatment**: [[cachin-guerraoui-rodrigues-2011-textbook]]
+- **Byzantine Generals Problem**: [[lamport-shostak-pease-1982-byzantine|lamport-shostak-pease-1982-byzantine]]
+- **FLP Impossibility**: [[fischer-lynch-paterson-1985-flp|fischer-lynch-paterson-1985-flp]]
+- **Textbook Treatment**: [[cachin-guerraoui-rodrigues-2011-textbook|cachin-guerraoui-rodrigues-2011-textbook]]
 
 ---
 

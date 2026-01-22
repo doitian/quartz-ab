@@ -7,18 +7,18 @@ updated: 2026-01-22
 status: complete
 difficulty: intermediate
 related:
-  - "[[overview]]"
-  - "[[reliable-broadcast]]"
-  - "[[provable-broadcast]]"
-  - "[[safety-properties]]"
-  - "[[liveness-properties]]"
+  - "[[overview|overview]]"
+  - "[[bft-consensus-analysis/provable-broadcast/reliable-broadcast|Reliable Broadcast]]"
+  - "[[bft-consensus-analysis/provable-broadcast/provable-broadcast|Provable Broadcast Protocol]]"
+  - "[[bft-consensus-analysis/bft-consensus/properties/safety-properties|Safety Properties in BFT Consensus]]"
+  - "[[bft-consensus-analysis/bft-consensus/properties/liveness-properties|Liveness Properties in BFT Consensus]]"
 references:
   - decentralized-thoughts-2022-provable-broadcast
   - cachin-guerraoui-rodrigues-2011-reliable-broadcast
   - halpern-moses-2000-knowledge
 prerequisites:
-  - "[[overview]]"
-  - "[[byzantine-failures]]"
+  - "[[overview|overview]]"
+  - "[[bft-consensus-analysis/bft-consensus/byzantine-failures|Byzantine Failures]]"
 ---
 
 # Provable Broadcast Properties
@@ -409,16 +409,16 @@ Result:
 
 ## Related Concepts
 
-- **[[overview]]**: Introduction to provable broadcast
-- **[[reliable-broadcast]]**: Baseline crash fault tolerant broadcast
-- **[[provable-broadcast]]**: Full protocol specifications
-- **[[safety-properties]]**: BFT consensus safety properties
-- **[[liveness-properties]]**: BFT consensus liveness properties
-- **[[temporal-logic]]**: Formal specification techniques
+- **[[overview|overview]]**: Introduction to provable broadcast
+- **[[bft-consensus-analysis/provable-broadcast/reliable-broadcast|Reliable Broadcast]]**: Baseline crash fault tolerant broadcast
+- **[[bft-consensus-analysis/provable-broadcast/provable-broadcast|Provable Broadcast Protocol]]**: Full protocol specifications
+- **[[bft-consensus-analysis/bft-consensus/properties/safety-properties|Safety Properties in BFT Consensus]]**: BFT consensus safety properties
+- **[[bft-consensus-analysis/bft-consensus/properties/liveness-properties|Liveness Properties in BFT Consensus]]**: BFT consensus liveness properties
+- **[[bft-consensus-analysis/logic-models/temporal-logic|Temporal Logic for Distributed Systems]]**: Formal specification techniques
 
 ## References
 
-See **[[references]]** for:
+See **[[bft-consensus-analysis/references|References: Bibliography and External Sources]]** for:
 - Cachin, Guerraoui, Rodrigues (2011) - Formal broadcast properties
 - Decentralized Thoughts (2022) - Provable broadcast explanation
 - Halpern & Moses (2000) - Knowledge and distributed systems
