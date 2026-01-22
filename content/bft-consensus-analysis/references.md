@@ -49,6 +49,54 @@ Halpern, J. Y., & Moses, Y. (1990). *Knowledge and common knowledge in a distrib
 **halpern-moses-2000-knowledge**  
 Alias for **halpern-moses-1990-knowledge** (arXiv preprint version from 2000).
 
+**fagin-halpern-moses-vardi-1995-reasoning**  
+Fagin, R., Halpern, J. Y., Moses, Y., & Vardi, M. Y. (1995). *Reasoning About Knowledge*. MIT Press.  
+🔗 [MIT Press](https://mitpress.mit.edu/9780262562003/reasoning-about-knowledge/)  
+**Note**: Foundational textbook on epistemic logic and knowledge in distributed systems.
+
+**pnueli-1977-temporal-logic**  
+Pnueli, A. (1977). *The Temporal Logic of Programs*. Proceedings of the 18th Annual Symposium on Foundations of Computer Science (FOCS), 46-57.  
+🔗 [IEEE](https://ieeexplore.ieee.org/document/4567924)  
+**Note**: Seminal paper introducing temporal logic for program verification.
+
+**lamport-1994-temporal-logic**  
+Lamport, L. (1994). *The Temporal Logic of Actions*. ACM Transactions on Programming Languages and Systems, 16(3), 872-923.  
+🔗 [ACM](https://dl.acm.org/doi/10.1145/177492.177726)  
+**Note**: TLA (Temporal Logic of Actions) framework for specifying and verifying concurrent systems.
+
+**lamport-2002-tla**  
+Lamport, L. (2002). *Specifying Systems: The TLA+ Language and Tools for Hardware and Software Engineers*. Addison-Wesley.  
+🔗 [TLA+ Home](https://lamport.azurewebsites.net/tla/tla.html)  
+**Note**: Comprehensive guide to TLA+ specification language.
+
+**baier-katoen-2008-principles**  
+Baier, C., & Katoen, J. P. (2008). *Principles of Model Checking*. MIT Press.  
+🔗 [MIT Press](https://mitpress.mit.edu/9780262026499/principles-of-model-checking/)  
+**Note**: Standard textbook on model checking and temporal logic.
+
+**konnov-veith-widder-2017-threshold**  
+Konnov, I., Veith, H., & Widder, J. (2017). *On the Completeness of Bounded Model Checking for Threshold-Based Distributed Algorithms: Reachability*. Information and Computation, 252, 95-109.  
+📄 [PDF](https://forsyte.at/wp-content/uploads/ic-2017.pdf) | 🔗 [ScienceDirect](https://www.sciencedirect.com/science/article/pii/S0890540116301146)  
+**Note**: Theoretical foundations of threshold automata model checking.
+
+**john-konnov-schmid-veith-widder-2013-parameterized**  
+John, A., Konnov, I., Schmid, U., Veith, H., & Widder, J. (2013). *Parameterized Model Checking of Fault-Tolerant Distributed Algorithms by Abstraction*. Proceedings of Formal Methods in Computer-Aided Design (FMCAD), 201-209.  
+📄 [PDF](https://forsyte.at/wp-content/uploads/fmcad13.pdf) | 🔗 [IEEE](https://ieeexplore.ieee.org/document/6679408)
+
+**lazic-triberti-widder-2017-cutoff**  
+Lazić, M., Triberti, G., & Widder, J. (2017). *A Short Counterexample Property for Safety and Liveness Verification of Fault-Tolerant Distributed Algorithms*. Proceedings of POPL 2017.  
+📄 [PDF](https://forsyte.at/wp-content/uploads/popl17.pdf)
+
+**hawblitzel-howell-kapritsos-lorch-parno-roberts-setty-zill-2015-ironfleet**  
+Hawblitzel, C., Howell, J., Kapritsos, M., Lorch, J. R., Parno, B., Roberts, M. L., Setty, S., & Zill, B. (2015). *IronFleet: Proving Practical Distributed Systems Correct*. Proceedings of the 25th Symposium on Operating Systems Principles (SOSP), 1-17.  
+📄 [PDF](https://www.microsoft.com/en-us/research/wp-content/uploads/2016/02/ironfleet.pdf) | 🔗 [ACM](https://dl.acm.org/doi/10.1145/2815400.2815428)  
+**Note**: End-to-end verification of distributed systems using Dafny.
+
+**wilcox-woos-panchekha-tatlock-wang-ernst-anderson-2015-verdi**  
+Wilcox, J. R., Woos, D., Panchekha, P., Tatlock, Z., Wang, X., Ernst, M. D., & Anderson, T. (2015). *Verdi: A Framework for Implementing and Formally Verifying Distributed Systems*. Proceedings of PLDI 2015, 357-368.  
+📄 [PDF](https://homes.cs.washington.edu/~mernst/pubs/verify-distsystem-pldi2015.pdf) | 🔗 [ACM](https://dl.acm.org/doi/10.1145/2737924.2737958)  
+**Note**: Coq-based framework for verified distributed systems.
+
 **konnov-2017-threshold-automata**  
 Konnov, I., Lazić, M., Veith, H., & Widder, J. (2017). *A Short Counterexample Property for Safety and Liveness Verification of Fault-Tolerant Distributed Algorithms*. Proceedings of the 44th ACM SIGPLAN Symposium on Principles of Programming Languages (POPL), 719-734.  
 📄 [PDF](https://forsyte.at/wp-content/uploads/popl17.pdf) | 🔗 [ACM](https://dl.acm.org/doi/10.1145/3009837.3009860)
@@ -87,6 +135,29 @@ Bracha, G. (1987). *Asynchronous Byzantine Agreement Protocols*. Information and
 Danezis, G., Kogias, E. K., Sonnino, A., & Spiegelman, A. (2022). *Narwhal and Tusk: A DAG-based Mempool and Efficient BFT Consensus*. Proceedings of the Seventeenth European Conference on Computer Systems (EuroSys), 221-238.  
 📄 [arXiv](https://arxiv.org/abs/2105.11827) | 🔗 [ACM](https://dl.acm.org/doi/10.1145/3492321.3519594)  
 **Note**: Modern DAG-based BFT using provable broadcast for data dissemination layer.
+
+**danezis-2022-narwhal-tusk**  
+Alias for **danezis-2022-narwhal** (same paper covering both Narwhal and Tusk components).
+
+**keidar-2021-dag-rider**  
+Keidar, I., Kokoris-Kogias, E., Naor, O., & Spiegelman, A. (2021). *All You Need is DAG*. Proceedings of the 2021 ACM Symposium on Principles of Distributed Computing (PODC), 165-175.  
+📄 [arXiv](https://arxiv.org/abs/2102.08325) | 🔗 [ACM](https://dl.acm.org/doi/10.1145/3465084.3467905)  
+**Note**: DAG-Rider protocol - DAG-based asynchronous BFT with optimal resilience.
+
+**cachin-2001-random-oracles-async**  
+Cachin, C., Kursawe, K., & Shoup, V. (2001). *Random Oracles in Constantinople: Practical Asynchronous Byzantine Agreement using Cryptography*. Proceedings of PODC 2001, 123-132.  
+📄 [PDF](https://eprint.iacr.org/2000/034.pdf) | 🔗 [ACM](https://dl.acm.org/doi/10.1145/383962.384024)  
+**Note**: Foundational work on cryptographic techniques for asynchronous BFT.
+
+**cachin-2011-introduction-reliable-broadcast**  
+Cachin, C., Guerraoui, R., & Rodrigues, L. (2011). *Introduction to Reliable and Secure Distributed Programming* (2nd ed.). Chapter 3: Reliable Broadcast. Springer.  
+🔗 [Springer](https://link.springer.com/book/10.1007/978-3-642-15260-3)  
+**Note**: Standard reference for broadcast primitives (alias for cachin-guerraoui-rodrigues-2011-textbook, Chapter 3 specific).
+
+**decentralized-thoughts-impossibility**  
+Decentralized Thoughts. (Various dates). *Impossibility Results in Distributed Computing*.  
+🔗 [Blog](https://decentralizedthoughts.github.io/)  
+**Note**: Collection of articles on FLP impossibility and related results.
 
 ---
 

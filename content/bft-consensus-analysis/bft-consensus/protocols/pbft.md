@@ -229,7 +229,7 @@ sequenceDiagram
 1. For replica $i$ to commit value $v$ at sequence $s$:
    - $i$ must receive $2f + 1$ `COMMIT(v, s, m)` messages
 2. For replica $j$ to commit value $w \neq v$ at sequence $s$:
-   - $j$ must receive $2f + 1$ `COMMIT(w, s, m')$ messages
+   - $j$ must receive $2f + 1$ `COMMIT(w, s, m')` messages
 3. Two sets of $2f + 1$ messages (out of $n = 3f + 1$ replicas) must intersect in at least $f + 1$ replicas
 4. At most $f$ replicas are Byzantine, so at least one honest replica is in the intersection
 5. Honest replicas send `COMMIT` for only one value per sequence number

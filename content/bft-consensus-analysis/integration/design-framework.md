@@ -229,7 +229,7 @@ Use [[relationships|the relationships]] between BFT consensus and provable broad
 |-----------------------|-------------------|-----------|
 | Safety (no disagreement) | **Agreement**: All honest nodes deliver same message | Any reliable broadcast |
 | Validity (correct proposal accepted) | **Validity**: Honest sender's message delivered correctly | Reliable broadcast |
-| Non-repudiation (prove delivery) | **Provability**: Cryptographic proof of delivery | [[../provable-broadcast/provable-broadcast\|Provable broadcast]] |
+| Non-repudiation (prove delivery) | **Provability**: Cryptographic proof of delivery | [[../provable-broadcast/provable-broadcast|Provable broadcast]] |
 | Censorship resistance | **Guaranteed delivery**: Byzantine nodes can't block messages | Byzantine reliable broadcast |
 | Efficiency (low overhead) | **Compact proofs**: $O(1)$ or $O(\log n)$ certificate size | Threshold signatures |
 
