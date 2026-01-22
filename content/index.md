@@ -1,16 +1,7 @@
 ---
-title: Welcome to Quartz AB
+title: Home
 ---
 
-# Welcome to Quartz AB
+# Quartz AB
 
-This is an Obsidian vault published with [Quartz](https://quartz.jzhao.xyz/).
-
-## Getting Started
-
-Explore the content in this vault to learn more about various topics.
-
-## Navigation
-
-- [[About]]
-- [[Notes/Sample Note]]
+[[bft-consensus-analysis/index|BFT Consensus Analysis]]
