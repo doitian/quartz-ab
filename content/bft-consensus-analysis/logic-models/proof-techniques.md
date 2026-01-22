@@ -8,15 +8,15 @@ status: complete
 difficulty: advanced
 related:
   - [[overview|overview]]
-  - [[bft-consensus-analysis/logic-models/formal-verification|Formal Verification of Consensus Protocols]]
-  - [[bft-consensus-analysis/logic-models/temporal-logic|Temporal Logic for Distributed Systems]]
-  - [[bft-consensus-analysis/logic-models/knowledge-framework|Knowledge Framework for Distributed Systems]]
-  - [[bft-consensus-analysis/bft-consensus/properties/safety-properties|Safety Properties in BFT Consensus]]
-  - [[bft-consensus-analysis/bft-consensus/properties/liveness-properties|Liveness Properties in BFT Consensus]]
+  - [[bft-consensus-analysis/logic-models/formal-verification|Formal Verification Techniques]]
+  - [[bft-consensus-analysis/logic-models/temporal-logic|Expressing Safety & Liveness]]
+  - [[bft-consensus-analysis/logic-models/knowledge-framework|Halpern-Moses Knowledge Framework]]
+  - [[bft-consensus-analysis/bft-consensus/properties/safety-properties|Safety]]
+  - [[bft-consensus-analysis/bft-consensus/properties/liveness-properties|Liveness]]
 prerequisites:
   - [[overview|overview]]
-  - [[bft-consensus-analysis/logic-models/temporal-logic|Temporal Logic for Distributed Systems]]
-  - [[bft-consensus-analysis/logic-models/formal-verification|Formal Verification of Consensus Protocols]]
+  - [[bft-consensus-analysis/logic-models/temporal-logic|Expressing Safety & Liveness]]
+  - [[bft-consensus-analysis/logic-models/formal-verification|Formal Verification Techniques]]
 references:
   - lamport-2002-tla
   - lynch-1996-distributed-algorithms
@@ -267,7 +267,7 @@ $$
 
 **Note**: Requires **fairness assumption** (messages eventually delivered).
 
-→ See [[bft-consensus-analysis/logic-models/temporal-logic|Temporal Logic for Distributed Systems]] for temporal operators
+→ See [[bft-consensus-analysis/logic-models/temporal-logic|Expressing Safety & Liveness]] for temporal operators
 
 ## Technique 4: Simulation Arguments
 
@@ -299,7 +299,7 @@ Prove protocol $P_1$ satisfies property $\phi$ by showing:
 
 **Proof**: Show $R$ is a simulation relation → PBFT refines Byzantine Agreement.
 
-→ See [[bft-consensus-analysis/logic-models/formal-verification|Formal Verification of Consensus Protocols]] for refinement verification
+→ See [[bft-consensus-analysis/logic-models/formal-verification|Formal Verification Techniques]] for refinement verification
 
 ## Technique 5: Contradiction and Adversary Arguments
 
@@ -360,7 +360,7 @@ Prove protocol $P_1$ satisfies property $\phi$ by showing:
 
 **Insight**: Protocols progressively increase knowledge until decision is safe.
 
-→ See [[bft-consensus-analysis/logic-models/knowledge-framework|Knowledge Framework for Distributed Systems]] for epistemic logic
+→ See [[bft-consensus-analysis/logic-models/knowledge-framework|Halpern-Moses Knowledge Framework]] for epistemic logic
 
 ## Technique 7: Case Analysis
 
@@ -470,20 +470,20 @@ Study published proofs (PBFT paper, HotStuff paper) for proof patterns.
 
 **Within Logic Models**:
 - [[overview|overview]] — Introduction to logic models
-- [[bft-consensus-analysis/logic-models/temporal-logic|Temporal Logic for Distributed Systems]] — Temporal logic operators
-- [[bft-consensus-analysis/logic-models/knowledge-framework|Knowledge Framework for Distributed Systems]] — Epistemic logic for knowledge proofs
-- [[bft-consensus-analysis/logic-models/formal-verification|Formal Verification of Consensus Protocols]] — Automated verification techniques
+- [[bft-consensus-analysis/logic-models/temporal-logic|Expressing Safety & Liveness]] — Temporal logic operators
+- [[bft-consensus-analysis/logic-models/knowledge-framework|Halpern-Moses Knowledge Framework]] — Epistemic logic for knowledge proofs
+- [[bft-consensus-analysis/logic-models/formal-verification|Formal Verification Techniques]] — Automated verification techniques
 
 **Related Concepts**:
-- [[bft-consensus-analysis/bft-consensus/fundamentals|BFT Consensus Fundamentals]] — BFT consensus properties
-- [[bft-consensus-analysis/bft-consensus/properties/safety-properties|Safety Properties in BFT Consensus]] — Safety properties to prove
-- [[bft-consensus-analysis/bft-consensus/properties/liveness-properties|Liveness Properties in BFT Consensus]] — Liveness properties to prove
+- [[bft-consensus-analysis/bft-consensus/fundamentals|BFT Fundamentals]] — BFT consensus properties
+- [[bft-consensus-analysis/bft-consensus/properties/safety-properties|Safety]] — Safety properties to prove
+- [[bft-consensus-analysis/bft-consensus/properties/liveness-properties|Liveness]] — Liveness properties to prove
 - [[bft-consensus-analysis/bft-consensus/properties/fault-tolerance-threshold|Fault Tolerance Threshold: Why f < n/3 for Byzantine Failures]] — Why f < n/3
 
 **Protocols**:
-- [[bft-consensus-analysis/bft-consensus/protocols/pbft|PBFT: Practical Byzantine Fault Tolerance]] — PBFT proof example
-- [[bft-consensus-analysis/bft-consensus/protocols/hotstuff|HotStuff: Linear-Complexity BFT Consensus]] — HotStuff simplified proofs
-- [[bft-consensus-analysis/provable-broadcast/provable-broadcast|Provable Broadcast Protocol]] — Broadcast correctness proofs
+- [[bft-consensus-analysis/bft-consensus/protocols/pbft|PBFT]] — PBFT proof example
+- [[bft-consensus-analysis/bft-consensus/protocols/hotstuff|HotStuff]] — HotStuff simplified proofs
+- [[bft-consensus-analysis/provable-broadcast/provable-broadcast|Provable Broadcast Mechanisms]] — Broadcast correctness proofs
 
 **External Resources**:
 - Lamport: "Specifying Systems" (2002) — TLA+ proofs
@@ -493,4 +493,4 @@ Study published proofs (PBFT paper, HotStuff paper) for proof patterns.
 
 ---
 
-**Congratulations!** You've completed the Logic Models domain. You now have the tools to formally specify, verify, and prove correctness of Byzantine consensus protocols. Consider applying these techniques to analyze protocols in the [[bft-consensus-analysis/integration/relationships|Relationships Between BFT, Broadcast, and Logic Models]] section.
+**Congratulations!** You've completed the Logic Models domain. You now have the tools to formally specify, verify, and prove correctness of Byzantine consensus protocols. Consider applying these techniques to analyze protocols in the [[bft-consensus-analysis/integration/relationships|Three-Way Connections]] section.

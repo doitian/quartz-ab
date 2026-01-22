@@ -9,17 +9,17 @@ synchrony_model: fully-asynchronous
 fault_tolerance: "f < n/3"
 year_introduced: 2016
 related:
-  - "[[bft-consensus-analysis/bft-consensus/protocols/pbft|PBFT: Practical Byzantine Fault Tolerance]]"
-  - "[[bft-consensus-analysis/bft-consensus/protocols/hotstuff|HotStuff: Linear-Complexity BFT Consensus]]"
-  - "[[bft-consensus-analysis/bft-consensus/protocols/protocol-comparison|BFT Protocol Comparison: PBFT, HoneyBadgerBFT, and HotStuff]]"
-  - "[[bft-consensus-analysis/provable-broadcast/provable-broadcast|Provable Broadcast Protocol]]"
+  - "[[bft-consensus-analysis/bft-consensus/protocols/pbft|PBFT]]"
+  - "[[bft-consensus-analysis/bft-consensus/protocols/hotstuff|HotStuff]]"
+  - "[[bft-consensus-analysis/bft-consensus/protocols/protocol-comparison|Protocol Comparison]]"
+  - "[[bft-consensus-analysis/provable-broadcast/provable-broadcast|Provable Broadcast Mechanisms]]"
 references:
   - miller-2016-honeybadger
   - comprehensive-bft-survey-2022
 prerequisites:
-  - "[[bft-consensus-analysis/bft-consensus/fundamentals|BFT Consensus Fundamentals]]"
+  - "[[bft-consensus-analysis/bft-consensus/fundamentals|BFT Fundamentals]]"
   - "[[bft-consensus-analysis/bft-consensus/byzantine-failures|Byzantine Failures]]"
-  - "[[bft-consensus-analysis/bft-consensus/properties/liveness-properties|Liveness Properties in BFT Consensus]]"
+  - "[[bft-consensus-analysis/bft-consensus/properties/liveness-properties|Liveness]]"
 ---
 
 # HoneyBadgerBFT: Asynchronous Byzantine Consensus
@@ -50,7 +50,7 @@ Fischer, Lynch, and Paterson (1985) proved that **deterministic consensus is imp
 
 **HoneyBadgerBFT's Approach**: Use **common coin** (shared randomness) to break symmetry and achieve probabilistic termination.
 
-**See [[bft-consensus-analysis/bft-consensus/properties/liveness-properties|Liveness Properties in BFT Consensus]] for FLP discussion.**
+**See [[bft-consensus-analysis/bft-consensus/properties/liveness-properties|Liveness]] for FLP discussion.**
 
 ## Protocol Architecture
 
@@ -89,7 +89,7 @@ graph TD
 - Nodes exchange validation messages when they receive enough shards
 - Deliver when $2f + 1$ nodes validate
 
-**See [[bft-consensus-analysis/provable-broadcast/reliable-broadcast|Reliable Broadcast]] and [[bft-consensus-analysis/provable-broadcast/provable-broadcast|Provable Broadcast Protocol]] for details.**
+**See [[bft-consensus-analysis/provable-broadcast/reliable-broadcast|Reliable Broadcast]] and [[bft-consensus-analysis/provable-broadcast/provable-broadcast|Provable Broadcast Mechanisms]] for details.**
 
 ### 2. Binary Byzantine Agreement (BBA)
 
@@ -202,7 +202,7 @@ HoneyBadgerBFT runs ACS repeatedly to agree on batches of transactions.
 - At least one honest node will vote 1 for this RBC in BBA
 - BBA ensures agreement, so all nodes will eventually include this proposal
 
-**See [[bft-consensus-analysis/bft-consensus/properties/safety-properties|Safety Properties in BFT Consensus]] for general safety framework.**
+**See [[bft-consensus-analysis/bft-consensus/properties/safety-properties|Safety]] for general safety framework.**
 
 ## Liveness Guarantees
 
@@ -222,7 +222,7 @@ HoneyBadgerBFT runs ACS repeatedly to agree on batches of transactions.
 
 **Trade-off**: Guaranteed liveness vs. higher latency variance.
 
-**See [[bft-consensus-analysis/bft-consensus/properties/liveness-properties|Liveness Properties in BFT Consensus]] for asynchronous liveness discussion.**
+**See [[bft-consensus-analysis/bft-consensus/properties/liveness-properties|Liveness]] for asynchronous liveness discussion.**
 
 ## Message Complexity
 
@@ -349,7 +349,7 @@ Where $B$ = batch size.
 
 **Examples**: DAG-Rider, Tusk
 
-**See [[bft-consensus-analysis/integration/case-studies/dag-rider-analysis|DAG-Rider: Asynchronous DAG-Based BFT Analysis]] case study.**
+**See [[bft-consensus-analysis/integration/case-studies/dag-rider-analysis|DAG-Based BFT Analysis]] case study.**
 
 ## Comparison to PBFT and HotStuff
 
@@ -364,7 +364,7 @@ Where $B$ = batch size.
 | **Setup** | Simple | DKG required | Simple |
 | **Best For** | Fast LANs, predictable networks | Adversarial networks, WANs | Large-scale, efficient |
 
-**See [[bft-consensus-analysis/bft-consensus/protocols/protocol-comparison|BFT Protocol Comparison: PBFT, HoneyBadgerBFT, and HotStuff]] for detailed analysis.**
+**See [[bft-consensus-analysis/bft-consensus/protocols/protocol-comparison|Protocol Comparison]] for detailed analysis.**
 
 ## Theoretical Significance
 
@@ -390,13 +390,13 @@ Where $B$ = batch size.
 
 ## See Also
 
-- [[bft-consensus-analysis/bft-consensus/protocols/pbft|PBFT: Practical Byzantine Fault Tolerance]] - Partially synchronous alternative
-- [[bft-consensus-analysis/bft-consensus/protocols/hotstuff|HotStuff: Linear-Complexity BFT Consensus]] - Modern linear-complexity protocol
-- [[bft-consensus-analysis/bft-consensus/protocols/protocol-comparison|BFT Protocol Comparison: PBFT, HoneyBadgerBFT, and HotStuff]] - Side-by-side comparison
+- [[bft-consensus-analysis/bft-consensus/protocols/pbft|PBFT]] - Partially synchronous alternative
+- [[bft-consensus-analysis/bft-consensus/protocols/hotstuff|HotStuff]] - Modern linear-complexity protocol
+- [[bft-consensus-analysis/bft-consensus/protocols/protocol-comparison|Protocol Comparison]] - Side-by-side comparison
 - [[bft-consensus-analysis/provable-broadcast/reliable-broadcast|Reliable Broadcast]] - Building block for HoneyBadgerBFT
-- [[bft-consensus-analysis/provable-broadcast/provable-broadcast|Provable Broadcast Protocol]] - Broadcast with delivery proofs
-- [[bft-consensus-analysis/bft-consensus/properties/liveness-properties|Liveness Properties in BFT Consensus]] - How randomization enables liveness
-- [[bft-consensus-analysis/integration/case-studies/dag-rider-analysis|DAG-Rider: Asynchronous DAG-Based BFT Analysis]] - Modern DAG-based async BFT (case study)
+- [[bft-consensus-analysis/provable-broadcast/provable-broadcast|Provable Broadcast Mechanisms]] - Broadcast with delivery proofs
+- [[bft-consensus-analysis/bft-consensus/properties/liveness-properties|Liveness]] - How randomization enables liveness
+- [[bft-consensus-analysis/integration/case-studies/dag-rider-analysis|DAG-Based BFT Analysis]] - Modern DAG-based async BFT (case study)
 
 ## Further Reading
 

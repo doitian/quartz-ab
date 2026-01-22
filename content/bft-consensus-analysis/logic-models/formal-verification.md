@@ -8,13 +8,13 @@ status: complete
 difficulty: intermediate
 related:
   - [[overview|overview]]
-  - [[bft-consensus-analysis/logic-models/temporal-logic|Temporal Logic for Distributed Systems]]
-  - [[bft-consensus-analysis/logic-models/threshold-automata|Threshold Automata for Parameterized Verification]]
+  - [[bft-consensus-analysis/logic-models/temporal-logic|Expressing Safety & Liveness]]
+  - [[bft-consensus-analysis/logic-models/threshold-automata|Threshold Automata]]
   - [[bft-consensus-analysis/logic-models/proof-techniques|Proof Techniques for Consensus Protocols]]
-  - [[bft-consensus-analysis/bft-consensus/fundamentals|BFT Consensus Fundamentals]]
+  - [[bft-consensus-analysis/bft-consensus/fundamentals|BFT Fundamentals]]
 prerequisites:
   - [[overview|overview]]
-  - [[bft-consensus-analysis/logic-models/temporal-logic|Temporal Logic for Distributed Systems]]
+  - [[bft-consensus-analysis/logic-models/temporal-logic|Expressing Safety & Liveness]]
 references:
   - lamport-2002-tla
   - hawblitzel-howell-kapritsos-lorch-parno-roberts-setty-zill-2015-ironfleet
@@ -71,7 +71,7 @@ references:
 
 **Best For**: Small to medium systems, finding bugs
 
-→ See [[bft-consensus-analysis/logic-models/threshold-automata|Threshold Automata for Parameterized Verification]] for specialized model checking of BFT protocols
+→ See [[bft-consensus-analysis/logic-models/threshold-automata|Threshold Automata]] for specialized model checking of BFT protocols
 
 ### 2. Theorem Proving
 
@@ -213,7 +213,7 @@ tlc TwoPhaseCommit.tla
 - Safety (Agreement) verified ✓
 - Liveness requires additional assumptions (TM recovery)
 
-→ See [[bft-consensus-analysis/logic-models/temporal-logic|Temporal Logic for Distributed Systems]] for LTL/CTL specifications
+→ See [[bft-consensus-analysis/logic-models/temporal-logic|Expressing Safety & Liveness]] for LTL/CTL specifications
 
 ## Theorem Proving: Coq Example
 
@@ -319,7 +319,7 @@ Qed.
 - **Partial Order Reduction**: Avoid exploring equivalent interleavings
 - **Symbolic Model Checking**: Use BDDs (binary decision diagrams)
 
-→ See [[bft-consensus-analysis/logic-models/threshold-automata|Threshold Automata for Parameterized Verification]] for parameterized abstraction
+→ See [[bft-consensus-analysis/logic-models/threshold-automata|Threshold Automata]] for parameterized abstraction
 
 ### 2. Liveness is Hard
 
@@ -455,15 +455,15 @@ Liveness == WF_vars(Next) => <>[]Decided
 
 **Within Logic Models**:
 - [[overview|overview]] — Introduction to logic models
-- [[bft-consensus-analysis/logic-models/temporal-logic|Temporal Logic for Distributed Systems]] — Temporal logic for specifications
-- [[bft-consensus-analysis/logic-models/threshold-automata|Threshold Automata for Parameterized Verification]] — Parameterized verification
+- [[bft-consensus-analysis/logic-models/temporal-logic|Expressing Safety & Liveness]] — Temporal logic for specifications
+- [[bft-consensus-analysis/logic-models/threshold-automata|Threshold Automata]] — Parameterized verification
 - [[bft-consensus-analysis/logic-models/proof-techniques|Proof Techniques for Consensus Protocols]] — Manual proof strategies
 
 **Related Concepts**:
-- [[bft-consensus-analysis/bft-consensus/fundamentals|BFT Consensus Fundamentals]] — BFT consensus basics
-- [[bft-consensus-analysis/bft-consensus/properties/safety-properties|Safety Properties in BFT Consensus]] — Safety properties to verify
-- [[bft-consensus-analysis/bft-consensus/properties/liveness-properties|Liveness Properties in BFT Consensus]] — Liveness properties to verify
-- [[bft-consensus-analysis/bft-consensus/protocols/pbft|PBFT: Practical Byzantine Fault Tolerance]] — PBFT verification example
+- [[bft-consensus-analysis/bft-consensus/fundamentals|BFT Fundamentals]] — BFT consensus basics
+- [[bft-consensus-analysis/bft-consensus/properties/safety-properties|Safety]] — Safety properties to verify
+- [[bft-consensus-analysis/bft-consensus/properties/liveness-properties|Liveness]] — Liveness properties to verify
+- [[bft-consensus-analysis/bft-consensus/protocols/pbft|PBFT]] — PBFT verification example
 
 **Tools**:
 - [TLA+ Toolbox](https://lamport.azurewebsites.net/tla/toolbox.html)

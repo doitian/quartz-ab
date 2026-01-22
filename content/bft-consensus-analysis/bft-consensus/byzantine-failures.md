@@ -7,9 +7,9 @@ updated: 2026-01-21
 status: complete
 difficulty: introductory
 related:
-  - "[[bft-consensus-analysis/bft-consensus/fundamentals|BFT Consensus Fundamentals]]"
+  - "[[bft-consensus-analysis/bft-consensus/fundamentals|BFT Fundamentals]]"
   - "[[bft-consensus-analysis/bft-consensus/properties/fault-tolerance-threshold|Fault Tolerance Threshold: Why f < n/3 for Byzantine Failures]]"
-  - "[[bft-consensus-analysis/bft-consensus/properties/safety-properties|Safety Properties in BFT Consensus]]"
+  - "[[bft-consensus-analysis/bft-consensus/properties/safety-properties|Safety]]"
 references:
   - lamport-shostak-pease-1982-byzantine
   - fischer-lynch-paterson-1985-flp
@@ -257,7 +257,7 @@ This ensures that conflicting decisions cannot both gather quorums.
 
 - **Model Checking**: Exhaustively test all possible Byzantine behaviors in small models
 - **Theorem Proving**: Mechanically verify that protocol maintains safety/liveness despite f Byzantine nodes
-- See [[bft-consensus-analysis/logic-models/formal-verification|Formal Verification of Consensus Protocols]] for techniques
+- See [[bft-consensus-analysis/logic-models/formal-verification|Formal Verification Techniques]] for techniques
 
 ## Historical Context
 
@@ -283,13 +283,13 @@ Fischer, Lynch, and Paterson proved that **deterministic consensus is impossible
 
 ## See Also
 
-- [[bft-consensus-analysis/bft-consensus/fundamentals|BFT Consensus Fundamentals]] - Core BFT consensus concepts
-- [[bft-consensus-analysis/bft-consensus/properties/safety-properties|Safety Properties in BFT Consensus]] - What Byzantine nodes cannot violate
-- [[bft-consensus-analysis/bft-consensus/properties/liveness-properties|Liveness Properties in BFT Consensus]] - Progress guarantees despite Byzantine nodes
+- [[bft-consensus-analysis/bft-consensus/fundamentals|BFT Fundamentals]] - Core BFT consensus concepts
+- [[bft-consensus-analysis/bft-consensus/properties/safety-properties|Safety]] - What Byzantine nodes cannot violate
+- [[bft-consensus-analysis/bft-consensus/properties/liveness-properties|Liveness]] - Progress guarantees despite Byzantine nodes
 - [[bft-consensus-analysis/bft-consensus/properties/fault-tolerance-threshold|Fault Tolerance Threshold: Why f < n/3 for Byzantine Failures]] - Mathematical foundation for f < n/3
-- [[bft-consensus-analysis/bft-consensus/protocols/pbft|PBFT: Practical Byzantine Fault Tolerance]] - First practical Byzantine fault tolerant protocol
-- [[bft-consensus-analysis/bft-consensus/protocols/honeybadger-bft|HoneyBadgerBFT: Asynchronous Byzantine Consensus]] - Asynchronous BFT protocol
-- [[bft-consensus-analysis/bft-consensus/protocols/hotstuff|HotStuff: Linear-Complexity BFT Consensus]] - Modern linear-complexity BFT protocol
+- [[bft-consensus-analysis/bft-consensus/protocols/pbft|PBFT]] - First practical Byzantine fault tolerant protocol
+- [[bft-consensus-analysis/bft-consensus/protocols/honeybadger-bft|HoneyBadgerBFT]] - Asynchronous BFT protocol
+- [[bft-consensus-analysis/bft-consensus/protocols/hotstuff|HotStuff]] - Modern linear-complexity BFT protocol
 
 ## Further Reading
 

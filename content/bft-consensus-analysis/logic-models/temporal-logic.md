@@ -8,10 +8,10 @@ status: complete
 difficulty: intermediate
 related:
   - [[overview|overview]]
-  - [[bft-consensus-analysis/logic-models/knowledge-framework|Knowledge Framework for Distributed Systems]]
-  - [[bft-consensus-analysis/logic-models/formal-verification|Formal Verification of Consensus Protocols]]
-  - [[bft-consensus-analysis/bft-consensus/properties/safety-properties|Safety Properties in BFT Consensus]]
-  - [[bft-consensus-analysis/bft-consensus/properties/liveness-properties|Liveness Properties in BFT Consensus]]
+  - [[bft-consensus-analysis/logic-models/knowledge-framework|Halpern-Moses Knowledge Framework]]
+  - [[bft-consensus-analysis/logic-models/formal-verification|Formal Verification Techniques]]
+  - [[bft-consensus-analysis/bft-consensus/properties/safety-properties|Safety]]
+  - [[bft-consensus-analysis/bft-consensus/properties/liveness-properties|Liveness]]
 prerequisites:
   - [[overview|overview]]
 references:
@@ -374,7 +374,7 @@ flowchart TD
     style G fill:#f8d7da
 ```
 
-→ See [[bft-consensus-analysis/logic-models/formal-verification|Formal Verification of Consensus Protocols]] for detailed verification techniques
+→ See [[bft-consensus-analysis/logic-models/formal-verification|Formal Verification Techniques]] for detailed verification techniques
 
 ## Bounded Temporal Operators
 
@@ -425,7 +425,7 @@ $$
 
 **Application**: Express sophisticated distributed system properties.
 
-→ See [[bft-consensus-analysis/logic-models/knowledge-framework|Knowledge Framework for Distributed Systems]] for knowledge operators
+→ See [[bft-consensus-analysis/logic-models/knowledge-framework|Halpern-Moses Knowledge Framework]] for knowledge operators
 
 ## Temporal Patterns in Consensus
 
@@ -491,14 +491,14 @@ $$
 
 **Within Logic Models**:
 - [[overview|overview]] — Introduction to logic models
-- [[bft-consensus-analysis/logic-models/knowledge-framework|Knowledge Framework for Distributed Systems]] — Epistemic logic for distributed systems
-- [[bft-consensus-analysis/logic-models/formal-verification|Formal Verification of Consensus Protocols]] — Verification techniques using temporal logic
+- [[bft-consensus-analysis/logic-models/knowledge-framework|Halpern-Moses Knowledge Framework]] — Epistemic logic for distributed systems
+- [[bft-consensus-analysis/logic-models/formal-verification|Formal Verification Techniques]] — Verification techniques using temporal logic
 - [[bft-consensus-analysis/logic-models/proof-techniques|Proof Techniques for Consensus Protocols]] — Proving temporal properties
 
 **Related Concepts**:
-- [[bft-consensus-analysis/bft-consensus/properties/safety-properties|Safety Properties in BFT Consensus]] — Safety in BFT consensus
-- [[bft-consensus-analysis/bft-consensus/properties/liveness-properties|Liveness Properties in BFT Consensus]] — Liveness in BFT consensus
-- [[bft-consensus-analysis/bft-consensus/fundamentals|BFT Consensus Fundamentals]] — Consensus properties overview
+- [[bft-consensus-analysis/bft-consensus/properties/safety-properties|Safety]] — Safety in BFT consensus
+- [[bft-consensus-analysis/bft-consensus/properties/liveness-properties|Liveness]] — Liveness in BFT consensus
+- [[bft-consensus-analysis/bft-consensus/fundamentals|BFT Fundamentals]] — Consensus properties overview
 - [[bft-consensus-analysis/provable-broadcast/properties|Provable Broadcast Properties]] — Temporal properties of broadcast
 
 **External Resources**:
@@ -509,4 +509,4 @@ $$
 
 ---
 
-**Next**: Explore [[bft-consensus-analysis/logic-models/formal-verification|Formal Verification of Consensus Protocols]] to see how temporal logic is used to verify consensus protocols.
+**Next**: Explore [[bft-consensus-analysis/logic-models/formal-verification|Formal Verification Techniques]] to see how temporal logic is used to verify consensus protocols.

@@ -11,12 +11,12 @@ synchrony_model: fully-asynchronous
 fault_tolerance: "f < n/3"
 year_introduced: 2016
 related:
-  - "[[bft-consensus-analysis/integration/relationships|Relationships Between BFT, Broadcast, and Logic Models]]"
-  - "[[bft-consensus-analysis/integration/design-framework|Unified Design Framework for BFT Systems]]"
-  - "[[bft-consensus-analysis/bft-consensus/protocols/honeybadger-bft|HoneyBadgerBFT: Asynchronous Byzantine Consensus]]"
+  - "[[bft-consensus-analysis/integration/relationships|Three-Way Connections]]"
+  - "[[bft-consensus-analysis/integration/design-framework|Applying All Three Perspectives]]"
+  - "[[bft-consensus-analysis/bft-consensus/protocols/honeybadger-bft|HoneyBadgerBFT]]"
   - "[[bft-consensus-analysis/provable-broadcast/reliable-broadcast|Reliable Broadcast]]"
-  - "[[bft-consensus-analysis/logic-models/temporal-logic|Temporal Logic for Distributed Systems]]"
-  - "[[bft-consensus-analysis/integration/case-studies/dag-rider-analysis|DAG-Rider: Asynchronous DAG-Based BFT Analysis]]"
+  - "[[bft-consensus-analysis/logic-models/temporal-logic|Expressing Safety & Liveness]]"
+  - "[[bft-consensus-analysis/integration/case-studies/dag-rider-analysis|DAG-Based BFT Analysis]]"
 references:
   - miller-2016-honeybadger
   - cachin-2001-random-oracles-async
@@ -477,7 +477,7 @@ graph TD
 
 ### 3.1 Formalizing HoneyBadger Properties
 
-Use [[bft-consensus-analysis/logic-models/temporal-logic|Temporal Logic for Distributed Systems]] to specify HoneyBadger's safety and liveness.
+Use [[bft-consensus-analysis/logic-models/temporal-logic|Expressing Safety & Liveness]] to specify HoneyBadger's safety and liveness.
 
 #### Safety (Agreement)
 
@@ -653,7 +653,7 @@ Once ACS terminates, consensus outputs.
 
 ### 3.5 Knowledge-Based Analysis
 
-**See [[bft-consensus-analysis/logic-models/knowledge-framework|Knowledge Framework for Distributed Systems]] for epistemic logic foundations.**
+**See [[bft-consensus-analysis/logic-models/knowledge-framework|Halpern-Moses Knowledge Framework]] for epistemic logic foundations.**
 
 **Question**: Why can't asynchronous consensus rely on knowledge of message delivery?
 
@@ -857,7 +857,7 @@ graph LR
 ---
 
 **See Also**:
-- [[bft-consensus-analysis/integration/case-studies/dag-rider-analysis|DAG-Rider: Asynchronous DAG-Based BFT Analysis]] - Another asynchronous BFT protocol using DAG structure
-- [[bft-consensus-analysis/integration/design-framework|Unified Design Framework for BFT Systems]] - Apply this integrated methodology to design your own protocols
-- [[bft-consensus-analysis/bft-consensus/protocols/protocol-comparison|BFT Protocol Comparison: PBFT, HoneyBadgerBFT, and HotStuff]] - Compare HoneyBadger to PBFT and HotStuff
-- [[bft-consensus-analysis/provable-broadcast/applications|Provable Broadcast Applications]] - Other applications of provable broadcast
+- [[bft-consensus-analysis/integration/case-studies/dag-rider-analysis|DAG-Based BFT Analysis]] - Another asynchronous BFT protocol using DAG structure
+- [[bft-consensus-analysis/integration/design-framework|Applying All Three Perspectives]] - Apply this integrated methodology to design your own protocols
+- [[bft-consensus-analysis/bft-consensus/protocols/protocol-comparison|Protocol Comparison]] - Compare HoneyBadger to PBFT and HotStuff
+- [[bft-consensus-analysis/provable-broadcast/applications|Real-World Usage in Blockchain & DLT]] - Other applications of provable broadcast

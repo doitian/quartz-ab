@@ -10,11 +10,11 @@ fault_model: byzantine
 fault_tolerance: "f < n/3"
 related:
   - "[[bft-consensus-analysis/provable-broadcast/byzantine-reliable-broadcast|Byzantine Reliable Broadcast]]"
-  - "[[bft-consensus-analysis/provable-broadcast/overview|Provable Broadcast: Overview]]"
+  - "[[bft-consensus-analysis/provable-broadcast/overview|Provable Broadcast Overview]]"
   - "[[bft-consensus-analysis/provable-broadcast/properties|Provable Broadcast Properties]]"
-  - "[[bft-consensus-analysis/provable-broadcast/vs-reliable-broadcast|Provable Broadcast vs Reliable Broadcast]]"
-  - "[[bft-consensus-analysis/bft-consensus/protocols/hotstuff|HotStuff: Linear-Complexity BFT Consensus]]"
-  - "[[bft-consensus-analysis/bft-consensus/protocols/honeybadger-bft|HoneyBadgerBFT: Asynchronous Byzantine Consensus]]"
+  - "[[bft-consensus-analysis/provable-broadcast/vs-reliable-broadcast|Provable vs Reliable Broadcast]]"
+  - "[[bft-consensus-analysis/bft-consensus/protocols/hotstuff|HotStuff]]"
+  - "[[bft-consensus-analysis/bft-consensus/protocols/honeybadger-bft|HoneyBadgerBFT]]"
 references:
   - decentralized-thoughts-2022-provable-broadcast
   - cachin-guerraoui-rodrigues-2011-reliable-broadcast
@@ -84,7 +84,7 @@ There are two main approaches to implementing provable broadcast: **signature-ba
 
 ### Variant 1: Signature-Based Provable Broadcast
 
-Used in protocols like **[[bft-consensus-analysis/bft-consensus/protocols/hotstuff|HotStuff: Linear-Complexity BFT Consensus]]**.
+Used in protocols like **[[bft-consensus-analysis/bft-consensus/protocols/hotstuff|HotStuff]]**.
 
 #### Protocol Steps
 
@@ -177,7 +177,7 @@ sequenceDiagram
 
 ### Variant 2: Threshold Signature Provable Broadcast
 
-Used in protocols like **[[bft-consensus-analysis/bft-consensus/protocols/honeybadger-bft|HoneyBadgerBFT: Asynchronous Byzantine Consensus]]**.
+Used in protocols like **[[bft-consensus-analysis/bft-consensus/protocols/honeybadger-bft|HoneyBadgerBFT]]**.
 
 #### Setup Phase (One-time)
 
@@ -426,7 +426,7 @@ Round i+1: Include cert_i as proof of previous round
 # Amortizes cost: 2 rounds become 1 amortized
 ```
 
-Used in: **[[bft-consensus-analysis/bft-consensus/protocols/hotstuff|HotStuff: Linear-Complexity BFT Consensus]]** (pipelined BFT)
+Used in: **[[bft-consensus-analysis/bft-consensus/protocols/hotstuff|HotStuff]]** (pipelined BFT)
 
 ### 3. Aggregated Signatures (BLS)
 
@@ -586,14 +586,14 @@ provable_broadcast(vertex)
 
 - **[[bft-consensus-analysis/provable-broadcast/byzantine-reliable-broadcast|Byzantine Reliable Broadcast]]**: Foundation without certificates
 - **[[bft-consensus-analysis/provable-broadcast/properties|Provable Broadcast Properties]]**: Formal property specifications
-- **[[bft-consensus-analysis/provable-broadcast/vs-reliable-broadcast|Provable Broadcast vs Reliable Broadcast]]**: Detailed comparison
-- **[[bft-consensus-analysis/bft-consensus/protocols/hotstuff|HotStuff: Linear-Complexity BFT Consensus]]**: Quorum certificate usage
-- **[[bft-consensus-analysis/bft-consensus/protocols/honeybadger-bft|HoneyBadgerBFT: Asynchronous Byzantine Consensus]]**: Threshold signature usage
-- **[[bft-consensus-analysis/provable-broadcast/applications|Provable Broadcast Applications]]**: Use cases in blockchain and distributed systems
+- **[[bft-consensus-analysis/provable-broadcast/vs-reliable-broadcast|Provable vs Reliable Broadcast]]**: Detailed comparison
+- **[[bft-consensus-analysis/bft-consensus/protocols/hotstuff|HotStuff]]**: Quorum certificate usage
+- **[[bft-consensus-analysis/bft-consensus/protocols/honeybadger-bft|HoneyBadgerBFT]]**: Threshold signature usage
+- **[[bft-consensus-analysis/provable-broadcast/applications|Real-World Usage in Blockchain & DLT]]**: Use cases in blockchain and distributed systems
 
 ## References
 
 - Decentralized Thoughts (2022). "What is Provable Broadcast?"
 - Yin et al. (2019). "HotStuff: BFT Consensus with Linearity and Responsiveness"
 - Miller et al. (2016). "The Honey Badger of BFT Protocols"
-- See **[[bft-consensus-analysis/references|References: Bibliography and External Sources]]** for complete bibliography
+- See **[[bft-consensus-analysis/references|References]]** for complete bibliography

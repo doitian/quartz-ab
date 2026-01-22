@@ -7,8 +7,8 @@ updated: 2026-01-21
 status: complete
 difficulty: intermediate
 related:
-  - "[[bft-consensus-analysis/bft-consensus/properties/liveness-properties|Liveness Properties in BFT Consensus]]"
-  - "[[bft-consensus-analysis/bft-consensus/fundamentals|BFT Consensus Fundamentals]]"
+  - "[[bft-consensus-analysis/bft-consensus/properties/liveness-properties|Liveness]]"
+  - "[[bft-consensus-analysis/bft-consensus/fundamentals|BFT Fundamentals]]"
   - "[[bft-consensus-analysis/bft-consensus/byzantine-failures|Byzantine Failures]]"
   - "[[bft-consensus-analysis/bft-consensus/properties/fault-tolerance-threshold|Fault Tolerance Threshold: Why f < n/3 for Byzantine Failures]]"
 references:
@@ -308,7 +308,7 @@ if node is locked on value v at round r:
 6. Contradiction: honest node cannot have sent COMMIT for both $v$ and $w$
 7. Therefore $v = w$
 
-**See [[bft-consensus-analysis/bft-consensus/protocols/pbft|PBFT: Practical Byzantine Fault Tolerance]] for full protocol details.**
+**See [[bft-consensus-analysis/bft-consensus/protocols/pbft|PBFT]] for full protocol details.**
 
 ## Temporal Logic Specification
 
@@ -330,7 +330,7 @@ $$
 
 This states: "Always, if a node decides $v$, then some node must have proposed $v$."
 
-**See [[bft-consensus-analysis/logic-models/temporal-logic|Temporal Logic for Distributed Systems]] for detailed treatment of formal specifications.**
+**See [[bft-consensus-analysis/logic-models/temporal-logic|Expressing Safety & Liveness]] for detailed treatment of formal specifications.**
 
 ## Safety vs. Liveness Trade-offs
 
@@ -385,17 +385,17 @@ def monitor_safety(node1_chain, node2_chain):
 - **Model Checkers**: TLA+, Spin can verify safety on execution traces
 - **Formal Verification**: Coq, Isabelle/HOL can prove safety mechanically
 
-**See [[bft-consensus-analysis/logic-models/formal-verification|Formal Verification of Consensus Protocols]] for verification techniques.**
+**See [[bft-consensus-analysis/logic-models/formal-verification|Formal Verification Techniques]] for verification techniques.**
 
 ## See Also
 
-- [[bft-consensus-analysis/bft-consensus/properties/liveness-properties|Liveness Properties in BFT Consensus]] - Complementary progress guarantees
-- [[bft-consensus-analysis/bft-consensus/fundamentals|BFT Consensus Fundamentals]] - Core BFT concepts
+- [[bft-consensus-analysis/bft-consensus/properties/liveness-properties|Liveness]] - Complementary progress guarantees
+- [[bft-consensus-analysis/bft-consensus/fundamentals|BFT Fundamentals]] - Core BFT concepts
 - [[bft-consensus-analysis/bft-consensus/byzantine-failures|Byzantine Failures]] - Fault model that safety must tolerate
 - [[bft-consensus-analysis/bft-consensus/properties/fault-tolerance-threshold|Fault Tolerance Threshold: Why f < n/3 for Byzantine Failures]] - Why $f < n/3$ is necessary
-- [[bft-consensus-analysis/bft-consensus/protocols/pbft|PBFT: Practical Byzantine Fault Tolerance]] - Safety mechanisms in PBFT
-- [[bft-consensus-analysis/bft-consensus/protocols/hotstuff|HotStuff: Linear-Complexity BFT Consensus]] - Modern safety-preserving optimizations
-- [[bft-consensus-analysis/logic-models/temporal-logic|Temporal Logic for Distributed Systems]] - Formal specification of safety properties
+- [[bft-consensus-analysis/bft-consensus/protocols/pbft|PBFT]] - Safety mechanisms in PBFT
+- [[bft-consensus-analysis/bft-consensus/protocols/hotstuff|HotStuff]] - Modern safety-preserving optimizations
+- [[bft-consensus-analysis/logic-models/temporal-logic|Expressing Safety & Liveness]] - Formal specification of safety properties
 
 ## Further Reading
 

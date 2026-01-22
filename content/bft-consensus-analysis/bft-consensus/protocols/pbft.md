@@ -9,16 +9,16 @@ synchrony_model: partially-synchronous
 fault_tolerance: "f < n/3"
 year_introduced: 1999
 related:
-  - "[[bft-consensus-analysis/bft-consensus/protocols/hotstuff|HotStuff: Linear-Complexity BFT Consensus]]"
-  - "[[bft-consensus-analysis/bft-consensus/protocols/protocol-comparison|BFT Protocol Comparison: PBFT, HoneyBadgerBFT, and HotStuff]]"
-  - "[[bft-consensus-analysis/bft-consensus/fundamentals|BFT Consensus Fundamentals]]"
-  - "[[bft-consensus-analysis/bft-consensus/properties/safety-properties|Safety Properties in BFT Consensus]]"
-  - "[[bft-consensus-analysis/bft-consensus/properties/liveness-properties|Liveness Properties in BFT Consensus]]"
+  - "[[bft-consensus-analysis/bft-consensus/protocols/hotstuff|HotStuff]]"
+  - "[[bft-consensus-analysis/bft-consensus/protocols/protocol-comparison|Protocol Comparison]]"
+  - "[[bft-consensus-analysis/bft-consensus/fundamentals|BFT Fundamentals]]"
+  - "[[bft-consensus-analysis/bft-consensus/properties/safety-properties|Safety]]"
+  - "[[bft-consensus-analysis/bft-consensus/properties/liveness-properties|Liveness]]"
 references:
   - castro-liskov-1999-pbft
   - decentralized-thoughts-2025-pbft
 prerequisites:
-  - "[[bft-consensus-analysis/bft-consensus/fundamentals|BFT Consensus Fundamentals]]"
+  - "[[bft-consensus-analysis/bft-consensus/fundamentals|BFT Fundamentals]]"
   - "[[bft-consensus-analysis/bft-consensus/byzantine-failures|Byzantine Failures]]"
   - "[[bft-consensus-analysis/bft-consensus/properties/fault-tolerance-threshold|Fault Tolerance Threshold: Why f < n/3 for Byzantine Failures]]"
 ---
@@ -238,7 +238,7 @@ sequenceDiagram
 
 **View Change Safety**: The `NEW-VIEW` protocol ensures that any value that might have been committed in the previous view is re-proposed in the new view, preventing loss of committed values.
 
-**See [[bft-consensus-analysis/bft-consensus/properties/safety-properties|Safety Properties in BFT Consensus]] for general safety guarantees.**
+**See [[bft-consensus-analysis/bft-consensus/properties/safety-properties|Safety]] for general safety guarantees.**
 
 ## Liveness Under Partial Synchrony
 
@@ -254,7 +254,7 @@ sequenceDiagram
 
 **Expected Time to Commit**: $O(1)$ rounds in the normal case (no view changes).
 
-**See [[bft-consensus-analysis/bft-consensus/properties/liveness-properties|Liveness Properties in BFT Consensus]] for general liveness guarantees.**
+**See [[bft-consensus-analysis/bft-consensus/properties/liveness-properties|Liveness]] for general liveness guarantees.**
 
 ## Message Complexity
 
@@ -359,7 +359,7 @@ sequenceDiagram
 | **Liveness** | After GST | After GST | Always (probabilistic) |
 | **Year** | 1999 | 2019 | 2016 |
 
-**See [[bft-consensus-analysis/bft-consensus/protocols/protocol-comparison|BFT Protocol Comparison: PBFT, HoneyBadgerBFT, and HotStuff]] for detailed analysis.**
+**See [[bft-consensus-analysis/bft-consensus/protocols/protocol-comparison|Protocol Comparison]] for detailed analysis.**
 
 ## Limitations
 
@@ -389,12 +389,12 @@ sequenceDiagram
 
 ## See Also
 
-- [[bft-consensus-analysis/bft-consensus/protocols/hotstuff|HotStuff: Linear-Complexity BFT Consensus]] - Modern linear-complexity evolution of PBFT
-- [[bft-consensus-analysis/bft-consensus/protocols/honeybadger-bft|HoneyBadgerBFT: Asynchronous Byzantine Consensus]] - Asynchronous alternative
-- [[bft-consensus-analysis/bft-consensus/protocols/protocol-comparison|BFT Protocol Comparison: PBFT, HoneyBadgerBFT, and HotStuff]] - Side-by-side comparison
-- [[bft-consensus-analysis/bft-consensus/properties/safety-properties|Safety Properties in BFT Consensus]] - Safety guarantees PBFT provides
-- [[bft-consensus-analysis/bft-consensus/properties/liveness-properties|Liveness Properties in BFT Consensus]] - Liveness guarantees under partial synchrony
-- [[bft-consensus-analysis/bft-consensus/fundamentals|BFT Consensus Fundamentals]] - BFT consensus foundations
+- [[bft-consensus-analysis/bft-consensus/protocols/hotstuff|HotStuff]] - Modern linear-complexity evolution of PBFT
+- [[bft-consensus-analysis/bft-consensus/protocols/honeybadger-bft|HoneyBadgerBFT]] - Asynchronous alternative
+- [[bft-consensus-analysis/bft-consensus/protocols/protocol-comparison|Protocol Comparison]] - Side-by-side comparison
+- [[bft-consensus-analysis/bft-consensus/properties/safety-properties|Safety]] - Safety guarantees PBFT provides
+- [[bft-consensus-analysis/bft-consensus/properties/liveness-properties|Liveness]] - Liveness guarantees under partial synchrony
+- [[bft-consensus-analysis/bft-consensus/fundamentals|BFT Fundamentals]] - BFT consensus foundations
 
 ## Further Reading
 

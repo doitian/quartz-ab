@@ -10,8 +10,8 @@ fault_model: byzantine
 fault_tolerance: "f < n/3"
 related:
   - "[[bft-consensus-analysis/provable-broadcast/reliable-broadcast|Reliable Broadcast]]"
-  - "[[bft-consensus-analysis/provable-broadcast/provable-broadcast|Provable Broadcast Protocol]]"
-  - "[[bft-consensus-analysis/provable-broadcast/overview|Provable Broadcast: Overview]]"
+  - "[[bft-consensus-analysis/provable-broadcast/provable-broadcast|Provable Broadcast Mechanisms]]"
+  - "[[bft-consensus-analysis/provable-broadcast/overview|Provable Broadcast Overview]]"
   - "[[bft-consensus-analysis/provable-broadcast/properties|Provable Broadcast Properties]]"
   - "[[bft-consensus-analysis/bft-consensus/byzantine-failures|Byzantine Failures]]"
 references:
@@ -351,7 +351,7 @@ Broadcast Merkle root, let nodes request missing leaves:
 
 ### 1. Byzantine Consensus Building Block
 
-**[[bft-consensus-analysis/bft-consensus/protocols/pbft|PBFT: Practical Byzantine Fault Tolerance]]**, **[[bft-consensus-analysis/bft-consensus/protocols/honeybadger-bft|HoneyBadgerBFT: Asynchronous Byzantine Consensus]]**, and other protocols use Byzantine reliable broadcast to:
+**[[bft-consensus-analysis/bft-consensus/protocols/pbft|PBFT]]**, **[[bft-consensus-analysis/bft-consensus/protocols/honeybadger-bft|HoneyBadgerBFT]]**, and other protocols use Byzantine reliable broadcast to:
 - Disseminate proposals
 - Ensure all replicas see the same requests
 - Build higher-level agreement
@@ -374,14 +374,14 @@ Replicate ledger updates across nodes:
 ### Does NOT Provide
 
 ❌ **Ordering**: Byzantine reliable broadcast doesn't specify message delivery order
-❌ **Provability**: No certificates proving delivery to others (see **[[bft-consensus-analysis/provable-broadcast/provable-broadcast|Provable Broadcast Protocol]]**)
+❌ **Provability**: No certificates proving delivery to others (see **[[bft-consensus-analysis/provable-broadcast/provable-broadcast|Provable Broadcast Mechanisms]]**)
 ❌ **Sender Accountability**: Can't prove sender equivocated (all nodes just reject)
 ❌ **Efficiency**: O(n²) message complexity is high for large networks
 
 ### Extensions
 
 - **Total Order Broadcast**: Add ordering guarantees (atomic broadcast)
-- **[[bft-consensus-analysis/provable-broadcast/provable-broadcast|Provable Broadcast Protocol]]**: Add delivery certificates
+- **[[bft-consensus-analysis/provable-broadcast/provable-broadcast|Provable Broadcast Mechanisms]]**: Add delivery certificates
 - **Threshold Cryptography**: Reduce message sizes with aggregated signatures
 
 ## Self-Assessment Questions
@@ -403,13 +403,13 @@ Replicate ledger updates across nodes:
 
 ## Next Steps
 
-- **[[bft-consensus-analysis/provable-broadcast/provable-broadcast|Provable Broadcast Protocol]]**: Add delivery certificates for accountability
+- **[[bft-consensus-analysis/provable-broadcast/provable-broadcast|Provable Broadcast Mechanisms]]**: Add delivery certificates for accountability
 - **[[bft-consensus-analysis/provable-broadcast/properties|Provable Broadcast Properties]]**: Formal property definitions
-- **[[bft-consensus-analysis/provable-broadcast/overview|Provable Broadcast: Overview]]**: Compare broadcast primitives
-- **[[bft-consensus-analysis/bft-consensus/protocols/honeybadger-bft|HoneyBadgerBFT: Asynchronous Byzantine Consensus]]**: See Byzantine broadcast in action
+- **[[bft-consensus-analysis/provable-broadcast/overview|Provable Broadcast Overview]]**: Compare broadcast primitives
+- **[[bft-consensus-analysis/bft-consensus/protocols/honeybadger-bft|HoneyBadgerBFT]]**: See Byzantine broadcast in action
 
 ## References
 
 - Bracha, G. (1987). "Asynchronous Byzantine Agreement Protocols"
 - Cachin, C., Guerraoui, R., & Rodrigues, L. (2011). "Introduction to Reliable and Secure Distributed Programming"
-- See **[[bft-consensus-analysis/references|References: Bibliography and External Sources]]** for complete bibliography
+- See **[[bft-consensus-analysis/references|References]]** for complete bibliography

@@ -8,8 +8,8 @@ status: complete
 difficulty: intermediate
 related:
   - "[[bft-consensus-analysis/bft-consensus/byzantine-failures|Byzantine Failures]]"
-  - "[[bft-consensus-analysis/bft-consensus/properties/safety-properties|Safety Properties in BFT Consensus]]"
-  - "[[bft-consensus-analysis/bft-consensus/fundamentals|BFT Consensus Fundamentals]]"
+  - "[[bft-consensus-analysis/bft-consensus/properties/safety-properties|Safety]]"
+  - "[[bft-consensus-analysis/bft-consensus/fundamentals|BFT Fundamentals]]"
 references:
   - lamport-shostak-pease-1982-byzantine
   - castro-liskov-1999-pbft
@@ -394,7 +394,7 @@ Intersection of two quorums:
   (2f + 1) + (2f + 1) - (3f + 1) = f + 1 ✓ (> f)
 ```
 
-**See [[bft-consensus-analysis/bft-consensus/protocols/pbft|PBFT: Practical Byzantine Fault Tolerance]] for protocol details.**
+**See [[bft-consensus-analysis/bft-consensus/protocols/pbft|PBFT]] for protocol details.**
 
 ### HoneyBadgerBFT
 
@@ -410,7 +410,7 @@ Byzantine nodes can block at most f proposals
 Honest nodes (n - f = 2f + 1) ensure progress ✓
 ```
 
-**See [[bft-consensus-analysis/bft-consensus/protocols/honeybadger-bft|HoneyBadgerBFT: Asynchronous Byzantine Consensus]] for protocol details.**
+**See [[bft-consensus-analysis/bft-consensus/protocols/honeybadger-bft|HoneyBadgerBFT]] for protocol details.**
 
 ### HotStuff
 
@@ -426,16 +426,16 @@ Two QCs intersect in at least f + 1 nodes ✓
 At least one honest node in intersection ✓
 ```
 
-**See [[bft-consensus-analysis/bft-consensus/protocols/hotstuff|HotStuff: Linear-Complexity BFT Consensus]] for protocol details.**
+**See [[bft-consensus-analysis/bft-consensus/protocols/hotstuff|HotStuff]] for protocol details.**
 
 ## See Also
 
 - [[bft-consensus-analysis/bft-consensus/byzantine-failures|Byzantine Failures]] - Fault model requiring this threshold
-- [[bft-consensus-analysis/bft-consensus/properties/safety-properties|Safety Properties in BFT Consensus]] - Properties guaranteed by quorum intersection
-- [[bft-consensus-analysis/bft-consensus/fundamentals|BFT Consensus Fundamentals]] - Core BFT concepts
-- [[bft-consensus-analysis/bft-consensus/protocols/pbft|PBFT: Practical Byzantine Fault Tolerance]] - First practical $n = 3f + 1$ protocol
-- [[bft-consensus-analysis/bft-consensus/protocols/honeybadger-bft|HoneyBadgerBFT: Asynchronous Byzantine Consensus]] - Asynchronous protocol with $n > 3f$
-- [[bft-consensus-analysis/bft-consensus/protocols/hotstuff|HotStuff: Linear-Complexity BFT Consensus]] - Modern optimized protocol with $n > 3f$
+- [[bft-consensus-analysis/bft-consensus/properties/safety-properties|Safety]] - Properties guaranteed by quorum intersection
+- [[bft-consensus-analysis/bft-consensus/fundamentals|BFT Fundamentals]] - Core BFT concepts
+- [[bft-consensus-analysis/bft-consensus/protocols/pbft|PBFT]] - First practical $n = 3f + 1$ protocol
+- [[bft-consensus-analysis/bft-consensus/protocols/honeybadger-bft|HoneyBadgerBFT]] - Asynchronous protocol with $n > 3f$
+- [[bft-consensus-analysis/bft-consensus/protocols/hotstuff|HotStuff]] - Modern optimized protocol with $n > 3f$
 
 ## Further Reading
 

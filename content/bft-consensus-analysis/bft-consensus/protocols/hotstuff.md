@@ -9,18 +9,18 @@ synchrony_model: partially-synchronous
 fault_tolerance: "f < n/3"
 year_introduced: 2019
 related:
-  - "[[bft-consensus-analysis/bft-consensus/protocols/pbft|PBFT: Practical Byzantine Fault Tolerance]]"
-  - "[[bft-consensus-analysis/bft-consensus/protocols/honeybadger-bft|HoneyBadgerBFT: Asynchronous Byzantine Consensus]]"
-  - "[[bft-consensus-analysis/bft-consensus/protocols/protocol-comparison|BFT Protocol Comparison: PBFT, HoneyBadgerBFT, and HotStuff]]"
-  - "[[bft-consensus-analysis/bft-consensus/fundamentals|BFT Consensus Fundamentals]]"
+  - "[[bft-consensus-analysis/bft-consensus/protocols/pbft|PBFT]]"
+  - "[[bft-consensus-analysis/bft-consensus/protocols/honeybadger-bft|HoneyBadgerBFT]]"
+  - "[[bft-consensus-analysis/bft-consensus/protocols/protocol-comparison|Protocol Comparison]]"
+  - "[[bft-consensus-analysis/bft-consensus/fundamentals|BFT Fundamentals]]"
 references:
   - yin-2019-hotstuff
   - comprehensive-bft-survey-2022
 prerequisites:
-  - "[[bft-consensus-analysis/bft-consensus/fundamentals|BFT Consensus Fundamentals]]"
+  - "[[bft-consensus-analysis/bft-consensus/fundamentals|BFT Fundamentals]]"
   - "[[bft-consensus-analysis/bft-consensus/byzantine-failures|Byzantine Failures]]"
-  - "[[bft-consensus-analysis/bft-consensus/properties/safety-properties|Safety Properties in BFT Consensus]]"
-  - "[[bft-consensus-analysis/bft-consensus/properties/liveness-properties|Liveness Properties in BFT Consensus]]"
+  - "[[bft-consensus-analysis/bft-consensus/properties/safety-properties|Safety]]"
+  - "[[bft-consensus-analysis/bft-consensus/properties/liveness-properties|Liveness]]"
 ---
 
 # HotStuff: Linear-Complexity BFT Consensus
@@ -276,7 +276,7 @@ Block n-2  →  Block n-1  →  Block n
 - PBFT: Phases use all-to-all broadcast ($O(n^2)$)
 - HotStuff: Phases use leader aggregation ($O(n)$)
 
-**See [[bft-consensus-analysis/bft-consensus/properties/safety-properties|Safety Properties in BFT Consensus]] for general safety framework.**
+**See [[bft-consensus-analysis/bft-consensus/properties/safety-properties|Safety]] for general safety framework.**
 
 ## Liveness via View Changes
 
@@ -297,7 +297,7 @@ Block n-2  →  Block n-1  →  Block n
 
 **Expected View Changes**: At most $f$ (until an honest leader is elected).
 
-**See [[bft-consensus-analysis/bft-consensus/properties/liveness-properties|Liveness Properties in BFT Consensus]] for liveness under partial synchrony.**
+**See [[bft-consensus-analysis/bft-consensus/properties/liveness-properties|Liveness]] for liveness under partial synchrony.**
 
 ## Message Complexity Analysis
 
@@ -442,7 +442,7 @@ Block n-2  →  Block n-1  →  Block n
 | **Cryptography** | Signatures | Threshold signatures | Threshold crypto + erasure coding |
 | **Best For** | Small clusters, proven stability | Large-scale blockchains, high throughput | Adversarial networks, no timing assumptions |
 
-**See [[bft-consensus-analysis/bft-consensus/protocols/protocol-comparison|BFT Protocol Comparison: PBFT, HoneyBadgerBFT, and HotStuff]] for detailed analysis.**
+**See [[bft-consensus-analysis/bft-consensus/protocols/protocol-comparison|Protocol Comparison]] for detailed analysis.**
 
 ## Theoretical Significance
 
@@ -464,12 +464,12 @@ Block n-2  →  Block n-1  →  Block n
 
 ## See Also
 
-- [[bft-consensus-analysis/bft-consensus/protocols/pbft|PBFT: Practical Byzantine Fault Tolerance]] - Foundational partially synchronous protocol
-- [[bft-consensus-analysis/bft-consensus/protocols/honeybadger-bft|HoneyBadgerBFT: Asynchronous Byzantine Consensus]] - Asynchronous alternative
-- [[bft-consensus-analysis/bft-consensus/protocols/protocol-comparison|BFT Protocol Comparison: PBFT, HoneyBadgerBFT, and HotStuff]] - Side-by-side comparison
-- [[bft-consensus-analysis/bft-consensus/properties/safety-properties|Safety Properties in BFT Consensus]] - Safety via QC chaining
-- [[bft-consensus-analysis/bft-consensus/properties/liveness-properties|Liveness Properties in BFT Consensus]] - Liveness under partial synchrony
-- [[bft-consensus-analysis/bft-consensus/fundamentals|BFT Consensus Fundamentals]] - BFT consensus foundations
+- [[bft-consensus-analysis/bft-consensus/protocols/pbft|PBFT]] - Foundational partially synchronous protocol
+- [[bft-consensus-analysis/bft-consensus/protocols/honeybadger-bft|HoneyBadgerBFT]] - Asynchronous alternative
+- [[bft-consensus-analysis/bft-consensus/protocols/protocol-comparison|Protocol Comparison]] - Side-by-side comparison
+- [[bft-consensus-analysis/bft-consensus/properties/safety-properties|Safety]] - Safety via QC chaining
+- [[bft-consensus-analysis/bft-consensus/properties/liveness-properties|Liveness]] - Liveness under partial synchrony
+- [[bft-consensus-analysis/bft-consensus/fundamentals|BFT Fundamentals]] - BFT consensus foundations
 
 ## Further Reading
 

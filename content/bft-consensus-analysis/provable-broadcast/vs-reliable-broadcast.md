@@ -9,8 +9,8 @@ difficulty: intermediate
 related:
   - "[[bft-consensus-analysis/provable-broadcast/reliable-broadcast|Reliable Broadcast]]"
   - "[[bft-consensus-analysis/provable-broadcast/byzantine-reliable-broadcast|Byzantine Reliable Broadcast]]"
-  - "[[bft-consensus-analysis/provable-broadcast/provable-broadcast|Provable Broadcast Protocol]]"
-  - "[[bft-consensus-analysis/provable-broadcast/overview|Provable Broadcast: Overview]]"
+  - "[[bft-consensus-analysis/provable-broadcast/provable-broadcast|Provable Broadcast Mechanisms]]"
+  - "[[bft-consensus-analysis/provable-broadcast/overview|Provable Broadcast Overview]]"
   - "[[bft-consensus-analysis/provable-broadcast/properties|Provable Broadcast Properties]]"
 references:
   - decentralized-thoughts-2022-provable-broadcast
@@ -18,12 +18,12 @@ references:
 prerequisites:
   - "[[bft-consensus-analysis/provable-broadcast/reliable-broadcast|Reliable Broadcast]]"
   - "[[bft-consensus-analysis/provable-broadcast/byzantine-reliable-broadcast|Byzantine Reliable Broadcast]]"
-  - "[[bft-consensus-analysis/provable-broadcast/provable-broadcast|Provable Broadcast Protocol]]"
+  - "[[bft-consensus-analysis/provable-broadcast/provable-broadcast|Provable Broadcast Mechanisms]]"
 ---
 
 # Provable Broadcast vs Reliable Broadcast
 
-This note provides a comprehensive comparison between **[[bft-consensus-analysis/provable-broadcast/reliable-broadcast|Reliable Broadcast]]**, **[[bft-consensus-analysis/provable-broadcast/byzantine-reliable-broadcast|Byzantine Reliable Broadcast]]**, and **[[bft-consensus-analysis/provable-broadcast/provable-broadcast|Provable Broadcast Protocol]]**, highlighting when to use each primitive and their design trade-offs.
+This note provides a comprehensive comparison between **[[bft-consensus-analysis/provable-broadcast/reliable-broadcast|Reliable Broadcast]]**, **[[bft-consensus-analysis/provable-broadcast/byzantine-reliable-broadcast|Byzantine Reliable Broadcast]]**, and **[[bft-consensus-analysis/provable-broadcast/provable-broadcast|Provable Broadcast Mechanisms]]**, highlighting when to use each primitive and their design trade-offs.
 
 ## Hierarchy of Broadcast Primitives
 
@@ -516,12 +516,12 @@ graph TD
 
 - **[[bft-consensus-analysis/provable-broadcast/reliable-broadcast|Reliable Broadcast]]**: Crash fault tolerant baseline
 - **[[bft-consensus-analysis/provable-broadcast/byzantine-reliable-broadcast|Byzantine Reliable Broadcast]]**: Byzantine extension without certificates
-- **[[bft-consensus-analysis/provable-broadcast/provable-broadcast|Provable Broadcast Protocol]]**: Full protocol with certificates
-- **[[bft-consensus-analysis/provable-broadcast/overview|Provable Broadcast: Overview]]**: High-level introduction
-- **[[bft-consensus-analysis/provable-broadcast/applications|Provable Broadcast Applications]]**: Real-world use cases
+- **[[bft-consensus-analysis/provable-broadcast/provable-broadcast|Provable Broadcast Mechanisms]]**: Full protocol with certificates
+- **[[bft-consensus-analysis/provable-broadcast/overview|Provable Broadcast Overview]]**: High-level introduction
+- **[[bft-consensus-analysis/provable-broadcast/applications|Real-World Usage in Blockchain & DLT]]**: Real-world use cases
 
 ## References
 
 - Cachin, C., Guerraoui, R., & Rodrigues, L. (2011). "Introduction to Reliable and Secure Distributed Programming"
 - Decentralized Thoughts (2022). "What is Provable Broadcast?"
-- See **[[bft-consensus-analysis/references|References: Bibliography and External Sources]]** for complete bibliography
+- See **[[bft-consensus-analysis/references|References]]** for complete bibliography

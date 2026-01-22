@@ -7,8 +7,8 @@ updated: 2026-01-21
 status: complete
 difficulty: intermediate
 related:
-  - "[[bft-consensus-analysis/bft-consensus/properties/safety-properties|Safety Properties in BFT Consensus]]"
-  - "[[bft-consensus-analysis/bft-consensus/fundamentals|BFT Consensus Fundamentals]]"
+  - "[[bft-consensus-analysis/bft-consensus/properties/safety-properties|Safety]]"
+  - "[[bft-consensus-analysis/bft-consensus/fundamentals|BFT Fundamentals]]"
   - "[[bft-consensus-analysis/bft-consensus/byzantine-failures|Byzantine Failures]]"
   - "[[bft-consensus-analysis/bft-consensus/properties/fault-tolerance-threshold|Fault Tolerance Threshold: Why f < n/3 for Byzantine Failures]]"
 references:
@@ -425,7 +425,7 @@ HoneyBadgerBFT: ~variable TPS (depends on network conditions)
 
 **Guarantee**: Termination after GST and after $O(f)$ view changes (expected).
 
-**See [[bft-consensus-analysis/bft-consensus/protocols/pbft|PBFT: Practical Byzantine Fault Tolerance]] for details.**
+**See [[bft-consensus-analysis/bft-consensus/protocols/pbft|PBFT]] for details.**
 
 ### HoneyBadgerBFT Liveness
 
@@ -438,7 +438,7 @@ HoneyBadgerBFT: ~variable TPS (depends on network conditions)
 
 **Guarantee**: Probabilistic termination with high probability in expected constant rounds.
 
-**See [[bft-consensus-analysis/bft-consensus/protocols/honeybadger-bft|HoneyBadgerBFT: Asynchronous Byzantine Consensus]] for details.**
+**See [[bft-consensus-analysis/bft-consensus/protocols/honeybadger-bft|HoneyBadgerBFT]] for details.**
 
 ### HotStuff Liveness
 
@@ -452,7 +452,7 @@ HoneyBadgerBFT: ~variable TPS (depends on network conditions)
 
 **Guarantee**: Termination after GST with responsive (actual network delay) latency.
 
-**See [[bft-consensus-analysis/bft-consensus/protocols/hotstuff|HotStuff: Linear-Complexity BFT Consensus]] for details.**
+**See [[bft-consensus-analysis/bft-consensus/protocols/hotstuff|HotStuff]] for details.**
 
 ## Temporal Logic Specification
 
@@ -476,18 +476,18 @@ $$
 
 This prevents perpetual stalling.
 
-**See [[bft-consensus-analysis/logic-models/temporal-logic|Temporal Logic for Distributed Systems]] for detailed formal specifications.**
+**See [[bft-consensus-analysis/logic-models/temporal-logic|Expressing Safety & Liveness]] for detailed formal specifications.**
 
 ## See Also
 
-- [[bft-consensus-analysis/bft-consensus/properties/safety-properties|Safety Properties in BFT Consensus]] - Complementary correctness guarantees
-- [[bft-consensus-analysis/bft-consensus/fundamentals|BFT Consensus Fundamentals]] - Core BFT consensus concepts
+- [[bft-consensus-analysis/bft-consensus/properties/safety-properties|Safety]] - Complementary correctness guarantees
+- [[bft-consensus-analysis/bft-consensus/fundamentals|BFT Fundamentals]] - Core BFT consensus concepts
 - [[bft-consensus-analysis/bft-consensus/byzantine-failures|Byzantine Failures]] - Fault model affecting liveness
 - [[bft-consensus-analysis/bft-consensus/properties/fault-tolerance-threshold|Fault Tolerance Threshold: Why f < n/3 for Byzantine Failures]] - Limits of fault tolerance
-- [[bft-consensus-analysis/bft-consensus/protocols/pbft|PBFT: Practical Byzantine Fault Tolerance]] - Partially synchronous liveness
-- [[bft-consensus-analysis/bft-consensus/protocols/honeybadger-bft|HoneyBadgerBFT: Asynchronous Byzantine Consensus]] - Asynchronous liveness via randomization
-- [[bft-consensus-analysis/bft-consensus/protocols/hotstuff|HotStuff: Linear-Complexity BFT Consensus]] - Linear-complexity liveness
-- [[bft-consensus-analysis/logic-models/temporal-logic|Temporal Logic for Distributed Systems]] - Formal specification of liveness properties
+- [[bft-consensus-analysis/bft-consensus/protocols/pbft|PBFT]] - Partially synchronous liveness
+- [[bft-consensus-analysis/bft-consensus/protocols/honeybadger-bft|HoneyBadgerBFT]] - Asynchronous liveness via randomization
+- [[bft-consensus-analysis/bft-consensus/protocols/hotstuff|HotStuff]] - Linear-complexity liveness
+- [[bft-consensus-analysis/logic-models/temporal-logic|Expressing Safety & Liveness]] - Formal specification of liveness properties
 
 ## Further Reading
 

@@ -7,20 +7,20 @@ updated: 2026-01-21
 status: complete
 difficulty: intermediate
 related:
-  - "[[bft-consensus-analysis/bft-consensus/protocols/pbft|PBFT: Practical Byzantine Fault Tolerance]]"
-  - "[[bft-consensus-analysis/bft-consensus/protocols/honeybadger-bft|HoneyBadgerBFT: Asynchronous Byzantine Consensus]]"
-  - "[[bft-consensus-analysis/bft-consensus/protocols/hotstuff|HotStuff: Linear-Complexity BFT Consensus]]"
-  - "[[bft-consensus-analysis/bft-consensus/fundamentals|BFT Consensus Fundamentals]]"
+  - "[[bft-consensus-analysis/bft-consensus/protocols/pbft|PBFT]]"
+  - "[[bft-consensus-analysis/bft-consensus/protocols/honeybadger-bft|HoneyBadgerBFT]]"
+  - "[[bft-consensus-analysis/bft-consensus/protocols/hotstuff|HotStuff]]"
+  - "[[bft-consensus-analysis/bft-consensus/fundamentals|BFT Fundamentals]]"
 references:
   - castro-liskov-1999-pbft
   - miller-2016-honeybadger
   - yin-2019-hotstuff
   - comprehensive-bft-survey-2022
 prerequisites:
-  - "[[bft-consensus-analysis/bft-consensus/fundamentals|BFT Consensus Fundamentals]]"
+  - "[[bft-consensus-analysis/bft-consensus/fundamentals|BFT Fundamentals]]"
   - "[[bft-consensus-analysis/bft-consensus/byzantine-failures|Byzantine Failures]]"
-  - "[[bft-consensus-analysis/bft-consensus/properties/safety-properties|Safety Properties in BFT Consensus]]"
-  - "[[bft-consensus-analysis/bft-consensus/properties/liveness-properties|Liveness Properties in BFT Consensus]]"
+  - "[[bft-consensus-analysis/bft-consensus/properties/safety-properties|Safety]]"
+  - "[[bft-consensus-analysis/bft-consensus/properties/liveness-properties|Liveness]]"
 ---
 
 # BFT Protocol Comparison: PBFT, HoneyBadgerBFT, and HotStuff
@@ -41,7 +41,7 @@ This note provides a comprehensive comparison of three major Byzantine fault-tol
 
 **Historical Significance**: Proved BFT could be practical, not just theoretical.
 
-**See [[bft-consensus-analysis/bft-consensus/protocols/pbft|PBFT: Practical Byzantine Fault Tolerance]] for detailed analysis.**
+**See [[bft-consensus-analysis/bft-consensus/protocols/pbft|PBFT]] for detailed analysis.**
 
 ### HoneyBadgerBFT (2016)
 
@@ -55,7 +55,7 @@ This note provides a comprehensive comparison of three major Byzantine fault-tol
 
 **Historical Significance**: Showed asynchronous BFT is achievable in practice.
 
-**See [[bft-consensus-analysis/bft-consensus/protocols/honeybadger-bft|HoneyBadgerBFT: Asynchronous Byzantine Consensus]] for detailed analysis.**
+**See [[bft-consensus-analysis/bft-consensus/protocols/honeybadger-bft|HoneyBadgerBFT]] for detailed analysis.**
 
 ### HotStuff (2019)
 
@@ -69,7 +69,7 @@ This note provides a comprehensive comparison of three major Byzantine fault-tol
 
 **Historical Significance**: Enabled BFT at scale (hundreds to thousands of nodes).
 
-**See [[bft-consensus-analysis/bft-consensus/protocols/hotstuff|HotStuff: Linear-Complexity BFT Consensus]] for detailed analysis.**
+**See [[bft-consensus-analysis/bft-consensus/protocols/hotstuff|HotStuff]] for detailed analysis.**
 
 ## Synchrony Model Comparison
 
@@ -392,7 +392,7 @@ Based on research papers and real-world deployments:
 
 **Key Innovation**: DAG structures reduce complexity and improve throughput.
 
-**See [[bft-consensus-analysis/integration/case-studies/dag-rider-analysis|DAG-Rider: Asynchronous DAG-Based BFT Analysis]] case study.**
+**See [[bft-consensus-analysis/integration/case-studies/dag-rider-analysis|DAG-Based BFT Analysis]] case study.**
 
 ### Hybrid Approaches
 
@@ -414,13 +414,13 @@ Despite their differences, all three protocols share some fundamental limitation
 
 ## See Also
 
-- [[bft-consensus-analysis/bft-consensus/protocols/pbft|PBFT: Practical Byzantine Fault Tolerance]] - Detailed PBFT analysis
-- [[bft-consensus-analysis/bft-consensus/protocols/honeybadger-bft|HoneyBadgerBFT: Asynchronous Byzantine Consensus]] - Detailed HoneyBadgerBFT analysis
-- [[bft-consensus-analysis/bft-consensus/protocols/hotstuff|HotStuff: Linear-Complexity BFT Consensus]] - Detailed HotStuff analysis
-- [[bft-consensus-analysis/bft-consensus/fundamentals|BFT Consensus Fundamentals]] - BFT consensus foundations
+- [[bft-consensus-analysis/bft-consensus/protocols/pbft|PBFT]] - Detailed PBFT analysis
+- [[bft-consensus-analysis/bft-consensus/protocols/honeybadger-bft|HoneyBadgerBFT]] - Detailed HoneyBadgerBFT analysis
+- [[bft-consensus-analysis/bft-consensus/protocols/hotstuff|HotStuff]] - Detailed HotStuff analysis
+- [[bft-consensus-analysis/bft-consensus/fundamentals|BFT Fundamentals]] - BFT consensus foundations
 - [[bft-consensus-analysis/bft-consensus/byzantine-failures|Byzantine Failures]] - Fault model all three tolerate
-- [[bft-consensus-analysis/bft-consensus/properties/safety-properties|Safety Properties in BFT Consensus]] - Safety guarantees provided by all three
-- [[bft-consensus-analysis/bft-consensus/properties/liveness-properties|Liveness Properties in BFT Consensus]] - Liveness guarantees (differ by protocol)
+- [[bft-consensus-analysis/bft-consensus/properties/safety-properties|Safety]] - Safety guarantees provided by all three
+- [[bft-consensus-analysis/bft-consensus/properties/liveness-properties|Liveness]] - Liveness guarantees (differ by protocol)
 - [[bft-consensus-analysis/bft-consensus/properties/fault-tolerance-threshold|Fault Tolerance Threshold: Why f < n/3 for Byzantine Failures]] - Why all three require $f < n/3$
 
 ## Further Reading

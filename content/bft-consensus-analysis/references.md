@@ -301,6 +301,6 @@ When adding a new reference:
 
 ## See Also
 
-- [[bft-consensus-analysis/glossary|Glossary: BFT Consensus, Provable Broadcast, and Logic Models]] - Technical terminology
+- [[bft-consensus-analysis/glossary|Glossary]] - Technical terminology
 - [[index|Welcome to Quartz AB]] - Knowledge base entry point
-- [[bft-consensus-analysis/quickstart|Quickstart Guide: BFT Consensus Analysis Knowledge Base]] - Navigation guide
+- [[bft-consensus-analysis/quickstart|Quickstart]] - Navigation guide

@@ -9,20 +9,20 @@ difficulty: intermediate
 fault_model: crash
 fault_tolerance: "f < n/2"
 related:
-  - "[[bft-consensus-analysis/provable-broadcast/overview|Provable Broadcast: Overview]]"
+  - "[[bft-consensus-analysis/provable-broadcast/overview|Provable Broadcast Overview]]"
   - "[[bft-consensus-analysis/provable-broadcast/byzantine-reliable-broadcast|Byzantine Reliable Broadcast]]"
   - "[[bft-consensus-analysis/provable-broadcast/properties|Provable Broadcast Properties]]"
-  - "[[bft-consensus-analysis/bft-consensus/fundamentals|BFT Consensus Fundamentals]]"
+  - "[[bft-consensus-analysis/bft-consensus/fundamentals|BFT Fundamentals]]"
 references:
   - cachin-guerraoui-rodrigues-2011-reliable-broadcast
   - bracha-asynchronous-consensus-1987
 prerequisites:
-  - "[[bft-consensus-analysis/bft-consensus/fundamentals|BFT Consensus Fundamentals]]"
+  - "[[bft-consensus-analysis/bft-consensus/fundamentals|BFT Fundamentals]]"
 ---
 
 # Reliable Broadcast
 
-**Reliable broadcast** is a communication primitive that ensures all correct nodes deliver the same set of messages, even in the presence of **crash failures**. It is the foundation for more advanced broadcast mechanisms like **[[bft-consensus-analysis/provable-broadcast/byzantine-reliable-broadcast|Byzantine Reliable Broadcast]]** and **[[bft-consensus-analysis/provable-broadcast/provable-broadcast|Provable Broadcast Protocol]]**.
+**Reliable broadcast** is a communication primitive that ensures all correct nodes deliver the same set of messages, even in the presence of **crash failures**. It is the foundation for more advanced broadcast mechanisms like **[[bft-consensus-analysis/provable-broadcast/byzantine-reliable-broadcast|Byzantine Reliable Broadcast]]** and **[[bft-consensus-analysis/provable-broadcast/provable-broadcast|Provable Broadcast Mechanisms]]**.
 
 ## Problem Statement
 
@@ -304,7 +304,7 @@ sequenceDiagram
 ### Extensions Needed For
 
 - **Byzantine Faults** → **[[bft-consensus-analysis/provable-broadcast/byzantine-reliable-broadcast|Byzantine Reliable Broadcast]]**
-- **Delivery Proof** → **[[bft-consensus-analysis/provable-broadcast/provable-broadcast|Provable Broadcast Protocol]]**
+- **Delivery Proof** → **[[bft-consensus-analysis/provable-broadcast/provable-broadcast|Provable Broadcast Mechanisms]]**
 - **Ordering** → **Total Order Broadcast / Atomic Broadcast**
 
 ## Mathematical Analysis
@@ -381,12 +381,12 @@ Reliable broadcast doesn't require crash detection (works in asynchronous model)
 ## Next Steps
 
 - **[[bft-consensus-analysis/provable-broadcast/byzantine-reliable-broadcast|Byzantine Reliable Broadcast]]**: Extend to tolerate malicious failures
-- **[[bft-consensus-analysis/provable-broadcast/provable-broadcast|Provable Broadcast Protocol]]**: Add delivery certificates
+- **[[bft-consensus-analysis/provable-broadcast/provable-broadcast|Provable Broadcast Mechanisms]]**: Add delivery certificates
 - **[[bft-consensus-analysis/provable-broadcast/properties|Provable Broadcast Properties]]**: Formal property specifications
-- **[[bft-consensus-analysis/provable-broadcast/overview|Provable Broadcast: Overview]]**: High-level broadcast comparison
+- **[[bft-consensus-analysis/provable-broadcast/overview|Provable Broadcast Overview]]**: High-level broadcast comparison
 
 ## References
 
 - Cachin, C., Guerraoui, R., & Rodrigues, L. (2011). "Introduction to Reliable and Secure Distributed Programming"
 - Bracha, G. (1987). "Asynchronous Byzantine Agreement Protocols"
-- See **[[bft-consensus-analysis/references|References: Bibliography and External Sources]]** for complete bibliography
+- See **[[bft-consensus-analysis/references|References]]** for complete bibliography
