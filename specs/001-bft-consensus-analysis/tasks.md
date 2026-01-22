@@ -65,18 +65,18 @@
 
 ### Broadcast Fundamentals
 
-- [ ] T015 [P] [Broadcast] Create overview.md in content/bft-consensus-analysis/provable-broadcast/overview.md
-- [ ] T016 [P] [Broadcast] Create properties.md in content/bft-consensus-analysis/provable-broadcast/properties.md
-- [ ] T017 [P] [Broadcast] Create reliable-broadcast.md in content/bft-consensus-analysis/provable-broadcast/reliable-broadcast.md
-- [ ] T018 [P] [Broadcast] Create byzantine-reliable-broadcast.md in content/bft-consensus-analysis/provable-broadcast/byzantine-reliable-broadcast.md
+- [X] T015 [P] [Broadcast] Create overview.md in content/bft-consensus-analysis/provable-broadcast/overview.md
+- [X] T016 [P] [Broadcast] Create properties.md in content/bft-consensus-analysis/provable-broadcast/properties.md
+- [X] T017 [P] [Broadcast] Create reliable-broadcast.md in content/bft-consensus-analysis/provable-broadcast/reliable-broadcast.md
+- [X] T018 [P] [Broadcast] Create byzantine-reliable-broadcast.md in content/bft-consensus-analysis/provable-broadcast/byzantine-reliable-broadcast.md
 
 ### Provable Broadcast Specifics
 
-- [ ] T019 [Broadcast] Create provable-broadcast.md in content/bft-consensus-analysis/provable-broadcast/provable-broadcast.md
-- [ ] T020 [Broadcast] Create vs-reliable-broadcast.md in content/bft-consensus-analysis/provable-broadcast/vs-reliable-broadcast.md
-- [ ] T021 [Broadcast] Create applications.md in content/bft-consensus-analysis/provable-broadcast/applications.md
+- [X] T019 [Broadcast] Create provable-broadcast.md in content/bft-consensus-analysis/provable-broadcast/provable-broadcast.md
+- [X] T020 [Broadcast] Create vs-reliable-broadcast.md in content/bft-consensus-analysis/provable-broadcast/vs-reliable-broadcast.md
+- [X] T021 [Broadcast] Create applications.md in content/bft-consensus-analysis/provable-broadcast/applications.md
 
-**Checkpoint**: Provable Broadcast domain complete - progression from reliable to provable broadcast documented
+**Checkpoint**: ✅ Provable Broadcast domain complete - progression from reliable to provable broadcast documented
 
 ---
 
