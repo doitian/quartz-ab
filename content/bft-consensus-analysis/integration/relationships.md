@@ -8,8 +8,8 @@ status: complete
 difficulty: intermediate
 related:
   - "[[../bft-consensus/fundamentals]]"
-  - "[[../provable-broadcast/overview]]"
-  - "[[../logic-models/overview]]"
+  - "[[bft-consensus-analysis/provable-broadcast/overview]]"
+  - "[[bft-consensus-analysis/logic-models/overview]]"
   - "[[design-framework]]"
   - "[[case-studies/honeybadger-complete]]"
 references:
@@ -54,12 +54,12 @@ graph TD
    - **Outputs**: Working protocols (PBFT, HoneyBadger, HotStuff)
    - **Properties**: Safety, liveness, fault tolerance thresholds
 
-2. **[[../provable-broadcast/overview|Provable Broadcast]]**: Communication primitives with cryptographic proofs of delivery
+2. **[[bft-consensus-analysis/provable-broadcast/overview|Provable Broadcast]]**: Communication primitives with cryptographic proofs of delivery
    - **Focus**: Reliable message dissemination with verifiable evidence
    - **Outputs**: Broadcast mechanisms (RBC, BRB, provable broadcast)
    - **Properties**: Validity, agreement, integrity, provability
 
-3. **[[../logic-models/overview|Logic Models]]**: Formal frameworks for reasoning about distributed systems
+3. **[[bft-consensus-analysis/logic-models/overview|Logic Models]]**: Formal frameworks for reasoning about distributed systems
    - **Focus**: Mathematical foundations for specification and verification
    - **Outputs**: Proofs of correctness, impossibility results
    - **Properties**: Soundness, completeness, decidability
@@ -256,12 +256,12 @@ graph TD
 
 When designing a new BFT consensus protocol:
 
-1. **Start with Logic Models** ([[../logic-models/overview]]):
+1. **Start with Logic Models** ([[bft-consensus-analysis/logic-models/overview]]):
    - Formalize safety and liveness requirements
    - Understand impossibility results and system model constraints
    - Define fault tolerance goals ($f < n/3$ for Byzantine)
 
-2. **Select Broadcast Primitives** ([[../provable-broadcast/overview]]):
+2. **Select Broadcast Primitives** ([[bft-consensus-analysis/provable-broadcast/overview]]):
    - Choose appropriate broadcast mechanism (RBC, provable broadcast, threshold sigs)
    - Match broadcast guarantees to consensus requirements
    - Consider communication complexity and cryptographic assumptions
@@ -431,11 +431,11 @@ graph LR
 
 ### For Protocol Designers
 
-1. **Start with Logic Models** ([[../logic-models/overview]]):
+1. **Start with Logic Models** ([[bft-consensus-analysis/logic-models/overview]]):
    - Understand FLP impossibility, Byzantine lower bounds
    - Learn to specify safety and liveness formally
 
-2. **Study Broadcast Primitives** ([[../provable-broadcast/overview]]):
+2. **Study Broadcast Primitives** ([[bft-consensus-analysis/provable-broadcast/overview]]):
    - Learn RBC, BRB, provable broadcast properties
    - Understand quorum certificates and threshold signatures
 
@@ -470,7 +470,7 @@ graph LR
    - Recognize which broadcast each protocol uses
    - Understand communication complexity implications
 
-3. **Optional: Study Logic Models** ([[../logic-models/overview]]):
+3. **Optional: Study Logic Models** ([[bft-consensus-analysis/logic-models/overview]]):
    - Gain confidence in protocol correctness
    - Understand why certain design choices are necessary
 

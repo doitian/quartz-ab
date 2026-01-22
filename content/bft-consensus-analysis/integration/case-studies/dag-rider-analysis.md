@@ -670,7 +670,7 @@ All reachable blocks are committed.
 
 ### 3.4 Asynchronous Model and FLP Circumvention
 
-**See [[../../logic-models/overview]] for FLP impossibility.**
+**See [[bft-consensus-analysis/logic-models/overview]] for FLP impossibility.**
 
 **FLP Impossibility**: Deterministic asynchronous consensus is impossible with even one crash failure.
 

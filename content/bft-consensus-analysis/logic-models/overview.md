@@ -277,7 +277,7 @@ graph LR
 - [[../bft-consensus/fundamentals]] — BFT consensus basics
 - [[../bft-consensus/properties/safety-properties]] — Safety in BFT
 - [[../bft-consensus/properties/liveness-properties]] — Liveness in BFT
-- [[../provable-broadcast/overview]] — Provable broadcast and certificates
+- [[bft-consensus-analysis/provable-broadcast/overview]] — Provable broadcast and certificates
 
 **External Resources**:
 - [Decentralized Thoughts: Impossibility Results](https://decentralizedthoughts.github.io)

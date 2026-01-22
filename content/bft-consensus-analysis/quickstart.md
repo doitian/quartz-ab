@@ -39,11 +39,11 @@ Choose your entry point based on your background and goals:
 
 | Your Background | Recommended Starting Point | Why |
 |----------------|---------------------------|-----|
-| **New to distributed systems** | [[bft-consensus/fundamentals]] | Build foundational understanding |
-| **Blockchain developer** | [[provable-broadcast/applications]] | See practical applications first |
-| **Formal verification engineer** | [[logic-models/overview]] | Start with verification frameworks |
-| **Experienced with consensus** | [[integration/relationships]] | Dive into synthesis |
-| **Want a specific protocol** | [[bft-consensus/protocols/protocol-comparison]] | Compare protocols side-by-side |
+| **New to distributed systems** | [[fundamentals]] | Build foundational understanding |
+| **Blockchain developer** | [[applications]] | See practical applications first |
+| **Formal verification engineer** | [[bft-consensus-analysis/logic-models/overview]] | Start with verification frameworks |
+| **Experienced with consensus** | [[relationships]] | Dive into synthesis |
+| **Want a specific protocol** | [[protocol-comparison]] | Compare protocols side-by-side |
 | **Just browsing** | [[index]] | High-level overview with links |
 
 ---
@@ -55,13 +55,13 @@ Choose your entry point based on your background and goals:
 **Goal**: Build understanding from the ground up
 
 1. Read [[glossary]] to familiarize yourself with key terms
-2. Start with [[bft-consensus/fundamentals]] to understand consensus basics
-3. Learn about [[bft-consensus/byzantine-failures]] to understand the threat model
-4. Explore [[provable-broadcast/reliable-broadcast]] to grasp broadcast primitives
-5. Progress to [[provable-broadcast/provable-broadcast]] to see the enhancement
-6. Study specific protocols: [[bft-consensus/protocols/pbft]] → [[bft-consensus/protocols/honeybadger-bft]]
-7. Understand formal methods via [[logic-models/knowledge-framework]]
-8. Synthesize knowledge in [[integration/relationships]]
+2. Start with [[fundamentals]] to understand consensus basics
+3. Learn about [[byzantine-failures]] to understand the threat model
+4. Explore [[reliable-broadcast]] to grasp broadcast primitives
+5. Progress to [[provable-broadcast]] to see the enhancement
+6. Study specific protocols: [[pbft]] → [[honeybadger-bft]]
+7. Understand formal methods via [[knowledge-framework]]
+8. Synthesize knowledge in [[relationships]]
 
 **Time Estimate**: 4-6 hours for thorough reading
 
@@ -71,15 +71,15 @@ Choose your entry point based on your background and goals:
 
 **Goal**: Understand practical BFT protocols and their trade-offs
 
-1. Skim [[bft-consensus/fundamentals]] for context
-2. Read [[bft-consensus/protocols/protocol-comparison]] for high-level comparison
+1. Skim [[fundamentals]] for context
+2. Read [[protocol-comparison]] for high-level comparison
 3. Deep dive into protocols relevant to your work:
-   - [[bft-consensus/protocols/pbft]] - Classic, widely studied
-   - [[bft-consensus/protocols/honeybadger-bft]] - Asynchronous, robust
-   - [[bft-consensus/protocols/hotstuff]] - Linear complexity, modern
-4. Understand the broadcast mechanisms they use: [[provable-broadcast/overview]]
-5. See integration in action: [[integration/case-studies/honeybadger-complete]]
-6. Apply to design: [[integration/design-framework]]
+   - [[pbft]] - Classic, widely studied
+   - [[honeybadger-bft]] - Asynchronous, robust
+   - [[hotstuff]] - Linear complexity, modern
+4. Understand the broadcast mechanisms they use: [[bft-consensus-analysis/provable-broadcast/overview]]
+5. See integration in action: [[honeybadger-complete]]
+6. Apply to design: [[design-framework]]
 
 **Time Estimate**: 3-4 hours
 
@@ -89,12 +89,12 @@ Choose your entry point based on your background and goals:
 
 **Goal**: Learn how to formally verify consensus protocols
 
-1. Review [[logic-models/overview]] for framework introduction
-2. Study [[logic-models/knowledge-framework]] (Halpern-Moses foundations)
-3. Learn temporal logic: [[logic-models/temporal-logic]]
-4. Understand verification techniques: [[logic-models/formal-verification]]
-5. See verification applied to protocols: [[integration/case-studies/honeybadger-complete]]
-6. Explore advanced: [[logic-models/threshold-automata]]
+1. Review [[bft-consensus-analysis/logic-models/overview]] for framework introduction
+2. Study [[knowledge-framework]] (Halpern-Moses foundations)
+3. Learn temporal logic: [[temporal-logic]]
+4. Understand verification techniques: [[formal-verification]]
+5. See verification applied to protocols: [[honeybadger-complete]]
+6. Explore advanced: [[threshold-automata]]
 
 **Time Estimate**: 5-7 hours (more if diving into formal proofs)
 
@@ -104,13 +104,13 @@ Choose your entry point based on your background and goals:
 
 **Goal**: Master broadcast primitives from basic to advanced
 
-1. Start with [[provable-broadcast/reliable-broadcast]]
-2. Progress to [[provable-broadcast/byzantine-reliable-broadcast]]
-3. Understand the key innovation: [[provable-broadcast/provable-broadcast]]
-4. Compare approaches: [[provable-broadcast/vs-reliable-broadcast]]
-5. See real-world usage: [[provable-broadcast/applications]]
-6. Study properties formally: [[provable-broadcast/properties]]
-7. See integration with consensus: [[integration/relationships]]
+1. Start with [[reliable-broadcast]]
+2. Progress to [[byzantine-reliable-broadcast]]
+3. Understand the key innovation: [[provable-broadcast]]
+4. Compare approaches: [[vs-reliable-broadcast]]
+5. See real-world usage: [[applications]]
+6. Study properties formally: [[properties]]
+7. See integration with consensus: [[relationships]]
 
 **Time Estimate**: 2-3 hours
 
@@ -172,34 +172,34 @@ Every note follows this pattern:
 
 | Topic | Main Entry Point |
 |-------|-----------------|
-| BFT Consensus | [[bft-consensus/fundamentals]] |
-| Safety Properties | [[bft-consensus/properties/safety-properties]] |
-| Liveness Properties | [[bft-consensus/properties/liveness-properties]] |
-| PBFT Protocol | [[bft-consensus/protocols/pbft]] |
-| HoneyBadgerBFT | [[bft-consensus/protocols/honeybadger-bft]] |
-| HotStuff | [[bft-consensus/protocols/hotstuff]] |
-| Provable Broadcast | [[provable-broadcast/provable-broadcast]] |
-| Reliable Broadcast | [[provable-broadcast/reliable-broadcast]] |
-| Knowledge Framework | [[logic-models/knowledge-framework]] |
-| Temporal Logic | [[logic-models/temporal-logic]] |
-| Formal Verification | [[logic-models/formal-verification]] |
-| Integration | [[integration/relationships]] |
+| BFT Consensus | [[fundamentals]] |
+| Safety Properties | [[safety-properties]] |
+| Liveness Properties | [[liveness-properties]] |
+| PBFT Protocol | [[pbft]] |
+| HoneyBadgerBFT | [[honeybadger-bft]] |
+| HotStuff | [[hotstuff]] |
+| Provable Broadcast | [[provable-broadcast]] |
+| Reliable Broadcast | [[reliable-broadcast]] |
+| Knowledge Framework | [[knowledge-framework]] |
+| Temporal Logic | [[temporal-logic]] |
+| Formal Verification | [[formal-verification]] |
+| Integration | [[relationships]] |
 
 ### By Question
 
 | Question | Navigate To |
 |----------|-------------|
-| What is Byzantine fault tolerance? | [[bft-consensus/fundamentals]] |
-| Why can BFT only tolerate f < n/3 faults? | [[bft-consensus/properties/fault-tolerance-threshold]] |
-| How does PBFT work? | [[bft-consensus/protocols/pbft]] |
-| What's the difference between PBFT and HotStuff? | [[bft-consensus/protocols/protocol-comparison]] |
-| What is provable broadcast? | [[provable-broadcast/provable-broadcast]] |
-| How is it different from reliable broadcast? | [[provable-broadcast/vs-reliable-broadcast]] |
-| Where is provable broadcast used? | [[provable-broadcast/applications]] |
-| How do I formally verify a consensus protocol? | [[logic-models/formal-verification]] |
-| What is common knowledge in distributed systems? | [[logic-models/knowledge-framework]] |
-| How do BFT, broadcast, and logic models relate? | [[integration/relationships]] |
-| Can I see a complete analysis of a real protocol? | [[integration/case-studies/honeybadger-complete]] |
+| What is Byzantine fault tolerance? | [[fundamentals]] |
+| Why can BFT only tolerate f < n/3 faults? | [[fault-tolerance-threshold]] |
+| How does PBFT work? | [[pbft]] |
+| What's the difference between PBFT and HotStuff? | [[protocol-comparison]] |
+| What is provable broadcast? | [[provable-broadcast]] |
+| How is it different from reliable broadcast? | [[vs-reliable-broadcast]] |
+| Where is provable broadcast used? | [[applications]] |
+| How do I formally verify a consensus protocol? | [[formal-verification]] |
+| What is common knowledge in distributed systems? | [[knowledge-framework]] |
+| How do BFT, broadcast, and logic models relate? | [[relationships]] |
+| Can I see a complete analysis of a real protocol? | [[honeybadger-complete]] |
 
 ### By Difficulty Level
 
@@ -319,9 +319,9 @@ If you can do most of these, congratulations—you've mastered the integrated pe
 
 Ready to begin? Choose your path:
 
-- **Beginner**: Start with [[bft-consensus/fundamentals]]
-- **Practitioner**: Jump to [[bft-consensus/protocols/protocol-comparison]]
-- **Researcher**: Explore [[logic-models/overview]]
+- **Beginner**: Start with [[fundamentals]]
+- **Practitioner**: Jump to [[protocol-comparison]]
+- **Researcher**: Explore [[bft-consensus-analysis/logic-models/overview]]
 - **Curious**: Browse [[index]] and follow what interests you
 
 ---

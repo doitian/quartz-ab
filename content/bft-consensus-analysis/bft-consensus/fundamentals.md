@@ -9,7 +9,7 @@ difficulty: introductory
 related:
   - [[byzantine-failures]]
   - [[../provable-broadcast/reliable-broadcast]]
-  - [[../logic-models/overview]]
+  - [[bft-consensus-analysis/logic-models/overview]]
 references:
   - lamport-shostak-pease-1982-byzantine
   - cachin-guerraoui-rodrigues-2011-textbook
@@ -262,7 +262,7 @@ Many modern BFT protocols use **provable broadcast** as a building block:
 - Safety/liveness properties are expressed in temporal logic
 - Model checkers verify protocol correctness
 - Knowledge-based reasoning explains why f < n/3
-- See [[../logic-models/overview|Logic Models Overview]]
+- See [[bft-consensus-analysis/logic-models/overview|Logic Models Overview]]
 
 ## Summary
 

@@ -9,8 +9,8 @@ difficulty: advanced
 related:
   - "[[relationships]]"
   - "[[../bft-consensus/fundamentals]]"
-  - "[[../provable-broadcast/overview]]"
-  - "[[../logic-models/overview]]"
+  - "[[bft-consensus-analysis/provable-broadcast/overview]]"
+  - "[[bft-consensus-analysis/logic-models/overview]]"
   - "[[case-studies/honeybadger-complete]]"
   - "[[case-studies/dag-rider-analysis]]"
 references:
@@ -130,7 +130,7 @@ $$
 
 ### Step 2.1: Understand Impossibility Results
 
-Use [[../logic-models/overview|logic models]] to understand fundamental limits:
+Use [[bft-consensus-analysis/logic-models/overview|logic models]] to understand fundamental limits:
 
 | Impossibility Result | System Model | Implication |
 |---------------------|--------------|-------------|
