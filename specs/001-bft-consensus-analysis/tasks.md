@@ -22,9 +22,9 @@
 
 **Purpose**: Create core navigation and reference files that all other notes depend on
 
-- [ ] T001 Verify existing index.md completeness in content/bft-consensus-analysis/index.md
-- [ ] T002 Verify existing glossary.md completeness in content/bft-consensus-analysis/glossary.md
-- [ ] T003 Verify existing references.md completeness in content/bft-consensus-analysis/references.md
+- [x] T001 Verify existing index.md completeness in content/bft-consensus-analysis/index.md
+- [x] T002 Verify existing glossary.md completeness in content/bft-consensus-analysis/glossary.md
+- [x] T003 Verify existing references.md completeness in content/bft-consensus-analysis/references.md
 - [ ] T004 [P] [Foundation] Create directory structure: content/bft-consensus-analysis/bft-consensus/properties/
 - [ ] T005 [P] [Foundation] Create directory structure: content/bft-consensus-analysis/integration/case-studies/
 
@@ -40,7 +40,7 @@
 
 ### Foundational BFT Concepts
 
-- [ ] T006 Verify existing fundamentals.md completeness in content/bft-consensus-analysis/bft-consensus/fundamentals.md
+- [x] T006 Verify existing fundamentals.md completeness in content/bft-consensus-analysis/bft-consensus/fundamentals.md
 - [ ] T007 [P] [BFT] Create byzantine-failures.md in content/bft-consensus-analysis/bft-consensus/byzantine-failures.md
 - [ ] T008 [P] [BFT] Create safety-properties.md in content/bft-consensus-analysis/bft-consensus/properties/safety-properties.md
 - [ ] T009 [P] [BFT] Create liveness-properties.md in content/bft-consensus-analysis/bft-consensus/properties/liveness-properties.md
