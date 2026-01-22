@@ -122,7 +122,7 @@ Choose your entry point based on your background and goals:
 
 This knowledge base is designed for [Obsidian](https://obsidian.md/), a powerful markdown editor with:
 
-- **Wikilinks**: Click `[[note-name|note-name]]` to navigate between notes
+- **Wikilinks**: Click `[[full/path/to/note|Note Title]]` to navigate between notes
 - **Graph View**: Visualize connections between notes (View → Open Graph View)
 - **Backlinks**: See which notes reference the current note (right sidebar)
 - **Search**: Find content across all notes (Cmd/Ctrl + Shift + F)

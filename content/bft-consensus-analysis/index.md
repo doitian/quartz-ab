@@ -195,7 +195,7 @@ A: Depends on your synchrony assumptions, threat model, and performance needs. S
 
 Use these Obsidian features:
 
-- **Wikilinks**: Click [[note-name|note-name]] to navigate
+- **Wikilinks**: Click `[[full/path/to/note|Note Title]]` to navigate
 - **Graph View**: Visualize connections (View → Open Graph View)
 - **Search**: Find content (Cmd/Ctrl + Shift + F)
 - **Tags**: Filter by `#bft`, `#broadcast`, `#logic-model`, etc.

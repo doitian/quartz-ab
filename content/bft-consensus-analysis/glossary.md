@@ -187,7 +187,7 @@ In protocols like PBFT, a configuration with a designated leader. View changes o
 ## W
 
 **Wikilink**  
-Obsidian's `[[note-name|note-name]]` syntax for linking between notes. See [[bft-consensus-analysis/quickstart|Quickstart Guide: BFT Consensus Analysis Knowledge Base#using-the-knowledge-base]].
+Obsidian's `[[full/path/to/note|Note Title]]` syntax for linking between notes. See [[bft-consensus-analysis/quickstart|Quickstart Guide: BFT Consensus Analysis Knowledge Base#using-the-knowledge-base]].
 
 ---
 
