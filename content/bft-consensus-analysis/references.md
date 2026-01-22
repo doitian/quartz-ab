@@ -301,6 +301,6 @@ When adding a new reference:
 
 ## See Also
 
-- [[glossary]] - Technical terminology
-- [[index]] - Knowledge base entry point
-- [[quickstart]] - Navigation guide
+- [[bft-consensus-analysis/glossary|Glossary]] - Technical terminology
+- [[index|Welcome to Quartz AB]] - Knowledge base entry point
+- [[bft-consensus-analysis/quickstart|Quickstart]] - Navigation guide

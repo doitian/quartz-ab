@@ -19,37 +19,37 @@ This knowledge base explores three interconnected areas of distributed systems t
 
 Understanding how distributed systems reach agreement even when some participants are malicious or faulty.
 
-- **Core Concepts**: [[bft-consensus/fundamentals|BFT Fundamentals]], [[bft-consensus/byzantine-failures|Byzantine Failures]]
-- **Protocols**: [[bft-consensus/protocols/pbft|PBFT]], [[bft-consensus/protocols/honeybadger-bft|HoneyBadgerBFT]], [[bft-consensus/protocols/hotstuff|HotStuff]]
-- **Properties**: [[bft-consensus/properties/safety-properties|Safety]], [[bft-consensus/properties/liveness-properties|Liveness]]
+- **Core Concepts**: [[bft-consensus-analysis/bft-consensus/fundamentals|BFT Fundamentals]], [[bft-consensus-analysis/bft-consensus/byzantine-failures|Byzantine Failures]]
+- **Protocols**: [[bft-consensus-analysis/bft-consensus/protocols/pbft|PBFT]], [[bft-consensus-analysis/bft-consensus/protocols/honeybadger-bft|HoneyBadgerBFT]], [[bft-consensus-analysis/bft-consensus/protocols/hotstuff|HotStuff]]
+- **Properties**: [[bft-consensus-analysis/bft-consensus/properties/safety-properties|Safety]], [[bft-consensus-analysis/bft-consensus/properties/liveness-properties|Liveness]]
 
 ### 📡 Provable Broadcast
 
 Communication primitives that provide cryptographic proof of message delivery.
 
-- **Foundations**: [[provable-broadcast/reliable-broadcast|Reliable Broadcast]], [[provable-broadcast/byzantine-reliable-broadcast|Byzantine Reliable Broadcast]]
-- **Key Innovation**: [[provable-broadcast/provable-broadcast|Provable Broadcast Mechanisms]]
-- **Comparisons**: [[provable-broadcast/vs-reliable-broadcast|Provable vs Reliable Broadcast]]
-- **Applications**: [[provable-broadcast/applications|Real-World Usage in Blockchain & DLT]]
+- **Foundations**: [[bft-consensus-analysis/provable-broadcast/reliable-broadcast|Reliable Broadcast]], [[bft-consensus-analysis/provable-broadcast/byzantine-reliable-broadcast|Byzantine Reliable Broadcast]]
+- **Key Innovation**: [[bft-consensus-analysis/provable-broadcast/provable-broadcast|Provable Broadcast Mechanisms]]
+- **Comparisons**: [[bft-consensus-analysis/provable-broadcast/vs-reliable-broadcast|Provable vs Reliable Broadcast]]
+- **Applications**: [[bft-consensus-analysis/provable-broadcast/applications|Real-World Usage in Blockchain & DLT]]
 
 ### 🔬 Logic Models
 
 Formal frameworks for specifying and verifying consensus protocol correctness.
 
-- **Foundations**: [[logic-models/knowledge-framework|Halpern-Moses Knowledge Framework]]
-- **Temporal Logic**: [[logic-models/temporal-logic|Expressing Safety & Liveness]]
-- **Verification**: [[logic-models/formal-verification|Formal Verification Techniques]]
-- **Tools**: [[logic-models/threshold-automata|Threshold Automata]] and Model Checking
+- **Foundations**: [[bft-consensus-analysis/logic-models/knowledge-framework|Halpern-Moses Knowledge Framework]]
+- **Temporal Logic**: [[bft-consensus-analysis/logic-models/temporal-logic|Expressing Safety & Liveness]]
+- **Verification**: [[bft-consensus-analysis/logic-models/formal-verification|Formal Verification Techniques]]
+- **Tools**: [[bft-consensus-analysis/logic-models/threshold-automata|Threshold Automata]] and Model Checking
 
 ### 🔗 Integration & Synthesis
 
 How these three areas connect and complement each other.
 
-- **Relationships**: [[integration/relationships|Three-Way Connections]]
+- **Relationships**: [[bft-consensus-analysis/integration/relationships|Three-Way Connections]]
 - **Case Studies**: 
-  - [[integration/case-studies/honeybadger-complete|HoneyBadgerBFT Complete Analysis]]
-  - [[integration/case-studies/dag-rider-analysis|DAG-Based BFT Analysis]]
-- **Design Guide**: [[integration/design-framework|Applying All Three Perspectives]]
+  - [[bft-consensus-analysis/integration/case-studies/honeybadger-complete|HoneyBadgerBFT Complete Analysis]]
+  - [[bft-consensus-analysis/integration/case-studies/dag-rider-analysis|DAG-Based BFT Analysis]]
+- **Design Guide**: [[bft-consensus-analysis/integration/design-framework|Applying All Three Perspectives]]
 
 ## Quick Start
 
@@ -57,13 +57,13 @@ Choose your entry point based on your background:
 
 | Your Background | Start Here |
 |----------------|-----------|
-| **New to distributed systems** | [[bft-consensus/fundamentals]] |
-| **Blockchain developer** | [[provable-broadcast/applications]] |
-| **Formal verification engineer** | [[logic-models/overview]] |
-| **Experienced practitioner** | [[integration/relationships]] |
-| **Want protocol comparison** | [[bft-consensus/protocols/protocol-comparison]] |
+| **New to distributed systems** | [[bft-consensus-analysis/bft-consensus/fundamentals|BFT Fundamentals]] |
+| **Blockchain developer** | [[bft-consensus-analysis/provable-broadcast/applications|Real-World Usage in Blockchain & DLT]] |
+| **Formal verification engineer** | [[bft-consensus-analysis/logic-models/overview|Logic Models Overview]] |
+| **Experienced practitioner** | [[bft-consensus-analysis/integration/relationships|Three-Way Connections]] |
+| **Want protocol comparison** | [[bft-consensus-analysis/bft-consensus/protocols/protocol-comparison|Protocol Comparison]] |
 
-📖 **Detailed navigation guide**: See [[quickstart]]
+📖 **Detailed navigation guide**: See [[bft-consensus-analysis/quickstart|Quickstart]]
 
 ## Key Insights
 
@@ -82,32 +82,32 @@ Understanding all three perspectives makes you a more effective:
 
 ### 📚 Path 1: Fundamentals First (Beginners)
 
-1. [[glossary]] - Key terminology
-2. [[bft-consensus/fundamentals]] - Consensus basics
-3. [[bft-consensus/byzantine-failures]] - Threat model
-4. [[provable-broadcast/reliable-broadcast]] - Communication primitives
-5. [[bft-consensus/protocols/pbft]] - Classic BFT protocol
-6. [[integration/relationships]] - Synthesis
+1. [[bft-consensus-analysis/glossary|Glossary]] - Key terminology
+2. [[bft-consensus-analysis/bft-consensus/fundamentals|BFT Fundamentals]] - Consensus basics
+3. [[bft-consensus-analysis/bft-consensus/byzantine-failures|Byzantine Failures]] - Threat model
+4. [[bft-consensus-analysis/provable-broadcast/reliable-broadcast|Reliable Broadcast]] - Communication primitives
+5. [[bft-consensus-analysis/bft-consensus/protocols/pbft|PBFT]] - Classic BFT protocol
+6. [[bft-consensus-analysis/integration/relationships|Three-Way Connections]] - Synthesis
 
 **Time**: 4-6 hours
 
 ### ⚙️ Path 2: Protocol-Centric (Practitioners)
 
-1. [[bft-consensus/protocols/protocol-comparison]] - Overview
-2. Deep dive: [[bft-consensus/protocols/honeybadger-bft]] or [[bft-consensus/protocols/hotstuff]]
-3. [[provable-broadcast/overview]] - Broadcast mechanisms
-4. [[integration/case-studies/honeybadger-complete]] - Complete analysis
-5. [[integration/design-framework]] - Apply to your work
+1. [[bft-consensus-analysis/bft-consensus/protocols/protocol-comparison|Protocol Comparison]] - Overview
+2. Deep dive: [[bft-consensus-analysis/bft-consensus/protocols/honeybadger-bft|HoneyBadgerBFT]] or [[bft-consensus-analysis/bft-consensus/protocols/hotstuff|HotStuff]]
+3. [[bft-consensus-analysis/provable-broadcast/overview|Provable Broadcast Overview]] - Broadcast mechanisms
+4. [[bft-consensus-analysis/integration/case-studies/honeybadger-complete|HoneyBadgerBFT Complete Analysis]] - Complete analysis
+5. [[bft-consensus-analysis/integration/design-framework|Applying All Three Perspectives]] - Apply to your work
 
 **Time**: 3-4 hours
 
 ### 🔬 Path 3: Formal Verification (Researchers)
 
-1. [[logic-models/overview]] - Introduction
-2. [[logic-models/knowledge-framework]] - Halpern-Moses foundations
-3. [[logic-models/temporal-logic]] - Specifications
-4. [[logic-models/formal-verification]] - Techniques
-5. [[integration/case-studies/honeybadger-complete]] - Applied verification
+1. [[bft-consensus-analysis/logic-models/overview|Logic Models Overview]] - Introduction
+2. [[bft-consensus-analysis/logic-models/knowledge-framework|Halpern-Moses Knowledge Framework]] - Halpern-Moses foundations
+3. [[bft-consensus-analysis/logic-models/temporal-logic|Expressing Safety & Liveness]] - Specifications
+4. [[bft-consensus-analysis/logic-models/formal-verification|Formal Verification Techniques]] - Techniques
+5. [[bft-consensus-analysis/integration/case-studies/honeybadger-complete|HoneyBadgerBFT Complete Analysis]] - Applied verification
 
 **Time**: 5-7 hours
 
@@ -154,32 +154,32 @@ graph TD
 
 ### Within This Knowledge Base
 
-- 📖 [[glossary]] - Technical terminology
-- 📚 [[references]] - Bibliography and citations
-- 🧭 [[quickstart]] - Detailed navigation guide
+- 📖 [[bft-consensus-analysis/glossary|Glossary]] - Technical terminology
+- 📚 [[bft-consensus-analysis/references|References]] - Bibliography and citations
+- 🧭 [[bft-consensus-analysis/quickstart|Quickstart]] - Detailed navigation guide
 
 ### External Resources
 
 - **Decentralized Thoughts**: Authoritative blog on consensus (decentralizedthoughts.github.io)
 - **Halpern & Moses (2000)**: "Knowledge and common knowledge" (arXiv cs/0006009)
-- **Original Papers**: See [[references]] for PBFT, HoneyBadgerBFT, HotStuff papers
+- **Original Papers**: See [[bft-consensus-analysis/references|References]] for PBFT, HoneyBadgerBFT, HotStuff papers
 
 ## Common Questions
 
 **Q: What is Byzantine fault tolerance?**  
-A: The ability to reach consensus even when some nodes behave maliciously. See [[bft-consensus/fundamentals]].
+A: The ability to reach consensus even when some nodes behave maliciously. See [[bft-consensus-analysis/bft-consensus/fundamentals|BFT Fundamentals]].
 
 **Q: Why the f < n/3 limit?**  
-A: Mathematical impossibility—you cannot distinguish correct from faulty if too many are faulty. See [[bft-consensus/properties/fault-tolerance-threshold]].
+A: Mathematical impossibility—you cannot distinguish correct from faulty if too many are faulty. See [[bft-consensus-analysis/bft-consensus/properties/fault-tolerance-threshold|Fault Tolerance Threshold: Why f < n/3 for Byzantine Failures]].
 
 **Q: How is provable broadcast different from reliable broadcast?**  
-A: Provable broadcast adds cryptographic delivery certificates. See [[provable-broadcast/vs-reliable-broadcast]].
+A: Provable broadcast adds cryptographic delivery certificates. See [[bft-consensus-analysis/provable-broadcast/vs-reliable-broadcast|Provable vs Reliable Broadcast]].
 
 **Q: Can I verify my protocol is correct?**  
-A: Yes, using logic models and model checkers. See [[logic-models/formal-verification]].
+A: Yes, using logic models and model checkers. See [[bft-consensus-analysis/logic-models/formal-verification|Formal Verification Techniques]].
 
 **Q: Which BFT protocol should I use?**  
-A: Depends on your synchrony assumptions, threat model, and performance needs. See [[bft-consensus/protocols/protocol-comparison]].
+A: Depends on your synchrony assumptions, threat model, and performance needs. See [[bft-consensus-analysis/bft-consensus/protocols/protocol-comparison|Protocol Comparison]].
 
 ## About This Knowledge Base
 
@@ -195,7 +195,7 @@ A: Depends on your synchrony assumptions, threat model, and performance needs. S
 
 Use these Obsidian features:
 
-- **Wikilinks**: Click [[note-name]] to navigate
+- **Wikilinks**: Click `[[full/path/to/note|Note Title]]` to navigate
 - **Graph View**: Visualize connections (View → Open Graph View)
 - **Search**: Find content (Cmd/Ctrl + Shift + F)
 - **Tags**: Filter by `#bft`, `#broadcast`, `#logic-model`, etc.
@@ -205,10 +205,10 @@ Use these Obsidian features:
 
 Ready to explore? Choose your path:
 
-➡️ **Beginner**: [[bft-consensus/fundamentals]]  
-➡️ **Practitioner**: [[bft-consensus/protocols/protocol-comparison]]  
-➡️ **Researcher**: [[logic-models/overview]]  
-➡️ **Browse**: [[quickstart]]
+➡️ **Beginner**: [[bft-consensus-analysis/bft-consensus/fundamentals|BFT Fundamentals]]  
+➡️ **Practitioner**: [[bft-consensus-analysis/bft-consensus/protocols/protocol-comparison|Protocol Comparison]]  
+➡️ **Researcher**: [[bft-consensus-analysis/logic-models/overview|Logic Models Overview]]  
+➡️ **Browse**: [[bft-consensus-analysis/quickstart|Quickstart]]
 
 ---
 

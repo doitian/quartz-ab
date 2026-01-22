@@ -7,14 +7,14 @@ updated: 2026-01-22
 status: complete
 difficulty: intermediate
 related:
-  - [[overview]]
-  - [[temporal-logic]]
-  - [[threshold-automata]]
-  - [[proof-techniques]]
-  - [[../bft-consensus/fundamentals]]
+  - [[overview|overview]]
+  - [[bft-consensus-analysis/logic-models/temporal-logic|Expressing Safety & Liveness]]
+  - [[bft-consensus-analysis/logic-models/threshold-automata|Threshold Automata]]
+  - [[bft-consensus-analysis/logic-models/proof-techniques|Proof Techniques for Consensus Protocols]]
+  - [[bft-consensus-analysis/bft-consensus/fundamentals|BFT Fundamentals]]
 prerequisites:
-  - [[overview]]
-  - [[temporal-logic]]
+  - [[overview|overview]]
+  - [[bft-consensus-analysis/logic-models/temporal-logic|Expressing Safety & Liveness]]
 references:
   - lamport-2002-tla
   - hawblitzel-howell-kapritsos-lorch-parno-roberts-setty-zill-2015-ironfleet
@@ -71,7 +71,7 @@ references:
 
 **Best For**: Small to medium systems, finding bugs
 
-→ See [[threshold-automata]] for specialized model checking of BFT protocols
+→ See [[bft-consensus-analysis/logic-models/threshold-automata|Threshold Automata]] for specialized model checking of BFT protocols
 
 ### 2. Theorem Proving
 
@@ -213,7 +213,7 @@ tlc TwoPhaseCommit.tla
 - Safety (Agreement) verified ✓
 - Liveness requires additional assumptions (TM recovery)
 
-→ See [[temporal-logic]] for LTL/CTL specifications
+→ See [[bft-consensus-analysis/logic-models/temporal-logic|Expressing Safety & Liveness]] for LTL/CTL specifications
 
 ## Theorem Proving: Coq Example
 
@@ -319,7 +319,7 @@ Qed.
 - **Partial Order Reduction**: Avoid exploring equivalent interleavings
 - **Symbolic Model Checking**: Use BDDs (binary decision diagrams)
 
-→ See [[threshold-automata]] for parameterized abstraction
+→ See [[bft-consensus-analysis/logic-models/threshold-automata|Threshold Automata]] for parameterized abstraction
 
 ### 2. Liveness is Hard
 
@@ -454,16 +454,16 @@ Liveness == WF_vars(Next) => <>[]Decided
 ## See Also
 
 **Within Logic Models**:
-- [[overview]] — Introduction to logic models
-- [[temporal-logic]] — Temporal logic for specifications
-- [[threshold-automata]] — Parameterized verification
-- [[proof-techniques]] — Manual proof strategies
+- [[overview|overview]] — Introduction to logic models
+- [[bft-consensus-analysis/logic-models/temporal-logic|Expressing Safety & Liveness]] — Temporal logic for specifications
+- [[bft-consensus-analysis/logic-models/threshold-automata|Threshold Automata]] — Parameterized verification
+- [[bft-consensus-analysis/logic-models/proof-techniques|Proof Techniques for Consensus Protocols]] — Manual proof strategies
 
 **Related Concepts**:
-- [[../bft-consensus/fundamentals]] — BFT consensus basics
-- [[../bft-consensus/properties/safety-properties]] — Safety properties to verify
-- [[../bft-consensus/properties/liveness-properties]] — Liveness properties to verify
-- [[../bft-consensus/protocols/pbft]] — PBFT verification example
+- [[bft-consensus-analysis/bft-consensus/fundamentals|BFT Fundamentals]] — BFT consensus basics
+- [[bft-consensus-analysis/bft-consensus/properties/safety-properties|Safety]] — Safety properties to verify
+- [[bft-consensus-analysis/bft-consensus/properties/liveness-properties|Liveness]] — Liveness properties to verify
+- [[bft-consensus-analysis/bft-consensus/protocols/pbft|PBFT]] — PBFT verification example
 
 **Tools**:
 - [TLA+ Toolbox](https://lamport.azurewebsites.net/tla/toolbox.html)
@@ -479,4 +479,4 @@ Liveness == WF_vars(Next) => <>[]Decided
 
 ---
 
-**Next**: Learn [[proof-techniques]] to manually prove consensus properties.
+**Next**: Learn [[bft-consensus-analysis/logic-models/proof-techniques|Proof Techniques for Consensus Protocols]] to manually prove consensus properties.

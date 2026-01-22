@@ -7,11 +7,11 @@ updated: 2026-01-22
 status: complete
 difficulty: intermediate
 related:
-  - "[[../bft-consensus/fundamentals]]"
-  - "[[../provable-broadcast/overview]]"
-  - "[[../logic-models/overview]]"
-  - "[[design-framework]]"
-  - "[[case-studies/honeybadger-complete]]"
+  - "[[bft-consensus-analysis/bft-consensus/fundamentals|BFT Fundamentals]]"
+  - "[[bft-consensus-analysis/provable-broadcast/overview|Provable Broadcast Overview]]"
+  - "[[bft-consensus-analysis/logic-models/overview|Logic Models Overview]]"
+  - "[[bft-consensus-analysis/integration/design-framework|Applying All Three Perspectives]]"
+  - "[[bft-consensus-analysis/integration/case-studies/honeybadger-complete|HoneyBadgerBFT Complete Analysis]]"
 references:
   - miller-2016-honeybadger
   - halpern-moses-1990-knowledge
@@ -49,17 +49,17 @@ graph TD
 
 ### The Three Domains
 
-1. **[[../bft-consensus/fundamentals|BFT Consensus]]**: Protocols for achieving agreement in the presence of Byzantine failures
+1. **[[bft-consensus-analysis/bft-consensus/fundamentals|BFT Fundamentals]]**: Protocols for achieving agreement in the presence of Byzantine failures
    - **Focus**: Practical distributed systems that tolerate malicious behavior
    - **Outputs**: Working protocols (PBFT, HoneyBadger, HotStuff)
    - **Properties**: Safety, liveness, fault tolerance thresholds
 
-2. **[[../provable-broadcast/overview|Provable Broadcast]]**: Communication primitives with cryptographic proofs of delivery
+2. **[[bft-consensus-analysis/provable-broadcast/overview|Provable Broadcast Overview]]**: Communication primitives with cryptographic proofs of delivery
    - **Focus**: Reliable message dissemination with verifiable evidence
    - **Outputs**: Broadcast mechanisms (RBC, BRB, provable broadcast)
    - **Properties**: Validity, agreement, integrity, provability
 
-3. **[[../logic-models/overview|Logic Models]]**: Formal frameworks for reasoning about distributed systems
+3. **[[bft-consensus-analysis/logic-models/overview|Logic Models Overview]]**: Formal frameworks for reasoning about distributed systems
    - **Focus**: Mathematical foundations for specification and verification
    - **Outputs**: Proofs of correctness, impossibility results
    - **Properties**: Soundness, completeness, decidability
@@ -108,19 +108,19 @@ sequenceDiagram
 
 #### Concrete Examples
 
-- **[[../bft-consensus/protocols/pbft|PBFT]]**:
+- **[[bft-consensus-analysis/bft-consensus/protocols/pbft|PBFT]]**:
   - Uses **authenticated broadcast** (digital signatures) for pre-prepare, prepare, commit phases
   - Quorum certificates prove $2f+1$ nodes witnessed a value
   
-- **[[../bft-consensus/protocols/honeybadger-bft|HoneyBadger BFT]]**:
-  - Uses **[[../provable-broadcast/reliable-broadcast|Reliable Broadcast]]** (RBC) with erasure coding
+- **[[bft-consensus-analysis/bft-consensus/protocols/honeybadger-bft|HoneyBadgerBFT]]**:
+  - Uses **[[bft-consensus-analysis/provable-broadcast/reliable-broadcast|Reliable Broadcast]]** (RBC) with erasure coding
   - Each node RBCs its input; ACS ensures $n-f$ values are delivered
   
-- **[[../bft-consensus/protocols/hotstuff|HotStuff]]**:
+- **[[bft-consensus-analysis/bft-consensus/protocols/hotstuff|HotStuff]]**:
   - Uses **broadcast with threshold signatures** for proposals
   - Leader aggregates $n-f$ votes into single quorum certificate
 
-**See [[../provable-broadcast/applications]] for detailed analysis.**
+**See [[bft-consensus-analysis/provable-broadcast/applications|Real-World Usage in Blockchain & DLT]] for detailed analysis.**
 
 ---
 
@@ -135,7 +135,7 @@ Broadcast properties are stated informally but must be proven rigorously:
 **Informal Statement** (Agreement):
 > "If any honest node delivers message $m$, then all honest nodes eventually deliver $m$."
 
-**Formal Statement** ([[../logic-models/temporal-logic|Temporal Logic]]):
+**Formal Statement** ([[bft-consensus-analysis/logic-models/temporal-logic|Expressing Safety & Liveness]]):
 
 $$
 \forall \text{honest } i, j: \quad \text{delivered}_i(m) \implies \Diamond \text{delivered}_j(m)
@@ -168,14 +168,14 @@ graph LR
 
 **Example: Proving Reliable Broadcast Agreement**
 
-Using [[../logic-models/threshold-automata|threshold automata]]:
+Using [[bft-consensus-analysis/logic-models/threshold-automata|Threshold Automata]]:
 
 1. **Model**: States = {init, echoed, ready, delivered}
 2. **Transitions**: Guarded by message counts (e.g., "received $2f+1$ echo messages")
 3. **Invariant**: If one honest node is in "delivered", all honest nodes will reach "delivered"
 4. **Proof**: Show invariant preserved by all transitions
 
-**See [[../logic-models/formal-verification]] for detailed techniques.**
+**See [[bft-consensus-analysis/logic-models/formal-verification|Formal Verification Techniques]] for detailed techniques.**
 
 ---
 
@@ -195,13 +195,13 @@ Logic models identify what is **not possible**:
 | **DLS (1988)** | Asynchronous, Byzantine | Requires $n > 3f$ nodes for consensus |
 | **CAP Theorem** | Partitioned network | Cannot have consistency + availability → choose trade-offs |
 
-**Example**: [[../bft-consensus/protocols/honeybadger-bft|HoneyBadger BFT]] uses **randomization** (common coin) to circumvent FLP impossibility in asynchronous networks.
+**Example**: [[bft-consensus-analysis/bft-consensus/protocols/honeybadger-bft|HoneyBadgerBFT]] uses **randomization** (common coin) to circumvent FLP impossibility in asynchronous networks.
 
 ##### Correctness Proofs Build Confidence
 
 Logic models prove protocols are correct:
 
-**PBFT Safety Proof Sketch** (using [[../logic-models/knowledge-framework|epistemic logic]]):
+**PBFT Safety Proof Sketch** (using [[bft-consensus-analysis/logic-models/knowledge-framework|Halpern-Moses Knowledge Framework]]):
 
 1. **Assumption**: At most $f < n/3$ Byzantine nodes ($n = 3f+1$)
 2. **Invariant**: Two quorums of $2f+1$ nodes must intersect in at least one honest node
@@ -211,7 +211,7 @@ Logic models prove protocols are correct:
    - At most $f$ are Byzantine, so at least **1 honest node** is in both quorums
    - This honest node prevents conflicting decisions
 
-**See [[../logic-models/proof-techniques]] for more examples.**
+**See [[bft-consensus-analysis/logic-models/proof-techniques|Proof Techniques for Consensus Protocols]] for more examples.**
 
 #### Verification Enables Trust
 
@@ -256,17 +256,17 @@ graph TD
 
 When designing a new BFT consensus protocol:
 
-1. **Start with Logic Models** ([[../logic-models/overview]]):
+1. **Start with Logic Models** ([[bft-consensus-analysis/logic-models/overview|Logic Models Overview]]):
    - Formalize safety and liveness requirements
    - Understand impossibility results and system model constraints
    - Define fault tolerance goals ($f < n/3$ for Byzantine)
 
-2. **Select Broadcast Primitives** ([[../provable-broadcast/overview]]):
+2. **Select Broadcast Primitives** ([[bft-consensus-analysis/provable-broadcast/overview|Provable Broadcast Overview]]):
    - Choose appropriate broadcast mechanism (RBC, provable broadcast, threshold sigs)
    - Match broadcast guarantees to consensus requirements
    - Consider communication complexity and cryptographic assumptions
 
-3. **Design BFT Protocol** ([[../bft-consensus/fundamentals]]):
+3. **Design BFT Protocol** ([[bft-consensus-analysis/bft-consensus/fundamentals|BFT Fundamentals]]):
    - Orchestrate rounds of broadcasting and voting
    - Define leader election or randomized coin flips
    - Handle view changes and failure recovery
@@ -281,7 +281,7 @@ When designing a new BFT consensus protocol:
    - Test against adversarial scenarios
    - Measure performance (latency, throughput)
 
-**See [[design-framework]] for detailed methodology.**
+**See [[bft-consensus-analysis/integration/design-framework|Applying All Three Perspectives]] for detailed methodology.**
 
 ---
 
@@ -353,7 +353,7 @@ graph TD
 2. **Broadcast**: Each node uses RBC to broadcast its input; ACS ensures $n-f$ RBCs complete
 3. **Logic Models**: Probabilistic termination proven using randomness from common coin
 
-**See [[case-studies/honeybadger-complete]] for detailed analysis.**
+**See [[bft-consensus-analysis/integration/case-studies/honeybadger-complete|HoneyBadgerBFT Complete Analysis]] for detailed analysis.**
 
 ### Example 2: PBFT (Partially Synchronous Consensus)
 
@@ -431,28 +431,28 @@ graph LR
 
 ### For Protocol Designers
 
-1. **Start with Logic Models** ([[../logic-models/overview]]):
+1. **Start with Logic Models** ([[bft-consensus-analysis/logic-models/overview|Logic Models Overview]]):
    - Understand FLP impossibility, Byzantine lower bounds
    - Learn to specify safety and liveness formally
 
-2. **Study Broadcast Primitives** ([[../provable-broadcast/overview]]):
+2. **Study Broadcast Primitives** ([[bft-consensus-analysis/provable-broadcast/overview|Provable Broadcast Overview]]):
    - Learn RBC, BRB, provable broadcast properties
    - Understand quorum certificates and threshold signatures
 
-3. **Analyze Existing Protocols** ([[../bft-consensus/protocols/protocol-comparison]]):
+3. **Analyze Existing Protocols** ([[bft-consensus-analysis/bft-consensus/protocols/protocol-comparison|Protocol Comparison]]):
    - See how PBFT, HoneyBadger, HotStuff integrate broadcast and logic
    - Identify trade-offs (synchrony assumptions, communication complexity)
 
-4. **Apply Integrated Framework** ([[design-framework]]):
+4. **Apply Integrated Framework** ([[bft-consensus-analysis/integration/design-framework|Applying All Three Perspectives]]):
    - Design new protocols with all three perspectives in mind
 
 ### For Researchers
 
-1. **Master Logic Models First** ([[../logic-models/formal-verification]]):
+1. **Master Logic Models First** ([[bft-consensus-analysis/logic-models/formal-verification|Formal Verification Techniques]]):
    - Deep dive into epistemic logic, temporal logic, threshold automata
    - Study impossibility proofs and verification techniques
 
-2. **Connect Logic to Broadcast** ([[../provable-broadcast/properties]]):
+2. **Connect Logic to Broadcast** ([[bft-consensus-analysis/provable-broadcast/properties|Provable Broadcast Properties]]):
    - Formalize broadcast properties in temporal logic
    - Prove correctness of broadcast mechanisms
 
@@ -462,15 +462,15 @@ graph LR
 
 ### For Practitioners
 
-1. **Start with BFT Protocols** ([[../bft-consensus/fundamentals]]):
+1. **Start with BFT Protocols** ([[bft-consensus-analysis/bft-consensus/fundamentals|BFT Fundamentals]]):
    - Understand safety, liveness, fault tolerance intuitively
    - Learn major protocols (PBFT, Tendermint, HotStuff)
 
-2. **Understand Broadcast Primitives** ([[../provable-broadcast/applications]]):
+2. **Understand Broadcast Primitives** ([[bft-consensus-analysis/provable-broadcast/applications|Real-World Usage in Blockchain & DLT]]):
    - Recognize which broadcast each protocol uses
    - Understand communication complexity implications
 
-3. **Optional: Study Logic Models** ([[../logic-models/overview]]):
+3. **Optional: Study Logic Models** ([[bft-consensus-analysis/logic-models/overview|Logic Models Overview]]):
    - Gain confidence in protocol correctness
    - Understand why certain design choices are necessary
 
@@ -518,14 +518,14 @@ graph LR
 
 ## Next Steps
 
-- **Apply Integration**: [[design-framework]] - Use all three perspectives to design protocols
+- **Apply Integration**: [[bft-consensus-analysis/integration/design-framework|Applying All Three Perspectives]] - Use all three perspectives to design protocols
 - **Case Studies**: 
-  - [[case-studies/honeybadger-complete]] - HoneyBadger BFT integrated analysis
-  - [[case-studies/dag-rider-analysis]] - DAG-Rider protocol analysis
+  - [[bft-consensus-analysis/integration/case-studies/honeybadger-complete|HoneyBadgerBFT Complete Analysis]] - HoneyBadger BFT integrated analysis
+  - [[bft-consensus-analysis/integration/case-studies/dag-rider-analysis|DAG-Based BFT Analysis]] - DAG-Rider protocol analysis
 - **Deepen Understanding**:
-  - [[../bft-consensus/protocols/protocol-comparison]] - Compare protocols across dimensions
-  - [[../provable-broadcast/vs-reliable-broadcast]] - Understand broadcast hierarchy
-  - [[../logic-models/proof-techniques]] - Learn verification methods
+  - [[bft-consensus-analysis/bft-consensus/protocols/protocol-comparison|Protocol Comparison]] - Compare protocols across dimensions
+  - [[bft-consensus-analysis/provable-broadcast/vs-reliable-broadcast|Provable vs Reliable Broadcast]] - Understand broadcast hierarchy
+  - [[bft-consensus-analysis/logic-models/proof-techniques|Proof Techniques for Consensus Protocols]] - Learn verification methods
 
 ---
 
@@ -547,6 +547,6 @@ The three domains are **mutually reinforcing**:
 ---
 
 **See Also**:
-- [[../index]] - Return to main navigation
-- [[../glossary]] - Technical term definitions
-- [[../references]] - Source materials and citations
+- [[bft-consensus-analysis/index|BFT Consensus Analysis: Entry Point]] - Return to main navigation
+- [[bft-consensus-analysis/glossary|Glossary]] - Technical term definitions
+- [[bft-consensus-analysis/references|References]] - Source materials and citations

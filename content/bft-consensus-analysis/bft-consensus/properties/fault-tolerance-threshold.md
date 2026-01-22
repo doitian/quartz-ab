@@ -7,9 +7,9 @@ updated: 2026-01-21
 status: complete
 difficulty: intermediate
 related:
-  - "[[byzantine-failures]]"
-  - "[[safety-properties]]"
-  - "[[fundamentals]]"
+  - "[[bft-consensus-analysis/bft-consensus/byzantine-failures|Byzantine Failures]]"
+  - "[[bft-consensus-analysis/bft-consensus/properties/safety-properties|Safety]]"
+  - "[[bft-consensus-analysis/bft-consensus/fundamentals|BFT Fundamentals]]"
 references:
   - lamport-shostak-pease-1982-byzantine
   - castro-liskov-1999-pbft
@@ -261,7 +261,7 @@ The $f < \frac{n}{3}$ bound applies to **all synchrony models**:
 
 **Reason**: The bound comes from quorum intersection, not authentication.
 
-**Note**: The original Byzantine Generals solution [[lamport-shostak-pease-1982-byzantine]] uses oral messages (unauthenticated) and still achieves $n > 3f$.
+**Note**: The original Byzantine Generals solution [[lamport-shostak-pease-1982-byzantine|lamport-shostak-pease-1982-byzantine]] uses oral messages (unauthenticated) and still achieves $n > 3f$.
 
 ### Stronger Result: Authenticated Broadcast
 
@@ -296,7 +296,7 @@ Assume $n = 3f$ (boundary case).
 
 **Conclusion**: $n = 3f$ is insufficient. Need $n > 3f$.
 
-**See [[byzantine-failures]] for detailed fault model discussion.**
+**See [[bft-consensus-analysis/bft-consensus/byzantine-failures|Byzantine Failures]] for detailed fault model discussion.**
 
 ## Practical Implications
 
@@ -368,7 +368,7 @@ $$
 
 **Why**: Broadcast doesn't require agreement among all nodes on who proposed what, only that honest nodes deliver the same value from a given sender.
 
-**Protocol Example**: Bracha's Byzantine Broadcast [[bracha-1987-asynchronous-broadcast]]
+**Protocol Example**: Bracha's Byzantine Broadcast [[bracha-1987-asynchronous-broadcast|bracha-1987-asynchronous-broadcast]]
 
 ### Partial Synchrony with Signatures: No Improvement
 
@@ -394,7 +394,7 @@ Intersection of two quorums:
   (2f + 1) + (2f + 1) - (3f + 1) = f + 1 ✓ (> f)
 ```
 
-**See [[pbft]] for protocol details.**
+**See [[bft-consensus-analysis/bft-consensus/protocols/pbft|PBFT]] for protocol details.**
 
 ### HoneyBadgerBFT
 
@@ -410,7 +410,7 @@ Byzantine nodes can block at most f proposals
 Honest nodes (n - f = 2f + 1) ensure progress ✓
 ```
 
-**See [[honeybadger-bft]] for protocol details.**
+**See [[bft-consensus-analysis/bft-consensus/protocols/honeybadger-bft|HoneyBadgerBFT]] for protocol details.**
 
 ### HotStuff
 
@@ -426,22 +426,22 @@ Two QCs intersect in at least f + 1 nodes ✓
 At least one honest node in intersection ✓
 ```
 
-**See [[hotstuff]] for protocol details.**
+**See [[bft-consensus-analysis/bft-consensus/protocols/hotstuff|HotStuff]] for protocol details.**
 
 ## See Also
 
-- [[byzantine-failures]] - Fault model requiring this threshold
-- [[safety-properties]] - Properties guaranteed by quorum intersection
-- [[fundamentals]] - Core BFT concepts
-- [[pbft]] - First practical $n = 3f + 1$ protocol
-- [[honeybadger-bft]] - Asynchronous protocol with $n > 3f$
-- [[hotstuff]] - Modern optimized protocol with $n > 3f$
+- [[bft-consensus-analysis/bft-consensus/byzantine-failures|Byzantine Failures]] - Fault model requiring this threshold
+- [[bft-consensus-analysis/bft-consensus/properties/safety-properties|Safety]] - Properties guaranteed by quorum intersection
+- [[bft-consensus-analysis/bft-consensus/fundamentals|BFT Fundamentals]] - Core BFT concepts
+- [[bft-consensus-analysis/bft-consensus/protocols/pbft|PBFT]] - First practical $n = 3f + 1$ protocol
+- [[bft-consensus-analysis/bft-consensus/protocols/honeybadger-bft|HoneyBadgerBFT]] - Asynchronous protocol with $n > 3f$
+- [[bft-consensus-analysis/bft-consensus/protocols/hotstuff|HotStuff]] - Modern optimized protocol with $n > 3f$
 
 ## Further Reading
 
-- **Original Byzantine Generals**: [[lamport-shostak-pease-1982-byzantine]]
-- **PBFT Threshold Analysis**: [[castro-liskov-1999-pbft]]
-- **Textbook Treatment**: [[cachin-guerraoui-rodrigues-2011-textbook]]
+- **Original Byzantine Generals**: [[lamport-shostak-pease-1982-byzantine|lamport-shostak-pease-1982-byzantine]]
+- **PBFT Threshold Analysis**: [[castro-liskov-1999-pbft|castro-liskov-1999-pbft]]
+- **Textbook Treatment**: [[cachin-guerraoui-rodrigues-2011-textbook|cachin-guerraoui-rodrigues-2011-textbook]]
 
 ---
 

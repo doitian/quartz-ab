@@ -11,12 +11,12 @@ synchrony_model: fully-asynchronous
 fault_tolerance: "f < n/3"
 year_introduced: 2021
 related:
-  - "[[../relationships]]"
-  - "[[../design-framework]]"
-  - "[[honeybadger-complete]]"
-  - "[[../../bft-consensus/protocols/hotstuff]]"
-  - "[[../../provable-broadcast/reliable-broadcast]]"
-  - "[[../../logic-models/temporal-logic]]"
+  - "[[bft-consensus-analysis/integration/relationships|Three-Way Connections]]"
+  - "[[bft-consensus-analysis/integration/design-framework|Applying All Three Perspectives]]"
+  - "[[bft-consensus-analysis/integration/case-studies/honeybadger-complete|HoneyBadgerBFT Complete Analysis]]"
+  - "[[bft-consensus-analysis/bft-consensus/protocols/hotstuff|HotStuff]]"
+  - "[[bft-consensus-analysis/provable-broadcast/reliable-broadcast|Reliable Broadcast]]"
+  - "[[bft-consensus-analysis/logic-models/temporal-logic|Expressing Safety & Liveness]]"
 references:
   - keidar-2021-dag-rider
   - danezis-2022-narwhal-tusk
@@ -241,7 +241,7 @@ function CreateBlock(round r):
 - **Agreement**: If any honest validator delivers $B$, all honest validators deliver $B$
 - **Integrity**: $B$ is delivered at most once and only if broadcast by author
 
-**See [[../../provable-broadcast/reliable-broadcast]] for RBC details.**
+**See [[bft-consensus-analysis/provable-broadcast/reliable-broadcast|Reliable Broadcast]] for RBC details.**
 
 #### Phase 2: Wave-Based Ordering (Extract Sequence from DAG)
 
@@ -447,7 +447,7 @@ sequenceDiagram
 - **Certificate**: Set of $2f+1$ `READY` signatures
 - **Provability**: Can prove to external observer that $B$ was delivered by showing certificate
 
-**See [[../../provable-broadcast/provable-broadcast]] for certificate-based broadcast.**
+**See [[bft-consensus-analysis/provable-broadcast/provable-broadcast|Provable Broadcast Mechanisms]] for certificate-based broadcast.**
 
 ### 2.3 Causal Broadcast via Parent References
 
@@ -527,7 +527,7 @@ graph TD
 
 ### 3.1 Formalizing DAG-Rider Properties
 
-Use [[../../logic-models/temporal-logic|temporal logic]] to specify DAG-Rider's safety and liveness.
+Use [[bft-consensus-analysis/logic-models/temporal-logic|Expressing Safety & Liveness]] to specify DAG-Rider's safety and liveness.
 
 #### Safety (Agreement on Transaction Order)
 
@@ -670,7 +670,7 @@ All reachable blocks are committed.
 
 ### 3.4 Asynchronous Model and FLP Circumvention
 
-**See [[../../logic-models/overview]] for FLP impossibility.**
+**See [[bft-consensus-analysis/logic-models/overview|Logic Models Overview]] for FLP impossibility.**
 
 **FLP Impossibility**: Deterministic asynchronous consensus is impossible with even one crash failure.
 
@@ -696,7 +696,7 @@ All reachable blocks are committed.
 
 ### 3.5 Knowledge-Based Analysis
 
-**See [[../../logic-models/knowledge-framework]] for epistemic logic.**
+**See [[bft-consensus-analysis/logic-models/knowledge-framework|Halpern-Moses Knowledge Framework]] for epistemic logic.**
 
 **Common Knowledge Challenge**: Asynchronous networks cannot achieve common knowledge in bounded time.
 
@@ -788,7 +788,7 @@ graph LR
 
 ### 4.3 Comparison: DAG-Rider vs HoneyBadger
 
-**See [[honeybadger-complete]] for HoneyBadger details.**
+**See [[bft-consensus-analysis/integration/case-studies/honeybadger-complete|HoneyBadgerBFT Complete Analysis]] for HoneyBadger details.**
 
 | Aspect | HoneyBadger BFT | DAG-Rider |
 |--------|----------------|-----------|
@@ -1037,7 +1037,7 @@ on consensus.deliver(tx_sequence):
 ---
 
 **See Also**:
-- [[honeybadger-complete]] - Another asynchronous BFT protocol (ACS-based)
-- [[../design-framework]] - Apply this integrated methodology to design your own protocols
-- [[../../bft-consensus/protocols/protocol-comparison]] - Compare DAG-Rider to other BFT protocols
-- [[../../provable-broadcast/reliable-broadcast]] - RBC foundations
+- [[bft-consensus-analysis/integration/case-studies/honeybadger-complete|HoneyBadgerBFT Complete Analysis]] - Another asynchronous BFT protocol (ACS-based)
+- [[bft-consensus-analysis/integration/design-framework|Applying All Three Perspectives]] - Apply this integrated methodology to design your own protocols
+- [[bft-consensus-analysis/bft-consensus/protocols/protocol-comparison|Protocol Comparison]] - Compare DAG-Rider to other BFT protocols
+- [[bft-consensus-analysis/provable-broadcast/reliable-broadcast|Reliable Broadcast]] - RBC foundations

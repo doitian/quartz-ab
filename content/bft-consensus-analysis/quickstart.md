@@ -7,9 +7,9 @@ updated: 2026-01-22
 status: complete
 difficulty: beginner
 related:
-  - "[[index]]"
-  - "[[glossary]]"
-  - "[[references]]"
+  - "[[index|Welcome to Quartz AB]]"
+  - "[[bft-consensus-analysis/glossary|Glossary]]"
+  - "[[bft-consensus-analysis/references|References]]"
 ---
 
 # Quickstart Guide: BFT Consensus Analysis Knowledge Base
@@ -39,12 +39,12 @@ Choose your entry point based on your background and goals:
 
 | Your Background | Recommended Starting Point | Why |
 |----------------|---------------------------|-----|
-| **New to distributed systems** | [[bft-consensus/fundamentals]] | Build foundational understanding |
-| **Blockchain developer** | [[provable-broadcast/applications]] | See practical applications first |
-| **Formal verification engineer** | [[logic-models/overview]] | Start with verification frameworks |
-| **Experienced with consensus** | [[integration/relationships]] | Dive into synthesis |
-| **Want a specific protocol** | [[bft-consensus/protocols/protocol-comparison]] | Compare protocols side-by-side |
-| **Just browsing** | [[index]] | High-level overview with links |
+| **New to distributed systems** | [[bft-consensus-analysis/bft-consensus/fundamentals|BFT Fundamentals]] | Build foundational understanding |
+| **Blockchain developer** | [[bft-consensus-analysis/provable-broadcast/applications|Real-World Usage in Blockchain & DLT]] | See practical applications first |
+| **Formal verification engineer** | [[bft-consensus-analysis/logic-models/overview|Logic Models Overview]] | Start with verification frameworks |
+| **Experienced with consensus** | [[bft-consensus-analysis/integration/relationships|Three-Way Connections]] | Dive into synthesis |
+| **Want a specific protocol** | [[bft-consensus-analysis/bft-consensus/protocols/protocol-comparison|Protocol Comparison]] | Compare protocols side-by-side |
+| **Just browsing** | [[index|Welcome to Quartz AB]] | High-level overview with links |
 
 ---
 
@@ -54,14 +54,14 @@ Choose your entry point based on your background and goals:
 
 **Goal**: Build understanding from the ground up
 
-1. Read [[glossary]] to familiarize yourself with key terms
-2. Start with [[bft-consensus/fundamentals]] to understand consensus basics
-3. Learn about [[bft-consensus/byzantine-failures]] to understand the threat model
-4. Explore [[provable-broadcast/reliable-broadcast]] to grasp broadcast primitives
-5. Progress to [[provable-broadcast/provable-broadcast]] to see the enhancement
-6. Study specific protocols: [[bft-consensus/protocols/pbft]] → [[bft-consensus/protocols/honeybadger-bft]]
-7. Understand formal methods via [[logic-models/knowledge-framework]]
-8. Synthesize knowledge in [[integration/relationships]]
+1. Read [[bft-consensus-analysis/glossary|Glossary]] to familiarize yourself with key terms
+2. Start with [[bft-consensus-analysis/bft-consensus/fundamentals|BFT Fundamentals]] to understand consensus basics
+3. Learn about [[bft-consensus-analysis/bft-consensus/byzantine-failures|Byzantine Failures]] to understand the threat model
+4. Explore [[bft-consensus-analysis/provable-broadcast/reliable-broadcast|Reliable Broadcast]] to grasp broadcast primitives
+5. Progress to [[bft-consensus-analysis/provable-broadcast/provable-broadcast|Provable Broadcast Mechanisms]] to see the enhancement
+6. Study specific protocols: [[bft-consensus-analysis/bft-consensus/protocols/pbft|PBFT]] → [[bft-consensus-analysis/bft-consensus/protocols/honeybadger-bft|HoneyBadgerBFT]]
+7. Understand formal methods via [[bft-consensus-analysis/logic-models/knowledge-framework|Halpern-Moses Knowledge Framework]]
+8. Synthesize knowledge in [[bft-consensus-analysis/integration/relationships|Three-Way Connections]]
 
 **Time Estimate**: 4-6 hours for thorough reading
 
@@ -71,15 +71,15 @@ Choose your entry point based on your background and goals:
 
 **Goal**: Understand practical BFT protocols and their trade-offs
 
-1. Skim [[bft-consensus/fundamentals]] for context
-2. Read [[bft-consensus/protocols/protocol-comparison]] for high-level comparison
+1. Skim [[bft-consensus-analysis/bft-consensus/fundamentals|BFT Fundamentals]] for context
+2. Read [[bft-consensus-analysis/bft-consensus/protocols/protocol-comparison|Protocol Comparison]] for high-level comparison
 3. Deep dive into protocols relevant to your work:
-   - [[bft-consensus/protocols/pbft]] - Classic, widely studied
-   - [[bft-consensus/protocols/honeybadger-bft]] - Asynchronous, robust
-   - [[bft-consensus/protocols/hotstuff]] - Linear complexity, modern
-4. Understand the broadcast mechanisms they use: [[provable-broadcast/overview]]
-5. See integration in action: [[integration/case-studies/honeybadger-complete]]
-6. Apply to design: [[integration/design-framework]]
+   - [[bft-consensus-analysis/bft-consensus/protocols/pbft|PBFT]] - Classic, widely studied
+   - [[bft-consensus-analysis/bft-consensus/protocols/honeybadger-bft|HoneyBadgerBFT]] - Asynchronous, robust
+   - [[bft-consensus-analysis/bft-consensus/protocols/hotstuff|HotStuff]] - Linear complexity, modern
+4. Understand the broadcast mechanisms they use: [[bft-consensus-analysis/provable-broadcast/overview|Provable Broadcast Overview]]
+5. See integration in action: [[bft-consensus-analysis/integration/case-studies/honeybadger-complete|HoneyBadgerBFT Complete Analysis]]
+6. Apply to design: [[bft-consensus-analysis/integration/design-framework|Applying All Three Perspectives]]
 
 **Time Estimate**: 3-4 hours
 
@@ -89,12 +89,12 @@ Choose your entry point based on your background and goals:
 
 **Goal**: Learn how to formally verify consensus protocols
 
-1. Review [[logic-models/overview]] for framework introduction
-2. Study [[logic-models/knowledge-framework]] (Halpern-Moses foundations)
-3. Learn temporal logic: [[logic-models/temporal-logic]]
-4. Understand verification techniques: [[logic-models/formal-verification]]
-5. See verification applied to protocols: [[integration/case-studies/honeybadger-complete]]
-6. Explore advanced: [[logic-models/threshold-automata]]
+1. Review [[bft-consensus-analysis/logic-models/overview|Logic Models Overview]] for framework introduction
+2. Study [[bft-consensus-analysis/logic-models/knowledge-framework|Halpern-Moses Knowledge Framework]] (Halpern-Moses foundations)
+3. Learn temporal logic: [[bft-consensus-analysis/logic-models/temporal-logic|Expressing Safety & Liveness]]
+4. Understand verification techniques: [[bft-consensus-analysis/logic-models/formal-verification|Formal Verification Techniques]]
+5. See verification applied to protocols: [[bft-consensus-analysis/integration/case-studies/honeybadger-complete|HoneyBadgerBFT Complete Analysis]]
+6. Explore advanced: [[bft-consensus-analysis/logic-models/threshold-automata|Threshold Automata]]
 
 **Time Estimate**: 5-7 hours (more if diving into formal proofs)
 
@@ -104,13 +104,13 @@ Choose your entry point based on your background and goals:
 
 **Goal**: Master broadcast primitives from basic to advanced
 
-1. Start with [[provable-broadcast/reliable-broadcast]]
-2. Progress to [[provable-broadcast/byzantine-reliable-broadcast]]
-3. Understand the key innovation: [[provable-broadcast/provable-broadcast]]
-4. Compare approaches: [[provable-broadcast/vs-reliable-broadcast]]
-5. See real-world usage: [[provable-broadcast/applications]]
-6. Study properties formally: [[provable-broadcast/properties]]
-7. See integration with consensus: [[integration/relationships]]
+1. Start with [[bft-consensus-analysis/provable-broadcast/reliable-broadcast|Reliable Broadcast]]
+2. Progress to [[bft-consensus-analysis/provable-broadcast/byzantine-reliable-broadcast|Byzantine Reliable Broadcast]]
+3. Understand the key innovation: [[bft-consensus-analysis/provable-broadcast/provable-broadcast|Provable Broadcast Mechanisms]]
+4. Compare approaches: [[bft-consensus-analysis/provable-broadcast/vs-reliable-broadcast|Provable vs Reliable Broadcast]]
+5. See real-world usage: [[bft-consensus-analysis/provable-broadcast/applications|Real-World Usage in Blockchain & DLT]]
+6. Study properties formally: [[bft-consensus-analysis/provable-broadcast/properties|Provable Broadcast Properties]]
+7. See integration with consensus: [[bft-consensus-analysis/integration/relationships|Three-Way Connections]]
 
 **Time Estimate**: 2-3 hours
 
@@ -122,7 +122,7 @@ Choose your entry point based on your background and goals:
 
 This knowledge base is designed for [Obsidian](https://obsidian.md/), a powerful markdown editor with:
 
-- **Wikilinks**: Click `[[note-name]]` to navigate between notes
+- **Wikilinks**: Click `[[full/path/to/note|Note Title]]` to navigate between notes
 - **Graph View**: Visualize connections between notes (View → Open Graph View)
 - **Backlinks**: See which notes reference the current note (right sidebar)
 - **Search**: Find content across all notes (Cmd/Ctrl + Shift + F)
@@ -172,34 +172,34 @@ Every note follows this pattern:
 
 | Topic | Main Entry Point |
 |-------|-----------------|
-| BFT Consensus | [[bft-consensus/fundamentals]] |
-| Safety Properties | [[bft-consensus/properties/safety-properties]] |
-| Liveness Properties | [[bft-consensus/properties/liveness-properties]] |
-| PBFT Protocol | [[bft-consensus/protocols/pbft]] |
-| HoneyBadgerBFT | [[bft-consensus/protocols/honeybadger-bft]] |
-| HotStuff | [[bft-consensus/protocols/hotstuff]] |
-| Provable Broadcast | [[provable-broadcast/provable-broadcast]] |
-| Reliable Broadcast | [[provable-broadcast/reliable-broadcast]] |
-| Knowledge Framework | [[logic-models/knowledge-framework]] |
-| Temporal Logic | [[logic-models/temporal-logic]] |
-| Formal Verification | [[logic-models/formal-verification]] |
-| Integration | [[integration/relationships]] |
+| BFT Consensus | [[bft-consensus-analysis/bft-consensus/fundamentals|BFT Fundamentals]] |
+| Safety Properties | [[bft-consensus-analysis/bft-consensus/properties/safety-properties|Safety]] |
+| Liveness Properties | [[bft-consensus-analysis/bft-consensus/properties/liveness-properties|Liveness]] |
+| PBFT Protocol | [[bft-consensus-analysis/bft-consensus/protocols/pbft|PBFT]] |
+| HoneyBadgerBFT | [[bft-consensus-analysis/bft-consensus/protocols/honeybadger-bft|HoneyBadgerBFT]] |
+| HotStuff | [[bft-consensus-analysis/bft-consensus/protocols/hotstuff|HotStuff]] |
+| Provable Broadcast | [[bft-consensus-analysis/provable-broadcast/provable-broadcast|Provable Broadcast Mechanisms]] |
+| Reliable Broadcast | [[bft-consensus-analysis/provable-broadcast/reliable-broadcast|Reliable Broadcast]] |
+| Knowledge Framework | [[bft-consensus-analysis/logic-models/knowledge-framework|Halpern-Moses Knowledge Framework]] |
+| Temporal Logic | [[bft-consensus-analysis/logic-models/temporal-logic|Expressing Safety & Liveness]] |
+| Formal Verification | [[bft-consensus-analysis/logic-models/formal-verification|Formal Verification Techniques]] |
+| Integration | [[bft-consensus-analysis/integration/relationships|Three-Way Connections]] |
 
 ### By Question
 
 | Question | Navigate To |
 |----------|-------------|
-| What is Byzantine fault tolerance? | [[bft-consensus/fundamentals]] |
-| Why can BFT only tolerate f < n/3 faults? | [[bft-consensus/properties/fault-tolerance-threshold]] |
-| How does PBFT work? | [[bft-consensus/protocols/pbft]] |
-| What's the difference between PBFT and HotStuff? | [[bft-consensus/protocols/protocol-comparison]] |
-| What is provable broadcast? | [[provable-broadcast/provable-broadcast]] |
-| How is it different from reliable broadcast? | [[provable-broadcast/vs-reliable-broadcast]] |
-| Where is provable broadcast used? | [[provable-broadcast/applications]] |
-| How do I formally verify a consensus protocol? | [[logic-models/formal-verification]] |
-| What is common knowledge in distributed systems? | [[logic-models/knowledge-framework]] |
-| How do BFT, broadcast, and logic models relate? | [[integration/relationships]] |
-| Can I see a complete analysis of a real protocol? | [[integration/case-studies/honeybadger-complete]] |
+| What is Byzantine fault tolerance? | [[bft-consensus-analysis/bft-consensus/fundamentals|BFT Fundamentals]] |
+| Why can BFT only tolerate f < n/3 faults? | [[bft-consensus-analysis/bft-consensus/properties/fault-tolerance-threshold|Fault Tolerance Threshold: Why f < n/3 for Byzantine Failures]] |
+| How does PBFT work? | [[bft-consensus-analysis/bft-consensus/protocols/pbft|PBFT]] |
+| What's the difference between PBFT and HotStuff? | [[bft-consensus-analysis/bft-consensus/protocols/protocol-comparison|Protocol Comparison]] |
+| What is provable broadcast? | [[bft-consensus-analysis/provable-broadcast/provable-broadcast|Provable Broadcast Mechanisms]] |
+| How is it different from reliable broadcast? | [[bft-consensus-analysis/provable-broadcast/vs-reliable-broadcast|Provable vs Reliable Broadcast]] |
+| Where is provable broadcast used? | [[bft-consensus-analysis/provable-broadcast/applications|Real-World Usage in Blockchain & DLT]] |
+| How do I formally verify a consensus protocol? | [[bft-consensus-analysis/logic-models/formal-verification|Formal Verification Techniques]] |
+| What is common knowledge in distributed systems? | [[bft-consensus-analysis/logic-models/knowledge-framework|Halpern-Moses Knowledge Framework]] |
+| How do BFT, broadcast, and logic models relate? | [[bft-consensus-analysis/integration/relationships|Three-Way Connections]] |
+| Can I see a complete analysis of a real protocol? | [[bft-consensus-analysis/integration/case-studies/honeybadger-complete|HoneyBadgerBFT Complete Analysis]] |
 
 ### By Difficulty Level
 
@@ -215,7 +215,7 @@ Use tags to filter by complexity:
 
 ## Key Concepts & Terminology
 
-Before diving in, familiarize yourself with these essential terms (see [[glossary]] for full definitions):
+Before diving in, familiarize yourself with these essential terms (see [[bft-consensus-analysis/glossary|Glossary]] for full definitions):
 
 - **Byzantine Failure**: Arbitrary or malicious behavior by faulty nodes (not just crashes)
 - **Consensus**: Agreement among distributed nodes on a single value
@@ -239,7 +239,7 @@ This knowledge base synthesizes information from authoritative sources:
 - **arXiv cs/0006009**: Halpern & Moses, "Knowledge and common knowledge in a distributed environment"
 - **Original Protocol Papers**: PBFT (Castro & Liskov), HoneyBadgerBFT (Miller et al.), HotStuff (Yin et al.)
 
-See [[references]] for the complete bibliography with links.
+See [[bft-consensus-analysis/references|References]] for the complete bibliography with links.
 
 ### Recommended External Reading
 
@@ -259,8 +259,8 @@ If you're maintaining this knowledge base:
 
 ### Adding New Content
 
-1. **Choose the right location**: See [[contracts/directory-structure]]
-2. **Use the note schema**: See [[contracts/note-schema]]
+1. **Choose the right location**: See [[contracts/directory-structure|contracts/directory-structure]]
+2. **Use the note schema**: See [[contracts/note-schema|contracts/note-schema]]
 3. **Follow naming conventions**: Use kebab-case (e.g., `new-protocol.md`)
 4. **Add YAML frontmatter**: Include required fields (title, type, tags, dates, status)
 5. **Link generously**: Connect to related notes using wikilinks
@@ -269,7 +269,7 @@ If you're maintaining this knowledge base:
 
 ### Quality Standards
 
-- **Cite sources**: Use [[references]] for all technical claims
+- **Cite sources**: Use [[bft-consensus-analysis/references|References]] for all technical claims
 - **Provide examples**: Include concrete instances, not just abstractions
 - **Use diagrams**: Mermaid diagrams for sequences, flows, structures
 - **Be accessible**: Start with intuition before formal definitions
@@ -281,17 +281,17 @@ If you're maintaining this knowledge base:
 
 ### Within the Knowledge Base
 
-- **Glossary**: [[glossary]] - Definitions of technical terms
-- **References**: [[references]] - Full citations and external links
-- **Index**: [[index]] - Overview and main navigation
+- **Glossary**: [[bft-consensus-analysis/glossary|Glossary]] - Definitions of technical terms
+- **References**: [[bft-consensus-analysis/references|References]] - Full citations and external links
+- **Index**: [[index|Welcome to Quartz AB]] - Overview and main navigation
 
 ### Common Issues
 
 | Problem | Solution |
 |---------|----------|
 | "This note assumes knowledge I don't have" | Check the `Prerequisites` section for suggested reading order |
-| "I don't understand the formal notation" | See [[glossary]] for notation explanations; start with accessible notes tagged `#introductory` |
-| "Wikilink doesn't resolve" | The note may not exist yet; check [[index]] for available content |
+| "I don't understand the formal notation" | See [[bft-consensus-analysis/glossary|Glossary]] for notation explanations; start with accessible notes tagged `#introductory` |
+| "Wikilink doesn't resolve" | The note may not exist yet; check [[index|Welcome to Quartz AB]] for available content |
 | "Too much detail, I just want the overview" | Look for "overview" or "fundamentals" notes in each domain |
 | "Not enough detail, I want the math" | Look for notes with `#advanced` tag or sections titled "Formal Specification" |
 
@@ -319,10 +319,10 @@ If you can do most of these, congratulations—you've mastered the integrated pe
 
 Ready to begin? Choose your path:
 
-- **Beginner**: Start with [[bft-consensus/fundamentals]]
-- **Practitioner**: Jump to [[bft-consensus/protocols/protocol-comparison]]
-- **Researcher**: Explore [[logic-models/overview]]
-- **Curious**: Browse [[index]] and follow what interests you
+- **Beginner**: Start with [[bft-consensus-analysis/bft-consensus/fundamentals|BFT Fundamentals]]
+- **Practitioner**: Jump to [[bft-consensus-analysis/bft-consensus/protocols/protocol-comparison|Protocol Comparison]]
+- **Researcher**: Explore [[bft-consensus-analysis/logic-models/overview|Logic Models Overview]]
+- **Curious**: Browse [[index|Welcome to Quartz AB]] and follow what interests you
 
 ---
 
@@ -336,8 +336,8 @@ Ready to begin? Choose your path:
 
 ## See Also
 
-- [[index]] - Main navigation hub
-- [[glossary]] - Technical terminology
-- [[references]] - Bibliography
-- [[contracts/note-schema]] - Metadata standards
-- [[contracts/directory-structure]] - File organization
+- [[index|Welcome to Quartz AB]] - Main navigation hub
+- [[bft-consensus-analysis/glossary|Glossary]] - Technical terminology
+- [[bft-consensus-analysis/references|References]] - Bibliography
+- [[contracts/note-schema|contracts/note-schema]] - Metadata standards
+- [[contracts/directory-structure|contracts/directory-structure]] - File organization

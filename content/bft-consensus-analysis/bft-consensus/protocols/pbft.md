@@ -9,18 +9,18 @@ synchrony_model: partially-synchronous
 fault_tolerance: "f < n/3"
 year_introduced: 1999
 related:
-  - "[[hotstuff]]"
-  - "[[protocol-comparison]]"
-  - "[[fundamentals]]"
-  - "[[safety-properties]]"
-  - "[[liveness-properties]]"
+  - "[[bft-consensus-analysis/bft-consensus/protocols/hotstuff|HotStuff]]"
+  - "[[bft-consensus-analysis/bft-consensus/protocols/protocol-comparison|Protocol Comparison]]"
+  - "[[bft-consensus-analysis/bft-consensus/fundamentals|BFT Fundamentals]]"
+  - "[[bft-consensus-analysis/bft-consensus/properties/safety-properties|Safety]]"
+  - "[[bft-consensus-analysis/bft-consensus/properties/liveness-properties|Liveness]]"
 references:
   - castro-liskov-1999-pbft
   - decentralized-thoughts-2025-pbft
 prerequisites:
-  - "[[fundamentals]]"
-  - "[[byzantine-failures]]"
-  - "[[fault-tolerance-threshold]]"
+  - "[[bft-consensus-analysis/bft-consensus/fundamentals|BFT Fundamentals]]"
+  - "[[bft-consensus-analysis/bft-consensus/byzantine-failures|Byzantine Failures]]"
+  - "[[bft-consensus-analysis/bft-consensus/properties/fault-tolerance-threshold|Fault Tolerance Threshold: Why f < n/3 for Byzantine Failures]]"
 ---
 
 # PBFT: Practical Byzantine Fault Tolerance
@@ -238,7 +238,7 @@ sequenceDiagram
 
 **View Change Safety**: The `NEW-VIEW` protocol ensures that any value that might have been committed in the previous view is re-proposed in the new view, preventing loss of committed values.
 
-**See [[safety-properties]] for general safety guarantees.**
+**See [[bft-consensus-analysis/bft-consensus/properties/safety-properties|Safety]] for general safety guarantees.**
 
 ## Liveness Under Partial Synchrony
 
@@ -254,7 +254,7 @@ sequenceDiagram
 
 **Expected Time to Commit**: $O(1)$ rounds in the normal case (no view changes).
 
-**See [[liveness-properties]] for general liveness guarantees.**
+**See [[bft-consensus-analysis/bft-consensus/properties/liveness-properties|Liveness]] for general liveness guarantees.**
 
 ## Message Complexity
 
@@ -359,7 +359,7 @@ sequenceDiagram
 | **Liveness** | After GST | After GST | Always (probabilistic) |
 | **Year** | 1999 | 2019 | 2016 |
 
-**See [[protocol-comparison]] for detailed analysis.**
+**See [[bft-consensus-analysis/bft-consensus/protocols/protocol-comparison|Protocol Comparison]] for detailed analysis.**
 
 ## Limitations
 
@@ -389,18 +389,18 @@ sequenceDiagram
 
 ## See Also
 
-- [[hotstuff]] - Modern linear-complexity evolution of PBFT
-- [[honeybadger-bft]] - Asynchronous alternative
-- [[protocol-comparison]] - Side-by-side comparison
-- [[safety-properties]] - Safety guarantees PBFT provides
-- [[liveness-properties]] - Liveness guarantees under partial synchrony
-- [[fundamentals]] - BFT consensus foundations
+- [[bft-consensus-analysis/bft-consensus/protocols/hotstuff|HotStuff]] - Modern linear-complexity evolution of PBFT
+- [[bft-consensus-analysis/bft-consensus/protocols/honeybadger-bft|HoneyBadgerBFT]] - Asynchronous alternative
+- [[bft-consensus-analysis/bft-consensus/protocols/protocol-comparison|Protocol Comparison]] - Side-by-side comparison
+- [[bft-consensus-analysis/bft-consensus/properties/safety-properties|Safety]] - Safety guarantees PBFT provides
+- [[bft-consensus-analysis/bft-consensus/properties/liveness-properties|Liveness]] - Liveness guarantees under partial synchrony
+- [[bft-consensus-analysis/bft-consensus/fundamentals|BFT Fundamentals]] - BFT consensus foundations
 
 ## Further Reading
 
-- **Original Paper**: [[castro-liskov-1999-pbft]]
-- **Tutorial**: [[decentralized-thoughts-2025-pbft]]
-- **Textbook**: [[cachin-guerraoui-rodrigues-2011-textbook]]
+- **Original Paper**: [[castro-liskov-1999-pbft|castro-liskov-1999-pbft]]
+- **Tutorial**: [[decentralized-thoughts-2025-pbft|decentralized-thoughts-2025-pbft]]
+- **Textbook**: [[cachin-guerraoui-rodrigues-2011-textbook|cachin-guerraoui-rodrigues-2011-textbook]]
 
 ---
 

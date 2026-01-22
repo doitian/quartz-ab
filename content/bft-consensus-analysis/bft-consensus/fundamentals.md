@@ -7,9 +7,9 @@ updated: 2026-01-21
 status: draft
 difficulty: introductory
 related:
-  - [[byzantine-failures]]
-  - [[../provable-broadcast/reliable-broadcast]]
-  - [[../logic-models/overview]]
+  - [[bft-consensus-analysis/bft-consensus/byzantine-failures|Byzantine Failures]]
+  - [[bft-consensus-analysis/provable-broadcast/reliable-broadcast|Reliable Broadcast]]
+  - [[bft-consensus-analysis/logic-models/overview|Logic Models Overview]]
 references:
   - lamport-shostak-pease-1982-byzantine
   - cachin-guerraoui-rodrigues-2011-textbook
@@ -161,7 +161,7 @@ This prevents a Byzantine leader from equivocating (sending different values to 
 
 Modern BFT protocols use **certificates** (proofs) that a message has been accepted by a quorum:
 - **Quorum Certificate**: Collection of signatures from n - f nodes
-- **Delivery Certificate**: Proof that a message was delivered (see [[../provable-broadcast/provable-broadcast|Provable Broadcast]])
+- **Delivery Certificate**: Proof that a message was delivered (see [[bft-consensus-analysis/provable-broadcast/provable-broadcast|Provable Broadcast Mechanisms]])
 
 Certificates enable compact proofs and reduce communication.
 
@@ -254,7 +254,7 @@ sequenceDiagram
 Many modern BFT protocols use **provable broadcast** as a building block:
 - Provable broadcast provides delivery certificates
 - BFT consensus uses these certificates to prove agreement
-- See [[../provable-broadcast/provable-broadcast|Provable Broadcast]]
+- See [[bft-consensus-analysis/provable-broadcast/provable-broadcast|Provable Broadcast Mechanisms]]
 
 ### BFT ↔ Logic Models
 
@@ -262,7 +262,7 @@ Many modern BFT protocols use **provable broadcast** as a building block:
 - Safety/liveness properties are expressed in temporal logic
 - Model checkers verify protocol correctness
 - Knowledge-based reasoning explains why f < n/3
-- See [[../logic-models/overview|Logic Models Overview]]
+- See [[bft-consensus-analysis/logic-models/overview|Logic Models Overview]]
 
 ## Summary
 
@@ -275,7 +275,7 @@ Many modern BFT protocols use **provable broadcast** as a building block:
 
 ## Next Steps
 
-- **Understand the threat model**: [[byzantine-failures|Byzantine Failures]]
+- **Understand the threat model**: [[bft-consensus-analysis/bft-consensus/byzantine-failures|Byzantine Failures]]
 - **Explore safety properties**: [[properties/safety-properties|Safety Properties]]
 - **Explore liveness properties**: [[properties/liveness-properties|Liveness Properties]]
 - **Study specific protocols**:
@@ -286,11 +286,11 @@ Many modern BFT protocols use **provable broadcast** as a building block:
 
 ## References
 
-[^1]: [[references#lamport-shostak-pease-1982-byzantine|Lamport, Shostak, & Pease (1982)]] - The Byzantine Generals Problem
-[^2]: [[references#fischer-lynch-paterson-1985-flp|Fischer, Lynch, & Paterson (1985)]] - FLP Impossibility
+[^1]: [[bft-consensus-analysis/references|References: Bibliography and External Sources#lamport-shostak-pease-1982-byzantine]] - The Byzantine Generals Problem
+[^2]: [[bft-consensus-analysis/references|References: Bibliography and External Sources#fischer-lynch-paterson-1985-flp]] - FLP Impossibility
 
 ## See Also
 
-- [[../index|Knowledge Base Home]]
-- [[glossary|Glossary]]
-- [[../integration/relationships|How BFT Relates to Broadcast and Logic Models]]
+- [[bft-consensus-analysis/index|BFT Consensus Analysis: Entry Point]]
+- [[bft-consensus-analysis/glossary|Glossary]]
+- [[bft-consensus-analysis/integration/relationships|Three-Way Connections]]

@@ -7,10 +7,10 @@ updated: 2026-01-22
 status: complete
 difficulty: introductory
 related:
-  - [[knowledge-framework]]
-  - [[temporal-logic]]
-  - [[formal-verification]]
-  - [[../bft-consensus/fundamentals]]
+  - [[bft-consensus-analysis/logic-models/knowledge-framework|Halpern-Moses Knowledge Framework]]
+  - [[bft-consensus-analysis/logic-models/temporal-logic|Expressing Safety & Liveness]]
+  - [[bft-consensus-analysis/logic-models/formal-verification|Formal Verification Techniques]]
+  - [[bft-consensus-analysis/bft-consensus/fundamentals|BFT Fundamentals]]
 references:
   - halpern-moses-1990-knowledge
   - lamport-1994-temporal-logic
@@ -72,7 +72,7 @@ Without logic models, such impossibility results cannot be rigorously establishe
 
 **Application**: Explains why consensus requires approximate common knowledge and why it's hard to achieve in asynchronous systems.
 
-→ See [[knowledge-framework]] for details
+→ See [[bft-consensus-analysis/logic-models/knowledge-framework|Halpern-Moses Knowledge Framework]] for details
 
 ### 2. Temporal Logic
 
@@ -85,7 +85,7 @@ Without logic models, such impossibility results cannot be rigorously establishe
 
 **Application**: Expresses consensus properties formally (e.g., "eventually all honest nodes decide" = ◇ decided).
 
-→ See [[temporal-logic]] for details
+→ See [[bft-consensus-analysis/logic-models/temporal-logic|Expressing Safety & Liveness]] for details
 
 ### 3. Threshold Automata
 
@@ -98,7 +98,7 @@ Without logic models, such impossibility results cannot be rigorously establishe
 
 **Application**: Automated verification of BFT protocols like PBFT, HotStuff using model checkers.
 
-→ See [[threshold-automata]] for details
+→ See [[bft-consensus-analysis/logic-models/threshold-automata|Threshold Automata]] for details
 
 ## The Logic Model Workflow
 
@@ -165,7 +165,7 @@ Agreement: ∀i,j ∈ Correct : decided(i) ∧ decided(j) → value(i) = value(j
 3. Protocol rule prevents honest nodes from sending conflicting messages
 4. Therefore, Agreement holds
 
-→ See [[proof-techniques]] for detailed proof strategies
+→ See [[bft-consensus-analysis/logic-models/proof-techniques|Proof Techniques for Consensus Protocols]] for detailed proof strategies
 
 ## Benefits of Logic Models
 
@@ -200,7 +200,7 @@ Prove correctness:
 - **Manual**: Inductive invariants for safety, progress measures for liveness
 - **Automated**: Model checking for finite-state systems, theorem proving for infinite systems
 
-→ See [[formal-verification]] for verification techniques
+→ See [[bft-consensus-analysis/logic-models/formal-verification|Formal Verification Techniques]] for verification techniques
 
 ## Limitations and Challenges
 
@@ -241,11 +241,11 @@ graph LR
 
 **Recommended Reading Order**:
 1. **Start here**: Logic Models Overview (this note)
-2. **Foundations**: [[knowledge-framework]] — Understand epistemic logic
-3. **Foundations**: [[temporal-logic]] — Learn temporal operators
-4. **Application**: [[formal-verification]] — See how to verify protocols
-5. **Advanced**: [[threshold-automata]] — Parameterized verification
-6. **Advanced**: [[proof-techniques]] — Master proof strategies
+2. **Foundations**: [[bft-consensus-analysis/logic-models/knowledge-framework|Halpern-Moses Knowledge Framework]] — Understand epistemic logic
+3. **Foundations**: [[bft-consensus-analysis/logic-models/temporal-logic|Expressing Safety & Liveness]] — Learn temporal operators
+4. **Application**: [[bft-consensus-analysis/logic-models/formal-verification|Formal Verification Techniques]] — See how to verify protocols
+5. **Advanced**: [[bft-consensus-analysis/logic-models/threshold-automata|Threshold Automata]] — Parameterized verification
+6. **Advanced**: [[bft-consensus-analysis/logic-models/proof-techniques|Proof Techniques for Consensus Protocols]] — Master proof strategies
 
 ## Self-Assessment Questions
 
@@ -260,24 +260,24 @@ graph LR
    - Why is common knowledge unattainable in asynchronous systems?
 
 3. **Integration**:
-   - How do logic models help verify [[../bft-consensus/protocols/pbft|PBFT]]?
-   - What role does [[../provable-broadcast/provable-broadcast|provable broadcast]] play in establishing distributed knowledge?
-   - How would you model a [[../bft-consensus/properties/safety-properties|safety violation]]?
+   - How do logic models help verify [[bft-consensus-analysis/bft-consensus/protocols/pbft|PBFT]]?
+   - What role does [[bft-consensus-analysis/provable-broadcast/provable-broadcast|Provable Broadcast Mechanisms]] play in establishing distributed knowledge?
+   - How would you model a [[bft-consensus-analysis/bft-consensus/properties/safety-properties|Safety]]?
 
 ## See Also
 
 **Within Logic Models**:
-- [[knowledge-framework]] — Epistemic logic and distributed knowledge
-- [[temporal-logic]] — LTL, CTL, and temporal operators
-- [[formal-verification]] — Verification techniques and tools
-- [[threshold-automata]] — Parameterized verification for quorum protocols
-- [[proof-techniques]] — Invariants, simulation, induction
+- [[bft-consensus-analysis/logic-models/knowledge-framework|Halpern-Moses Knowledge Framework]] — Epistemic logic and distributed knowledge
+- [[bft-consensus-analysis/logic-models/temporal-logic|Expressing Safety & Liveness]] — LTL, CTL, and temporal operators
+- [[bft-consensus-analysis/logic-models/formal-verification|Formal Verification Techniques]] — Verification techniques and tools
+- [[bft-consensus-analysis/logic-models/threshold-automata|Threshold Automata]] — Parameterized verification for quorum protocols
+- [[bft-consensus-analysis/logic-models/proof-techniques|Proof Techniques for Consensus Protocols]] — Invariants, simulation, induction
 
 **Related Domains**:
-- [[../bft-consensus/fundamentals]] — BFT consensus basics
-- [[../bft-consensus/properties/safety-properties]] — Safety in BFT
-- [[../bft-consensus/properties/liveness-properties]] — Liveness in BFT
-- [[../provable-broadcast/overview]] — Provable broadcast and certificates
+- [[bft-consensus-analysis/bft-consensus/fundamentals|BFT Fundamentals]] — BFT consensus basics
+- [[bft-consensus-analysis/bft-consensus/properties/safety-properties|Safety]] — Safety in BFT
+- [[bft-consensus-analysis/bft-consensus/properties/liveness-properties|Liveness]] — Liveness in BFT
+- [[bft-consensus-analysis/provable-broadcast/overview|Provable Broadcast Overview]] — Provable broadcast and certificates
 
 **External Resources**:
 - [Decentralized Thoughts: Impossibility Results](https://decentralizedthoughts.github.io)
@@ -286,4 +286,4 @@ graph LR
 
 ---
 
-**Next**: Dive into [[knowledge-framework]] to understand epistemic logic and how nodes reason about what they know.
+**Next**: Dive into [[bft-consensus-analysis/logic-models/knowledge-framework|Halpern-Moses Knowledge Framework]] to understand epistemic logic and how nodes reason about what they know.
