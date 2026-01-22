@@ -3,8 +3,8 @@ title: "BFT Consensus Analysis: Entry Point"
 type: concept
 tags: [bft, consensus, index, navigation]
 created: 2026-01-21
-updated: 2026-01-21
-status: draft
+updated: 2026-01-22
+status: complete
 ---
 
 # BFT Consensus Analysis: Integrated Knowledge Base

@@ -3,8 +3,8 @@ title: "References: Bibliography and External Sources"
 type: reference
 tags: [references, bibliography, citations]
 created: 2026-01-21
-updated: 2026-01-21
-status: draft
+updated: 2026-01-22
+status: complete
 ---
 
 # References
@@ -44,7 +44,10 @@ Fischer, M. J., Lynch, N. A., & Paterson, M. S. (1985). *Impossibility of Distri
 **halpern-moses-1990-knowledge**  
 Halpern, J. Y., & Moses, Y. (1990). *Knowledge and common knowledge in a distributed environment*. Journal of the ACM, 37(3), 549-587.  
 📄 [arXiv cs/0006009](https://arxiv.org/abs/cs/0006009) | 🔗 [ACM](https://dl.acm.org/doi/10.1145/79147.79161)  
-**Note**: Originally published in 1990; arXiv version is cs/0006009 (2000 preprint).
+**Note**: Originally published in 1990; arXiv version is cs/0006009 (2000 preprint). Also cited as **halpern-moses-2000-knowledge** in some references.
+
+**halpern-moses-2000-knowledge**  
+Alias for **halpern-moses-1990-knowledge** (arXiv preprint version from 2000).
 
 **konnov-2017-threshold-automata**  
 Konnov, I., Lazić, M., Veith, H., & Widder, J. (2017). *A Short Counterexample Property for Safety and Liveness Verification of Fault-Tolerant Distributed Algorithms*. Proceedings of the 44th ACM SIGPLAN Symposium on Principles of Programming Languages (POPL), 719-734.  
@@ -69,6 +72,21 @@ Bracha, G. (1987). *Asynchronous Byzantine Agreement Protocols*. Information and
 **cachin-2001-reliable-broadcast**  
 Cachin, C., Guerraoui, R., & Rodrigues, L. (2001). *Reliable Broadcast in Distributed Systems*. In Introduction to Reliable and Secure Distributed Programming (pp. 61-78). Springer.  
 🔗 [Springer](https://link.springer.com/chapter/10.1007/978-3-642-15260-3_4)
+
+**cachin-guerraoui-rodrigues-2011-reliable-broadcast**  
+Cachin, C., Guerraoui, R., & Rodrigues, L. (2011). *Introduction to Reliable and Secure Distributed Programming* (2nd ed.). Springer. Chapter 3: Reliable Broadcast.  
+🔗 [Springer](https://link.springer.com/book/10.1007/978-3-642-15260-3)  
+**Note**: Comprehensive treatment of broadcast primitives including reliable broadcast, Byzantine reliable broadcast, and their properties.
+
+**bracha-asynchronous-consensus-1987**  
+Bracha, G. (1987). *Asynchronous Byzantine Agreement Protocols*. Information and Computation, 75(2), 130-143.  
+🔗 [ScienceDirect](https://www.sciencedirect.com/science/article/pii/0890540187900543)  
+**Note**: Seminal paper introducing the ECHO-READY protocol for Byzantine reliable broadcast.
+
+**danezis-2022-narwhal**  
+Danezis, G., Kogias, E. K., Sonnino, A., & Spiegelman, A. (2022). *Narwhal and Tusk: A DAG-based Mempool and Efficient BFT Consensus*. Proceedings of the Seventeenth European Conference on Computer Systems (EuroSys), 221-238.  
+📄 [arXiv](https://arxiv.org/abs/2105.11827) | 🔗 [ACM](https://dl.acm.org/doi/10.1145/3492321.3519594)  
+**Note**: Modern DAG-based BFT using provable broadcast for data dissemination layer.
 
 ---
 
@@ -206,6 +224,7 @@ When adding a new reference:
 ## Version History
 
 - **v1.0 (2026-01-21)**: Initial bibliography with core BFT, broadcast, and logic model references
+- **v1.1 (2026-01-22)**: Added provable broadcast references (Bracha, Danezis Narwhal, expanded Cachin et al.)
 
 ---
 
