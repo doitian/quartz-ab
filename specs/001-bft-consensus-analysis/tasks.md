@@ -48,10 +48,10 @@
 
 ### BFT Protocol Documentation
 
-- [ ] T011 [P] [BFT] Create pbft.md in content/bft-consensus-analysis/bft-consensus/protocols/pbft.md
-- [ ] T012 [P] [BFT] Create honeybadger-bft.md in content/bft-consensus-analysis/bft-consensus/protocols/honeybadger-bft.md
-- [ ] T013 [P] [BFT] Create hotstuff.md in content/bft-consensus-analysis/bft-consensus/protocols/hotstuff.md
-- [ ] T014 [BFT] Create protocol-comparison.md in content/bft-consensus-analysis/bft-consensus/protocols/protocol-comparison.md
+- [X] T011 [P] [BFT] Create pbft.md in content/bft-consensus-analysis/bft-consensus/protocols/pbft.md
+- [X] T012 [P] [BFT] Create honeybadger-bft.md in content/bft-consensus-analysis/bft-consensus/protocols/honeybadger-bft.md
+- [X] T013 [P] [BFT] Create hotstuff.md in content/bft-consensus-analysis/bft-consensus/protocols/hotstuff.md
+- [X] T014 [BFT] Create protocol-comparison.md in content/bft-consensus-analysis/bft-consensus/protocols/protocol-comparison.md
 
 **Checkpoint**: BFT Consensus domain complete - all protocols documented with comparisons
 
