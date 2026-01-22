@@ -39,6 +39,11 @@ jobs:
           cp config/quartz.config.ts quartz/
           cp config/quartz.layout.ts quartz/
 
+      - name: Apply Obsidian compatibility patch
+        working-directory: ./quartz
+        run: |
+          git apply ../config/quartz-shortest-path.patch
+
       - name: Build Quartz
         working-directory: ./quartz
         run: npx quartz build --directory ../content
