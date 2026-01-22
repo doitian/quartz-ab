@@ -10,7 +10,7 @@ related:
   - "[[bft-consensus-analysis/provable-broadcast/reliable-broadcast|Reliable Broadcast]]"
   - "[[bft-consensus-analysis/provable-broadcast/byzantine-reliable-broadcast|Byzantine Reliable Broadcast]]"
   - "[[bft-consensus-analysis/provable-broadcast/provable-broadcast|Provable Broadcast Protocol]]"
-  - "[[overview|overview]]"
+  - "[[bft-consensus-analysis/provable-broadcast/overview|Provable Broadcast: Overview]]"
   - "[[bft-consensus-analysis/provable-broadcast/properties|Provable Broadcast Properties]]"
 references:
   - decentralized-thoughts-2022-provable-broadcast
@@ -517,7 +517,7 @@ graph TD
 - **[[bft-consensus-analysis/provable-broadcast/reliable-broadcast|Reliable Broadcast]]**: Crash fault tolerant baseline
 - **[[bft-consensus-analysis/provable-broadcast/byzantine-reliable-broadcast|Byzantine Reliable Broadcast]]**: Byzantine extension without certificates
 - **[[bft-consensus-analysis/provable-broadcast/provable-broadcast|Provable Broadcast Protocol]]**: Full protocol with certificates
-- **[[overview|overview]]**: High-level introduction
+- **[[bft-consensus-analysis/provable-broadcast/overview|Provable Broadcast: Overview]]**: High-level introduction
 - **[[bft-consensus-analysis/provable-broadcast/applications|Provable Broadcast Applications]]**: Real-world use cases
 
 ## References

@@ -10,7 +10,7 @@ fault_model: byzantine
 fault_tolerance: "f < n/3"
 related:
   - "[[bft-consensus-analysis/provable-broadcast/byzantine-reliable-broadcast|Byzantine Reliable Broadcast]]"
-  - "[[overview|overview]]"
+  - "[[bft-consensus-analysis/provable-broadcast/overview|Provable Broadcast: Overview]]"
   - "[[bft-consensus-analysis/provable-broadcast/properties|Provable Broadcast Properties]]"
   - "[[bft-consensus-analysis/provable-broadcast/vs-reliable-broadcast|Provable Broadcast vs Reliable Broadcast]]"
   - "[[bft-consensus-analysis/bft-consensus/protocols/hotstuff|HotStuff: Linear-Complexity BFT Consensus]]"

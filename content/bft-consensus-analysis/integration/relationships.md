@@ -11,7 +11,7 @@ related:
   - "[[bft-consensus-analysis/provable-broadcast/overview|Provable Broadcast: Overview]]"
   - "[[bft-consensus-analysis/logic-models/overview|Logic Models for Distributed Systems]]"
   - "[[bft-consensus-analysis/integration/design-framework|Unified Design Framework for BFT Systems]]"
-  - "[[case-studies/honeybadger-complete|case-studies/honeybadger-complete]]"
+  - "[[bft-consensus-analysis/integration/case-studies/honeybadger-complete|HoneyBadger BFT: Complete Integrated Analysis]]"
 references:
   - miller-2016-honeybadger
   - halpern-moses-1990-knowledge
@@ -353,7 +353,7 @@ graph TD
 2. **Broadcast**: Each node uses RBC to broadcast its input; ACS ensures $n-f$ RBCs complete
 3. **Logic Models**: Probabilistic termination proven using randomness from common coin
 
-**See [[case-studies/honeybadger-complete|case-studies/honeybadger-complete]] for detailed analysis.**
+**See [[bft-consensus-analysis/integration/case-studies/honeybadger-complete|HoneyBadger BFT: Complete Integrated Analysis]] for detailed analysis.**
 
 ### Example 2: PBFT (Partially Synchronous Consensus)
 
@@ -520,8 +520,8 @@ graph LR
 
 - **Apply Integration**: [[bft-consensus-analysis/integration/design-framework|Unified Design Framework for BFT Systems]] - Use all three perspectives to design protocols
 - **Case Studies**: 
-  - [[case-studies/honeybadger-complete|case-studies/honeybadger-complete]] - HoneyBadger BFT integrated analysis
-  - [[case-studies/dag-rider-analysis|case-studies/dag-rider-analysis]] - DAG-Rider protocol analysis
+  - [[bft-consensus-analysis/integration/case-studies/honeybadger-complete|HoneyBadger BFT: Complete Integrated Analysis]] - HoneyBadger BFT integrated analysis
+  - [[bft-consensus-analysis/integration/case-studies/dag-rider-analysis|DAG-Rider: Asynchronous DAG-Based BFT Analysis]] - DAG-Rider protocol analysis
 - **Deepen Understanding**:
   - [[bft-consensus-analysis/bft-consensus/protocols/protocol-comparison|BFT Protocol Comparison: PBFT, HoneyBadgerBFT, and HotStuff]] - Compare protocols across dimensions
   - [[bft-consensus-analysis/provable-broadcast/vs-reliable-broadcast|Provable Broadcast vs Reliable Broadcast]] - Understand broadcast hierarchy

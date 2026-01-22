@@ -8,7 +8,7 @@ status: complete
 difficulty: intermediate
 related:
   - "[[bft-consensus-analysis/provable-broadcast/provable-broadcast|Provable Broadcast Protocol]]"
-  - "[[overview|overview]]"
+  - "[[bft-consensus-analysis/provable-broadcast/overview|Provable Broadcast: Overview]]"
   - "[[bft-consensus-analysis/bft-consensus/protocols/hotstuff|HotStuff: Linear-Complexity BFT Consensus]]"
   - "[[bft-consensus-analysis/bft-consensus/protocols/honeybadger-bft|HoneyBadgerBFT: Asynchronous Byzantine Consensus]]"
   - "[[bft-consensus-analysis/bft-consensus/protocols/protocol-comparison|BFT Protocol Comparison: PBFT, HoneyBadgerBFT, and HotStuff]]"
@@ -613,7 +613,7 @@ nodes → level_1_aggregators → level_2_aggregators → root
 - **[[bft-consensus-analysis/bft-consensus/protocols/hotstuff|HotStuff: Linear-Complexity BFT Consensus]]**: Linear BFT using QCs
 - **[[bft-consensus-analysis/bft-consensus/protocols/honeybadger-bft|HoneyBadgerBFT: Asynchronous Byzantine Consensus]]**: Asynchronous BFT with threshold signatures
 - **[[bft-consensus-analysis/bft-consensus/protocols/protocol-comparison|BFT Protocol Comparison: PBFT, HoneyBadgerBFT, and HotStuff]]**: Comparing BFT protocols
-- **[[overview|overview]]**: Introduction to provable broadcast
+- **[[bft-consensus-analysis/provable-broadcast/overview|Provable Broadcast: Overview]]**: Introduction to provable broadcast
 
 ## References
 

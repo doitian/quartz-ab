@@ -9,7 +9,7 @@ difficulty: intermediate
 fault_model: crash
 fault_tolerance: "f < n/2"
 related:
-  - "[[overview|overview]]"
+  - "[[bft-consensus-analysis/provable-broadcast/overview|Provable Broadcast: Overview]]"
   - "[[bft-consensus-analysis/provable-broadcast/byzantine-reliable-broadcast|Byzantine Reliable Broadcast]]"
   - "[[bft-consensus-analysis/provable-broadcast/properties|Provable Broadcast Properties]]"
   - "[[bft-consensus-analysis/bft-consensus/fundamentals|BFT Consensus Fundamentals]]"
@@ -383,7 +383,7 @@ Reliable broadcast doesn't require crash detection (works in asynchronous model)
 - **[[bft-consensus-analysis/provable-broadcast/byzantine-reliable-broadcast|Byzantine Reliable Broadcast]]**: Extend to tolerate malicious failures
 - **[[bft-consensus-analysis/provable-broadcast/provable-broadcast|Provable Broadcast Protocol]]**: Add delivery certificates
 - **[[bft-consensus-analysis/provable-broadcast/properties|Provable Broadcast Properties]]**: Formal property specifications
-- **[[overview|overview]]**: High-level broadcast comparison
+- **[[bft-consensus-analysis/provable-broadcast/overview|Provable Broadcast: Overview]]**: High-level broadcast comparison
 
 ## References
 

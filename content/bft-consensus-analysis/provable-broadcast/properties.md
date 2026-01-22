@@ -7,7 +7,7 @@ updated: 2026-01-22
 status: complete
 difficulty: intermediate
 related:
-  - "[[overview|overview]]"
+  - "[[bft-consensus-analysis/provable-broadcast/overview|Provable Broadcast: Overview]]"
   - "[[bft-consensus-analysis/provable-broadcast/reliable-broadcast|Reliable Broadcast]]"
   - "[[bft-consensus-analysis/provable-broadcast/provable-broadcast|Provable Broadcast Protocol]]"
   - "[[bft-consensus-analysis/bft-consensus/properties/safety-properties|Safety Properties in BFT Consensus]]"
@@ -17,7 +17,7 @@ references:
   - cachin-guerraoui-rodrigues-2011-reliable-broadcast
   - halpern-moses-2000-knowledge
 prerequisites:
-  - "[[overview|overview]]"
+  - "[[bft-consensus-analysis/provable-broadcast/overview|Provable Broadcast: Overview]]"
   - "[[bft-consensus-analysis/bft-consensus/byzantine-failures|Byzantine Failures]]"
 ---
 
@@ -409,7 +409,7 @@ Result:
 
 ## Related Concepts
 
-- **[[overview|overview]]**: Introduction to provable broadcast
+- **[[bft-consensus-analysis/provable-broadcast/overview|Provable Broadcast: Overview]]**: Introduction to provable broadcast
 - **[[bft-consensus-analysis/provable-broadcast/reliable-broadcast|Reliable Broadcast]]**: Baseline crash fault tolerant broadcast
 - **[[bft-consensus-analysis/provable-broadcast/provable-broadcast|Provable Broadcast Protocol]]**: Full protocol specifications
 - **[[bft-consensus-analysis/bft-consensus/properties/safety-properties|Safety Properties in BFT Consensus]]**: BFT consensus safety properties

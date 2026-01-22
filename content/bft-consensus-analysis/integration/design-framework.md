@@ -11,8 +11,8 @@ related:
   - "[[bft-consensus-analysis/bft-consensus/fundamentals|BFT Consensus Fundamentals]]"
   - "[[bft-consensus-analysis/provable-broadcast/overview|Provable Broadcast: Overview]]"
   - "[[bft-consensus-analysis/logic-models/overview|Logic Models for Distributed Systems]]"
-  - "[[case-studies/honeybadger-complete|case-studies/honeybadger-complete]]"
-  - "[[case-studies/dag-rider-analysis|case-studies/dag-rider-analysis]]"
+  - "[[bft-consensus-analysis/integration/case-studies/honeybadger-complete|HoneyBadger BFT: Complete Integrated Analysis]]"
+  - "[[bft-consensus-analysis/integration/case-studies/dag-rider-analysis|DAG-Rider: Asynchronous DAG-Based BFT Analysis]]"
 references:
   - comprehensive-bft-survey-2022
   - cachin-2011-introduction-reliable-broadcast
@@ -799,7 +799,7 @@ Let's apply this framework to design a BFT consensus protocol for a permissioned
 **Advantages**: High throughput, asynchronous  
 **Disadvantages**: Complex ordering logic, eventual finality
 
-**See [[case-studies/dag-rider-analysis|case-studies/dag-rider-analysis]] for details.**
+**See [[bft-consensus-analysis/integration/case-studies/dag-rider-analysis|DAG-Rider: Asynchronous DAG-Based BFT Analysis]] for details.**
 
 ---
 
@@ -945,8 +945,8 @@ Use this checklist when designing a new BFT protocol:
 ## Next Steps
 
 - **Case Studies**: See how this framework was applied to real protocols:
-  - [[case-studies/honeybadger-complete|case-studies/honeybadger-complete]] - HoneyBadger BFT integrated analysis
-  - [[case-studies/dag-rider-analysis|case-studies/dag-rider-analysis]] - DAG-Rider protocol analysis
+  - [[bft-consensus-analysis/integration/case-studies/honeybadger-complete|HoneyBadger BFT: Complete Integrated Analysis]] - HoneyBadger BFT integrated analysis
+  - [[bft-consensus-analysis/integration/case-studies/dag-rider-analysis|DAG-Rider: Asynchronous DAG-Based BFT Analysis]] - DAG-Rider protocol analysis
 - **Deepen Understanding**:
   - [[bft-consensus-analysis/integration/relationships|Relationships Between BFT, Broadcast, and Logic Models]] - How BFT, broadcast, and logic models interconnect
   - [[bft-consensus-analysis/bft-consensus/protocols/protocol-comparison|BFT Protocol Comparison: PBFT, HoneyBadgerBFT, and HotStuff]] - Compare existing protocols

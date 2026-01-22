@@ -11,7 +11,7 @@ fault_tolerance: "f < n/3"
 related:
   - "[[bft-consensus-analysis/provable-broadcast/reliable-broadcast|Reliable Broadcast]]"
   - "[[bft-consensus-analysis/provable-broadcast/provable-broadcast|Provable Broadcast Protocol]]"
-  - "[[overview|overview]]"
+  - "[[bft-consensus-analysis/provable-broadcast/overview|Provable Broadcast: Overview]]"
   - "[[bft-consensus-analysis/provable-broadcast/properties|Provable Broadcast Properties]]"
   - "[[bft-consensus-analysis/bft-consensus/byzantine-failures|Byzantine Failures]]"
 references:
@@ -405,7 +405,7 @@ Replicate ledger updates across nodes:
 
 - **[[bft-consensus-analysis/provable-broadcast/provable-broadcast|Provable Broadcast Protocol]]**: Add delivery certificates for accountability
 - **[[bft-consensus-analysis/provable-broadcast/properties|Provable Broadcast Properties]]**: Formal property definitions
-- **[[overview|overview]]**: Compare broadcast primitives
+- **[[bft-consensus-analysis/provable-broadcast/overview|Provable Broadcast: Overview]]**: Compare broadcast primitives
 - **[[bft-consensus-analysis/bft-consensus/protocols/honeybadger-bft|HoneyBadgerBFT: Asynchronous Byzantine Consensus]]**: See Byzantine broadcast in action
 
 ## References
