@@ -1,6 +1,8 @@
-# Wikilink Strategy for Quartz Obsidian Compatibility
+# Agent Instructions for Quartz AB Repository
 
-## Strategy
+## Wikilink Strategy for Quartz Obsidian Compatibility
+
+### Strategy
 
 Use Quartz's `markdownLinkResolution: "absolute"` strategy.
 
@@ -12,14 +14,14 @@ Use Quartz's `markdownLinkResolution: "absolute"` strategy.
 [[bft-consensus/fundamentals]]  ❌ (partial path - not used)
 ```
 
-## Rules
+### Rules
 - ❌ No `.md` extensions in wikilinks
 - ❌ No relative paths (`../` or `./`)
 - ✅ Always use full absolute path from `content/` directory
 - ✅ Use natural, concise display text that flows well in context
 - ✅ Display text can be shorter than page title for better readability
 
-## Examples
+### Examples
 
 ```markdown
 # Good - concise, natural display text:
@@ -38,7 +40,7 @@ Use Quartz's `markdownLinkResolution: "absolute"` strategy.
 [[../overview|Overview]]  # Relative path
 ```
 
-## Display Text Guidelines
+### Display Text Guidelines
 
 - Use concise names in lists: `[[path|PBFT]]` not `[[path|PBFT: Practical Byzantine Fault Tolerance]]`
 - Use descriptive text that fits the sentence context
